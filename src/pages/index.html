@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
   <meta charset="UTF-8">
@@ -69,60 +69,46 @@
 </head>
 
 <body>
-  <main>
-    <label>Nazwa: <input type="text"></label>
-    <ul>
-      <li>
-        <input type="number">
-        <select>
+  <main class="main">
+    <label>Nazwa: <input type="text" placeholder="Wpisz nazwę posiłku"></label>
+    <ul class="ingredients-list">
+      <li class="ingredients-list__item">
+        <input class="ingredients-list__ingredient-weight" type="number">
+        <select class="ingredients-list__ingredient">
           <option value="1">jajka</option>
           <option value="2">masło</option>
           <option value="3">szynka</option>
           <option value="4">awokado</option>
           <option value="5">olej</option>
         </select>
-        <input type="text" disabled="disabled">
-        <input type="text" disabled="disabled">
-        <input type="text" disabled="disabled">
-        <input type="text" disabled="disabled">
+        <input type="text" class="ingredients-list__macro ingredients-list__macro--protein" disabled="disabled">
+        <input type="text" class="ingredients-list__macro ingredients-list__macro--fat" disabled="disabled">
+        <input type="text" class="ingredients-list__macro ingredients-list__macro--carbohydrates" disabled="disabled">
+        <input type="text" class="ingredients-list__macro ingredients-list__macro--energy" disabled="disabled">
       </li>
-      <li>
-        <input type="number">
-        <select>
+      <li class="ingredients-list__item">
+        <input class="ingredients-list__ingredient-weight" type="number">
+        <select class="ingredients-list__ingredient">
           <option value="1">jajka</option>
           <option value="2">masło</option>
           <option value="3">szynka</option>
           <option value="4">awokado</option>
           <option value="5">olej</option>
         </select>
-        <input type="text" disabled="disabled">
-        <input type="text" disabled="disabled">
-        <input type="text" disabled="disabled">
-        <input type="text" disabled="disabled">
-      </li>
-      <li>
-        <input type="number">
-        <select>
-          <option value="1">jajka</option>
-          <option value="2">masło</option>
-          <option value="3">szynka</option>
-          <option value="4">awokado</option>
-          <option value="5">olej</option>
-        </select>
-        <input type="text" disabled="disabled">
-        <input type="text" disabled="disabled">
-        <input type="text" disabled="disabled">
-        <input type="text" disabled="disabled">
+        <input type="text" class="ingredients-list__macro ingredients-list__macro--protein" disabled="disabled">
+        <input type="text" class="ingredients-list__macro ingredients-list__macro--fat" disabled="disabled">
+        <input type="text" class="ingredients-list__macro ingredients-list__macro--carbohydrates" disabled="disabled">
+        <input type="text" class="ingredients-list__macro ingredients-list__macro--energy" disabled="disabled">
       </li>
     </ul>
     <div class="summary">
-      <label>Kalorie: <input type="text" disabled></label>
-      <label>Stosunek ketogenny: <input type="text" disabled></label>
-      <label>Białko: <input type="text" disabled></label>
-      <label>Tłusz: <input type="text" disabled></label>
-      <label>Węglowodany: <input type="text" disabled></label>
+      <label>Kalorie: <input type="text" class="summary__macro summary__macro--energy" disabled></label>
+      <label>Stosunek ketogenny: <input type="text" class="summary__macro summary__macro--ratio" disabled></label>
+      <label>Białko: <input type="text" class="summary__macro summary__macro--protein" disabled></label>
+      <label>Tłusz: <input type="text" class="summary__macro summary__macro--fat" disabled></label>
+      <label>Węglowodany: <input type="text" class="summary__macro summary__macro--carbohydrates" disabled></label>
     </div>
-    <button>Zapisz</button>
+    <button class="btn-save">Zapisz</button>
   </main>
 
 
