@@ -1,7 +1,17 @@
+// https://colorpalettes.net/color-palette-4221/
+
 @import "~normalize.css";
 
 @import "_variables";
-@import "modules/hello.scss";
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
 
 body {
   background: $wtf;
