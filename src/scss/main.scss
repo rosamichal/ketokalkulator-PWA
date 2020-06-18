@@ -8,18 +8,53 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 
 body {
-  background: $wtf;
+  background: $light;
   font-family: 'Lato', sans-serif;
-  color: #fff;
+  color: $light-dark;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
 }
 
+.main {
+  width: 800px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 4px 4px 5px rgba(82, 82, 82, .4);
+}
+
+.header {
+  border-radius: 5px 5px 0 0;
+  padding: 20px;
+  background-image: linear-gradient(340deg, #026d02 0%, #509601 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__heading {
+    color: $light;
+    padding: 0;
+    margin: 10px 30px;
+    font-size: 60px;
+  }
+}
+
+.ingredients-list {
+  list-style: none;
+  padding: 0;
+
+  &__item {
+    padding: 10px;
+    margin: 10px 0;
+    border: solid 1px hsl(38, 36%, 63%);
+    background-color: rgba(255, 255, 255, .5);
+  }
+}
