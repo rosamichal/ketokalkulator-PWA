@@ -4,7 +4,7 @@ export const ingredients = [{
     protein: 10,
     fat: 7,
     carbohydrates: 2
-},,{
+},{
     id: 2,
     name: 'masło',
     protein: 3,
@@ -22,7 +22,7 @@ export const ingredients = [{
     protein: 10,
     fat: 40,
     carbohydrates: 2
-}{
+},{
     id: 5,
     name: 'olej',
     protein: 0,
