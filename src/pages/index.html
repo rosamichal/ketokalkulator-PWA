@@ -77,7 +77,7 @@
       <h1 class="header__heading">Keto kalkulator</h1>
     </header>
     <div class="recipe">
-      <input class="input input--recipe-name" type="text" placeholder="Wpisz nazwę posiłku" aria-label="Nazwa posiłku">
+      <input class="input input--recipe-name js--recipe-name" type="text" placeholder="Wpisz nazwę posiłku" aria-label="Nazwa posiłku">
       <div class="ingredients-header">
         <span>Składniki</span>
         <span>Bia (g)</span>
@@ -85,7 +85,7 @@
         <span>Węg (g)</span>
         <span>Kalorie</span>
       </div>
-      <ul class="ingredients-list">
+      <ul class="ingredients-list js--ingredients-list">
         <li class="ingredients-list__item">
           <input class="ingredients-list__ingredient-weight input" type="number">
           <select class="ingredients-list__ingredient input input--select">
@@ -135,7 +135,7 @@
           <button>Usuń</button>
         </li>
       </ul>
-      <button>Dodaj składnik</button>
+      <button class="js--btn-add-ingredient">Dodaj składnik</button>
     </div>
     <div class="summary">
       <label>Kalorie: <input type="text" class="summary__macro summary__macro--energy input" disabled></label>
@@ -145,7 +145,7 @@
       <label>Węglowodany: <input type="text" class="summary__macro summary__macro--carbohydrates input"
           disabled></label>
     </div>
-    <button class="btn-save">Zapisz</button>
+    <button class="btn-save js--btn-save-recipe">Zapisz</button>
   </main>
 
 
