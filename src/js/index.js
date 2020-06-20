@@ -56,6 +56,7 @@ const addIngredient = () => {
 
     const inputWeight = document.createElement('input');
     inputWeight.type = "number";
+    inputWeight.min = 0;
     inputWeight.classList.add('ingredients-list__ingredient-weight', 'input');
     li.appendChild(inputWeight);
 
@@ -101,8 +102,9 @@ const applySelectFilter = select => {
     });
 }
 
-const deleteIngredient = () => {
-
+const deleteIngredient = (event) => {
+    const li = event.target.closest('li');
+    ingredientsList.removeChild(li);
 }
 
 document.addEventListener('DOMContentLoaded', main);
