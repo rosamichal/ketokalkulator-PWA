@@ -229,6 +229,8 @@ export const Select = function(target, settings) {
 
 		this.closeList();
 		this.clearFilter();
+		
+		this.target.dispatchEvent(new Event('input'));
 
 		setTimeout(this.positionList.bind(this), 200);
 	};

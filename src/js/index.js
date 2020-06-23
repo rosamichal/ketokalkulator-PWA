@@ -57,11 +57,14 @@ const addIngredient = () => {
     const inputWeight = document.createElement('input');
     inputWeight.type = "number";
     inputWeight.min = 0;
+    inputWeight.value = 0;
     inputWeight.classList.add('ingredients-list__ingredient-weight', 'input');
+    inputWeight.addEventListener('input', updateIngredientMacro);
     li.appendChild(inputWeight);
 
     const selectIngredients = document.createElement('select');
     selectIngredients.classList.add('ingredients-list__ingredient', 'input', 'input--select');
+    selectIngredients.addEventListener('input', updateIngredientMacro);
     fillIngredientsSelect(selectIngredients);
     li.appendChild(selectIngredients);
     applySelectFilter(selectIngredients);
@@ -95,7 +98,7 @@ const addIngredient = () => {
 }
 
 const applySelectFilter = select => {
-    var mySelect = new Select(select, {
+    const mySelect = new Select(select, {
         filtered: 'auto',
         filter_threshold: 7,
         filter_placeholder: 'Wpisz nazwę składnika...'
@@ -105,6 +108,22 @@ const applySelectFilter = select => {
 const deleteIngredient = (event) => {
     const li = event.target.closest('li');
     ingredientsList.removeChild(li);
+}
+
+const updateIngredientMacro = event => {
+    const li = event.target.closest('.ingredients-list__item');
+    const weightInput = li.querySelector('.ingredients-list__ingredient-weight');
+    const ingredientSelect = li.querySelector('.ingredients-list__ingredient');
+    const proteinInput = li.querySelector('.ingredients-list__macro--protein');
+    const fatInput = li.querySelector('.ingredients-list__macro--fat');
+    const carbohydratesInput = li.querySelector('.ingredients-list__macro--carbohydrates');
+    const energyInput = li.querySelector('.ingredients-list__macro--energy');
+    const ingredient = ingredients.find(i => i.id == ingredientSelect.value);
+
+    proteinInput.value = ingredient.protein * weightInput.value / 100;
+    fatInput.value = ingredient.fat * weightInput.value / 100;
+    carbohydratesInput.value = ingredient.carbohydrates * weightInput.value / 100;
+    energyInput.value = ((ingredient.protein + ingredient.carbohydrates) * 4 + ingredient.fat * 9) * weightInput.value / 100;
 }
 
 document.addEventListener('DOMContentLoaded', main);
