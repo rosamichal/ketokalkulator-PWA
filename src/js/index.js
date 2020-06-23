@@ -120,10 +120,10 @@ const updateIngredientMacro = event => {
     const energyInput = li.querySelector('.ingredients-list__macro--energy');
     const ingredient = getIngredients().find(i => i.Id == ingredientSelect.value);
 
-    proteinInput.value = ingredient.Protein * weightInput.value / 100;
-    fatInput.value = ingredient.Fat * weightInput.value / 100;
-    carbohydratesInput.value = ingredient.Carbohydrates * weightInput.value / 100;
-    energyInput.value = ((ingredient.Protein + ingredient.Carbohydrates) * 4 + ingredient.Fat * 9) * weightInput.value / 100;
+    proteinInput.value = (ingredient.Protein * weightInput.value / 100).toFixed(2);
+    fatInput.value = (ingredient.Fat * weightInput.value / 100).toFixed(2);
+    carbohydratesInput.value = (ingredient.Carbohydrates * weightInput.value / 100).toFixed(2);
+    energyInput.value = (((ingredient.Protein + ingredient.Carbohydrates) * 4 + ingredient.Fat * 9) * weightInput.value / 100).toFixed(2);
 }
 
 document.addEventListener('DOMContentLoaded', main);
