@@ -1,7 +1,7 @@
 import '../scss/main.scss';
 
 import {
-    ingredients
+    getIngredients
 } from './ingredients'
 import {
     Select
@@ -37,10 +37,10 @@ const addEventListeners = () => {
 }
 
 const fillIngredientsSelect = select => {
-    ingredients.map(el => {
+    getIngredients().map(el => {
         const optionIngredient = document.createElement('option');
-        optionIngredient.value = el.id;
-        optionIngredient.text = el.name;
+        optionIngredient.value = el.Id;
+        optionIngredient.text = el.Name;
 
         select.appendChild(optionIngredient);
     })
@@ -118,12 +118,12 @@ const updateIngredientMacro = event => {
     const fatInput = li.querySelector('.ingredients-list__macro--fat');
     const carbohydratesInput = li.querySelector('.ingredients-list__macro--carbohydrates');
     const energyInput = li.querySelector('.ingredients-list__macro--energy');
-    const ingredient = ingredients.find(i => i.id == ingredientSelect.value);
+    const ingredient = getIngredients().find(i => i.Id == ingredientSelect.value);
 
-    proteinInput.value = ingredient.protein * weightInput.value / 100;
-    fatInput.value = ingredient.fat * weightInput.value / 100;
-    carbohydratesInput.value = ingredient.carbohydrates * weightInput.value / 100;
-    energyInput.value = ((ingredient.protein + ingredient.carbohydrates) * 4 + ingredient.fat * 9) * weightInput.value / 100;
+    proteinInput.value = ingredient.Protein * weightInput.value / 100;
+    fatInput.value = ingredient.Fat * weightInput.value / 100;
+    carbohydratesInput.value = ingredient.Carbohydrates * weightInput.value / 100;
+    energyInput.value = ((ingredient.Protein + ingredient.Carbohydrates) * 4 + ingredient.Fat * 9) * weightInput.value / 100;
 }
 
 document.addEventListener('DOMContentLoaded', main);
