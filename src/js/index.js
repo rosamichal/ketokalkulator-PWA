@@ -77,13 +77,20 @@ const addIngredient = () => {
     const li = document.createElement('li');
     li.classList.add('ingredients-list__item');
 
+    const btnDecrement = document.createElement('button');
+    btnDecrement.textContent = '-';
+    li.appendChild(btnDecrement);
+
     const inputWeight = document.createElement('input');
     inputWeight.type = "number";
     inputWeight.min = 0;
-    inputWeight.value = 0;
     inputWeight.classList.add('ingredients-list__ingredient-weight', 'input');
     inputWeight.addEventListener('input', updateIngredientMacro);
     li.appendChild(inputWeight);
+
+    const btnIncrement = document.createElement('button');
+    btnIncrement.textContent = '+';
+    li.appendChild(btnIncrement);
 
     const selectIngredients = document.createElement('select');
     selectIngredients.classList.add('ingredients-list__ingredient', 'input', 'input--select');
@@ -92,30 +99,30 @@ const addIngredient = () => {
     li.appendChild(selectIngredients);
     applySelectFilter(selectIngredients);
 
-    const inputProtein = document.createElement('input');
-    inputProtein.classList.add('ingredients-list__macro', 'ingredients-list__macro--protein', 'input');
-    inputProtein.disabled = true;
-    li.appendChild(inputProtein);
-
-    const inputFat = document.createElement('input');
-    inputFat.classList.add('ingredients-list__macro', 'ingredients-list__macro--fat', 'input');
-    inputFat.disabled = true;
-    li.appendChild(inputFat);
-
-    const inputCarbohydrates = document.createElement('input');
-    inputCarbohydrates.classList.add('ingredients-list__macro', 'ingredients-list__macro--carbohydrates', 'input');
-    inputCarbohydrates.disabled = true;
-    li.appendChild(inputCarbohydrates);
-
-    const inputEnergy = document.createElement('input');
-    inputEnergy.classList.add('ingredients-list__macro', 'ingredients-list__macro--energy', 'input');
-    inputEnergy.disabled = true;
-    li.appendChild(inputEnergy);
-
     const btnDelete = document.createElement('button');
     btnDelete.textContent = "Usuń"
     btnDelete.addEventListener('click', deleteIngredient);
     li.appendChild(btnDelete);
+
+    const ingredientSummary = document.createElement('div');
+    ingredientSummary.classList.add('ingredients-list__ingerdient-summary');
+    li.appendChild(ingredientSummary);
+
+    const emptyDiv = document.createElement('div');
+    ingredientSummary.appendChild(emptyDiv);
+
+    const spanProtein = document.createElement('span');
+    spanProtein.textContent = 'B: 0g';
+    ingredientSummary.appendChild(spanProtein);
+    
+    const spanFat = document.createElement('span');
+    spanFat.textContent = 'T: 0g';
+    ingredientSummary.appendChild(spanFat);
+    
+    const spanCarbohydrates = document.createElement('span');
+    spanCarbohydrates.textContent = 'W: 0g';
+    ingredientSummary.appendChild(spanCarbohydrates);
+
 
     ingredientsList.appendChild(li);
     currentRecipe.ingredients.push({

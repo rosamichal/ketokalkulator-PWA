@@ -77,43 +77,56 @@
       <h1 class="header__heading">Keto kalkulator</h1>
     </header>
     <div class="recipe">
-      <input class="input input--recipe-name js--recipe-name" type="text" placeholder="Wpisz nazwę posiłku"
-        aria-label="Nazwa posiłku">
-      <div class="ingredients-header">
+      <div class="summary">
+        <div class="summary__macro">
+          <h2 class="summary__header">B</h2><span>6,1</span> / <span>8</span>
+        </div>
+        <div class="summary__macro">
+          <h2 class="summary__header">T</h2><span>2,1</span> / <span>20</span>
+        </div>
+        <div class="summary__macro">
+          <h2 class="summary__header">W</h2><span>0,3</span> / <span>2</span>
+        </div>
+        <div class="summary__macro summary__macro--energy-ratio">
+          <div class="summary__energy-wrapper">
+            Kcal: <span>100</span> / <span>300</span>
+          </div>
+          <div class="summary__ratio-wrapper">
+            Stosunek ketogenny <span>2:1</span> / <span>1:1</span>
+          </div>
+        </div>
+      </div>
+      <h2>Nazwa dania</h2>
+      <input class="input input--recipe-name js--recipe-name" type="text" placeholder="Wpisz nazwę dania"
+        aria-label="Nazwa dania">
+      <!-- <div class="ingredients-header">
         <span>Składniki</span>
         <span>Bia (g)</span>
         <span>Tłu (g)</span>
         <span>Węg (g)</span>
         <span>Kalorie</span>
-      </div>
+      </div> -->
       <ul class="ingredients-list js--ingredients-list">
         <!-- <li class="ingredients-list__item">
+          <button>-</button>
           <input class="ingredients-list__ingredient-weight input" type="number">
-          <select class="ingredients-list__ingredient input input--select">
-            <option value="1">jajka</option>
-            <option value="2">masło</option>
-            <option value="3">szynka krucha</option>
-            <option value="4">awokado</option>
-            <option value="5">olej lniany</option>
-          </select>
-          <input type="text" class="ingredients-list__macro ingredients-list__macro--protein input" disabled="disabled">
-          <input type="text" class="ingredients-list__macro ingredients-list__macro--fat input" disabled="disabled">
-          <input type="text" class="ingredients-list__macro ingredients-list__macro--carbohydrates input"
-            disabled="disabled">
-          <input type="text" class="ingredients-list__macro ingredients-list__macro--energy input" disabled="disabled">
+          <button>+</button>
+            <select class="ingredients-list__ingredient input input--select">
+              <option value="1">jajka</option>
+              <option value="2">masło</option>
+              <option value="3">szynka krucha</option>
+              <option value="4">awokado</option>
+              <option value="5">olej lniany</option>
+            </select>
+            <!-- <span>B: 6g</span>
+            <span>T: 2g</span>
+            <span>W: 0,3g</span> --
           <button>Usuń</button>
         </li> -->
       </ul>
       <button class="js--btn-add-ingredient">Dodaj składnik</button>
     </div>
-    <div class="summary">
-      <label>Kalorie: <input type="text" class="summary__macro summary__macro--energy input" disabled></label>
-      <label>Stosunek ketogenny: <input type="text" class="summary__macro summary__macro--ratio input" disabled></label>
-      <label>Białko: <input type="text" class="summary__macro summary__macro--protein input" disabled></label>
-      <label>Tłusz: <input type="text" class="summary__macro summary__macro--fat input" disabled></label>
-      <label>Węglowodany: <input type="text" class="summary__macro summary__macro--carbohydrates input"
-          disabled></label>
-    </div>
+
     <button class="btn-save js--btn-save-recipe">Zapisz</button>
   </main>
 
