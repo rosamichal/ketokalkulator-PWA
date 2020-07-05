@@ -36,9 +36,9 @@ const currentRecipe = {
         const p = +this.getProtein();
         const c = +this.getCarbohydrates();
         const f = +this.getFat();
-        
+
         return f === 0 ? '0.00' : (p + c) === 0 ? 'sam tłuszcz' : (f / (p + c)).toFixed(2)
-}
+    }
 };
 
 
@@ -79,6 +79,7 @@ const addIngredient = () => {
 
     const btnDecrement = document.createElement('button');
     btnDecrement.textContent = '-';
+    btnDecrement.addEventListener('click', decrementWeight);
     li.appendChild(btnDecrement);
 
     const inputWeight = document.createElement('input');
@@ -90,6 +91,7 @@ const addIngredient = () => {
 
     const btnIncrement = document.createElement('button');
     btnIncrement.textContent = '+';
+    btnIncrement.addEventListener('click', incrementWeight);
     li.appendChild(btnIncrement);
 
     const selectIngredients = document.createElement('select');
@@ -112,14 +114,17 @@ const addIngredient = () => {
     ingredientSummary.appendChild(emptyDiv);
 
     const spanProtein = document.createElement('span');
+    spanProtein.classList.add('ingredients-list__macro--protein');
     spanProtein.textContent = 'B: 0g';
     ingredientSummary.appendChild(spanProtein);
-    
+
     const spanFat = document.createElement('span');
+    spanFat.classList.add('ingredients-list__macro--fat');
     spanFat.textContent = 'T: 0g';
     ingredientSummary.appendChild(spanFat);
-    
+
     const spanCarbohydrates = document.createElement('span');
+    spanCarbohydrates.classList.add('ingredients-list__macro--carbohydrates');
     spanCarbohydrates.textContent = 'W: 0g';
     ingredientSummary.appendChild(spanCarbohydrates);
 
@@ -139,12 +144,12 @@ const applySelectFilter = select => {
     });
 }
 
-const deleteIngredient = (event) => {
+const deleteIngredient = event => {
     const li = event.target.closest('li');
-    
+
     const ingredientIndex = Array.from(ingredientsList.children).indexOf(li);
     delete currentRecipe.ingredients[ingredientIndex];
-    
+
     ingredientsList.removeChild(li);
 
     updateRecipeMacro();
@@ -157,7 +162,7 @@ const updateIngredientMacro = event => {
     const proteinInput = li.querySelector('.ingredients-list__macro--protein');
     const fatInput = li.querySelector('.ingredients-list__macro--fat');
     const carbohydratesInput = li.querySelector('.ingredients-list__macro--carbohydrates');
-    const energyInput = li.querySelector('.ingredients-list__macro--energy');
+    //const energyInput = li.querySelector('.ingredients-list__macro--energy');
     const ingredient = getIngredients().find(i => i.Id == ingredientSelect.value);
 
     const ingredientIndex = Array.from(ingredientsList.children).indexOf(li);
@@ -166,26 +171,42 @@ const updateIngredientMacro = event => {
         ingredient
     };
 
-    proteinInput.value = (ingredient.Protein * weightInput.value / 100).toFixed(2);
-    fatInput.value = (ingredient.Fat * weightInput.value / 100).toFixed(2);
-    carbohydratesInput.value = (ingredient.Carbohydrates * weightInput.value / 100).toFixed(2);
-    energyInput.value = (((ingredient.Protein + ingredient.Carbohydrates) * 4 + ingredient.Fat * 9) * weightInput.value / 100).toFixed(2);
+    proteinInput.textContent = `B: ${(ingredient.Protein * weightInput.value / 100).toFixed(2)} g`;
+    fatInput.textContent = `T: ${(ingredient.Fat * weightInput.value / 100).toFixed(2)} g`;
+    carbohydratesInput.textContent = `W: ${(ingredient.Carbohydrates * weightInput.value / 100).toFixed(2)} g`;
+    //energyInput.value = (((ingredient.Protein + ingredient.Carbohydrates) * 4 + ingredient.Fat * 9) * weightInput.value / 100).toFixed(2);
 
     updateRecipeMacro();
 }
 
 const updateRecipeMacro = () => {
-    const recipeRatio = document.querySelector('.summary__macro--ratio');
-    const recipeEnergy = document.querySelector('.summary__macro--energy');
-    const recipeProtein = document.querySelector('.summary__macro--protein');
-    const recipeFat = document.querySelector('.summary__macro--fat');
-    const recipeCarbohydrates = document.querySelector('.summary__macro--carbohydrates');
+    const recipeRatio = document.querySelector('.js--summary__macro--ratio');
+    const recipeEnergy = document.querySelector('.js--summary__macro--energy');
+    const recipeProtein = document.querySelector('.js--summary__macro--protein');
+    const recipeFat = document.querySelector('.js--summary__macro--fat');
+    const recipeCarbohydrates = document.querySelector('.js--summary__macro--carbohydrates');
 
-    recipeRatio.value = currentRecipe.getRatio();
-    recipeEnergy.value = currentRecipe.getEnergy();
-    recipeProtein.value = currentRecipe.getProtein();
-    recipeFat.value = currentRecipe.getFat();
-    recipeCarbohydrates.value = currentRecipe.getCarbohydrates();
+    recipeRatio.textContent = currentRecipe.getRatio();
+    recipeEnergy.textContent = currentRecipe.getEnergy();
+    recipeProtein.textContent = currentRecipe.getProtein();
+    recipeFat.textContent = currentRecipe.getFat();
+    recipeCarbohydrates.textContent = currentRecipe.getCarbohydrates();
+}
+
+const incrementWeight = event => {
+    const button = event.target;
+    const weightInput = button.parentNode.querySelector('.ingredients-list__ingredient-weight');
+    weightInput.value++;
+    weightInput.dispatchEvent(new Event('input'));
+}
+
+const decrementWeight = event => {
+    const button = event.target;
+    const weightInput = button.parentNode.querySelector('.ingredients-list__ingredient-weight');
+    if (weightInput.value > 0) {
+        weightInput.value--;
+        weightInput.dispatchEvent(new Event('input'));
+    }
 }
 
 document.addEventListener('DOMContentLoaded', main);
