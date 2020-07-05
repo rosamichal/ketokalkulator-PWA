@@ -54,23 +54,23 @@ body {
   list-style: none;
   padding: 0;
 
-  &__ingredient{
+  &__ingredient {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
   }
 
-  &__ingerdient-summary{
+  &__ingerdient-summary {
     grid-column: 1 / span 5;
     display: grid;
-    grid-template-columns: 200px 1fr 1fr 1fr 50px;
+    grid-template-columns: 140px 1fr 1fr 1fr 50px;
     column-gap: 10px;
     justify-items: center;
   }
 
   &__item {
     display: grid;
-    grid-template-columns: 50px 80px 50px 1fr 50px;
+    grid-template-columns: 35px 50px 35px 1fr 50px;
     column-gap: 10px;
     margin: 10px 0;
   }
@@ -101,7 +101,7 @@ body {
 .summary {
   padding: 20px 10px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);  
+  grid-template-columns: repeat(3, 1fr);
 
   &__macro {
     text-align: center;
@@ -109,14 +109,24 @@ body {
     padding: 10px;
     color: #fff;
 
-    &--energy-ratio{
+    &--energy-ratio {
       display: flex;
       justify-content: space-between;
       grid-column: 1 / 4;
     }
   }
 
-  &__header{
+  &__header {
     margin: 0;
   }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
