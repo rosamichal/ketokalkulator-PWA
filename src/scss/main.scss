@@ -54,18 +54,11 @@ body {
   list-style: none;
   padding: 0;
 
-  &__ingredient {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-  }
-
   &__ingerdient-summary {
     grid-column: 1 / span 5;
     display: grid;
     grid-template-columns: 140px 1fr 1fr 1fr 50px;
     column-gap: 10px;
-    justify-items: center;
   }
 
   &__item {
