@@ -78,7 +78,7 @@ const addIngredient = () => {
     li.classList.add('ingredients-list__item');
 
     const btnDecrement = document.createElement('button');
-    btnDecrement.textContent = '-';
+    btnDecrement.innerHTML = '<i class="fas fa-minus"></i>';
     btnDecrement.addEventListener('click', decrementWeight);
     li.appendChild(btnDecrement);
 
@@ -90,7 +90,7 @@ const addIngredient = () => {
     li.appendChild(inputWeight);
 
     const btnIncrement = document.createElement('button');
-    btnIncrement.textContent = '+';
+    btnIncrement.innerHTML = '<i class="fas fa-plus"></i>';
     btnIncrement.addEventListener('click', incrementWeight);
     li.appendChild(btnIncrement);
 
@@ -102,7 +102,7 @@ const addIngredient = () => {
     applySelectFilter(selectIngredients);
 
     const btnDelete = document.createElement('button');
-    btnDelete.textContent = "Usuń"
+    btnDelete.innerHTML = '<i class="fas fa-trash"></i>';
     btnDelete.addEventListener('click', deleteIngredient);
     li.appendChild(btnDelete);
 
@@ -195,14 +195,14 @@ const updateRecipeMacro = () => {
 
 const incrementWeight = event => {
     const button = event.target;
-    const weightInput = button.parentNode.querySelector('.ingredients-list__ingredient-weight');
+    const weightInput = button.closest('li').querySelector('.ingredients-list__ingredient-weight');
     weightInput.value++;
     weightInput.dispatchEvent(new Event('input'));
 }
 
 const decrementWeight = event => {
     const button = event.target;
-    const weightInput = button.parentNode.querySelector('.ingredients-list__ingredient-weight');
+    const weightInput = button.closest('li').querySelector('.ingredients-list__ingredient-weight');
     if (weightInput.value > 0) {
         weightInput.value--;
         weightInput.dispatchEvent(new Event('input'));
