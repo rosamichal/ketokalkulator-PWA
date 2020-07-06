@@ -23,7 +23,7 @@ $select-highlight: $light-green;
 		border-bottom: 1px solid $select-accent;
 		cursor: pointer;
 		overflow-x: hidden;
-		white-space: nowrap;
+		// white-space: nowrap;
 
 		&::before {
 			position: absolute;

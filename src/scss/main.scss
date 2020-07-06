@@ -26,27 +26,50 @@ body {
 }
 
 .main {
-  width: 800px;
-  border-radius: 5px;
+
   background: #fff;
-  box-shadow: 4px 4px 5px rgba(82, 82, 82, .4);
-  align-self: start;
-  margin-top: 30px;
+  width: 100%;
+
+  @media (min-width: $brakepointLarge) {
+    width: 800px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px rgba(82, 82, 82, .4);
+    align-self: start;
+    margin-top: 30px;
+  }
 }
 
 .header {
-  border-radius: 5px 5px 0 0;
-  padding: 20px;
+  padding: 5px;
   background-image: linear-gradient(340deg, $dark-green 0%, $light-green 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  @media (min-width: $brakepointLarge) {
+    padding: 20px;
+    border-radius: 5px 5px 0 0;
+  }
+
   &__heading {
     color: $light;
     padding: 0;
     margin: 10px 30px;
-    font-size: 60px;
+    font-size: 25px;
+
+    @media (min-width: $brakepointLarge) {
+      font-size: 60px;
+    }
+  }
+
+  &__logo {
+    width: 60px;
+    height: 60px;
+
+    @media (min-width: $brakepointLarge) {
+      width: 100px;
+      height: 100px;
+    }
   }
 }
 
@@ -57,15 +80,28 @@ body {
   &__ingerdient-summary {
     grid-column: 1 / span 5;
     display: grid;
-    grid-template-columns: 140px 1fr 1fr 1fr 50px;
-    column-gap: 10px;
+    grid-template-columns: 0px 1fr 1fr 1fr;
+
+    @media (min-width: $brakepointMedium) {
+      grid-template-columns: 140px 1fr 1fr 1fr 35px;
+      column-gap: 10px;
+    }
+
+    // @media (min-width: $brakepointLarge) {
+    //   grid-template-columns: 140px 1fr 1fr 1fr 35px;
+    //   column-gap: 10px;
+    // }
   }
 
   &__item {
     display: grid;
-    grid-template-columns: 35px 50px 35px 1fr 50px;
-    column-gap: 10px;
+    grid-template-columns: 35px 50px 35px 1fr 35px;
+    column-gap: 5px;
     margin: 10px 0;
+
+    @media (min-width: $brakepointLarge) {
+      column-gap: 10px;
+    }
   }
 }
 
@@ -88,11 +124,15 @@ body {
 
 .recipe {
   padding: 20px 10px;
+
+  &__label{
+    font-size: 18px;
+  }
 }
 
 
 .summary {
-  padding: 20px 10px;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
