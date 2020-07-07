@@ -213,7 +213,7 @@ export const Select = function(target, settings) {
 		var self = this;
 
 		this.options.filter(function(li) {
-			if(li.innerHTML.substring(0, self.filter.value.length).toLowerCase() == self.filter.value.toLowerCase()) {
+			if(li.innerHTML.toLowerCase().includes(self.filter.value.toLowerCase())) {
 				li.style.display = 'block';
 			} else {
 				li.style.display = 'none';
