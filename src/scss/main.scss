@@ -25,7 +25,7 @@ body {
   min-height: 100vh;
 }
 
-.main {
+.recipe-form {
 
   background: #fff;
   width: 100%;
@@ -125,7 +125,7 @@ body {
 .recipe {
   padding: 20px 10px;
 
-  &__label{
+  &__label {
     font-size: 18px;
   }
 }
@@ -162,4 +162,38 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.recipe-list {
+  margin-top: 32px;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.recipe-list-item {
+  border-radius: 5px;
+  box-shadow: 4px 4px 5px rgba(82, 82, 82, .4);
+  background-color: #fff;
+  padding: 10px;
+
+  &__header{
+    margin: 0;
+    padding: 8px;
+    color: $light-green;
+    font-size: 16px;
+  }
+  &__macro {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    margin-bottom: 8px;
+  }
+
+  &__summary {
+    display: flex;
+    justify-content: space-between;
+  }
 }

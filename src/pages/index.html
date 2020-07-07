@@ -74,35 +74,36 @@
 
 <body>
   <main class="main">
-    <header class="header">
-      <img class="header__logo" width="100px" height="100px" src="../assets/img/avocado.svg" alt="awokado">
-      <h1 class="header__heading">Keto kalkulator</h1>
-    </header>
-    <div class="recipe">
-      <div class="summary">
-        <div class="summary__macro">
-          <h2 class="summary__header">B</h2><span class="js--summary__macro--protein">0</span>
-        </div>
-        <div class="summary__macro">
-          <h2 class="summary__header">T</h2><span class="js--summary__macro--fat">0</span>
-        </div>
-        <div class="summary__macro">
-          <h2 class="summary__header">W</h2><span class="js--summary__macro--carbohydrates">0</span>
-        </div>
-        <div class="summary__macro summary__macro--energy-ratio">
-          <div class="summary__energy-wrapper">
-            Kcal: <span class="js--summary__macro--energy">0</span>
+    <div class="recipe-form">
+      <header class="header">
+        <img class="header__logo" width="100px" height="100px" src="../assets/img/avocado.svg" alt="awokado">
+        <h1 class="header__heading">Keto kalkulator</h1>
+      </header>
+      <div class="recipe">
+        <div class="summary">
+          <div class="summary__macro">
+            <h2 class="summary__header">B</h2><span class="js--summary__macro--protein">0</span>
           </div>
-          <div class="summary__ratio-wrapper">
-            Stosunek ketogenny <span class="js--summary__macro--ratio">--</span> : 1
+          <div class="summary__macro">
+            <h2 class="summary__header">T</h2><span class="js--summary__macro--fat">0</span>
+          </div>
+          <div class="summary__macro">
+            <h2 class="summary__header">W</h2><span class="js--summary__macro--carbohydrates">0</span>
+          </div>
+          <div class="summary__macro summary__macro--energy-ratio">
+            <div class="summary__energy-wrapper">
+              Kcal: <span class="js--summary__macro--energy">0</span>
+            </div>
+            <div class="summary__ratio-wrapper">
+              Stosunek ketogenny <span class="js--summary__macro--ratio">--</span> : 1
+            </div>
           </div>
         </div>
-      </div>
-      <h2 class="recipe__label">Nazwa dania</h2>
-      <input class="input input--recipe-name js--recipe-name" type="text" placeholder="Wpisz nazwę dania"
-        aria-label="Nazwa dania">
-      <ul class="ingredients-list js--ingredients-list">
-        <!-- <li class="ingredients-list__item">
+        <h2 class="recipe__label">Nazwa dania</h2>
+        <input class="input input--recipe-name js--recipe-name" type="text" placeholder="Wpisz nazwę dania"
+          aria-label="Nazwa dania">
+        <ul class="ingredients-list js--ingredients-list">
+          <!-- <li class="ingredients-list__item">
           <button>-</button>
           <input class="ingredients-list__ingredient-weight input" type="number">
           <button>+</button>
@@ -118,11 +119,32 @@
             <span>W: 0,3g</span> --
           <button>Usuń</button>
         </li> -->
-      </ul>
-      <button class="js--btn-add-ingredient">Dodaj składnik</button>
+        </ul>
+        <button class="js--btn-add-ingredient">Dodaj składnik</button>
+      </div>
+
+      <button class="btn-save js--btn-save-recipe">Zapisz</button>
     </div>
 
-    <button class="btn-save js--btn-save-recipe">Zapisz</button>
+    <div class="recipe-list">
+      <div class="recipe-list__search">
+
+      </div>
+      <div class="recipe-list__content">
+        <div class="recipe-list-item">
+          <h2 class="recipe-list-item__header">Jajecznica z szynką na maśle</h2>
+          <div class="recipe-list-item__macro">
+            <span>B: 25 g</span>
+            <span>T: 34 g</span>
+            <span>W: 7 g</span>
+          </div>
+          <div class="recipe-list-item__summary">
+            <span>kcal: 300</span>
+            <span>Stosunek ketogenny 1,3 : 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
 
