@@ -169,7 +169,11 @@ input[type=number] {
 
   &__content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+
+    @media (min-width: $brakepointMedium) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }
 
