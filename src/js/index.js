@@ -17,34 +17,16 @@ let recipeName;
 let ingredientsList;
 let btnAddIngredient;
 let btnSaveRecipe;
-const currentRecipe = {
-    name: "",
-    ingredients: [],
-    getProtein() {
-        return this.ingredients.reduce((proteinAll, item) => proteinAll + item.weight * item.ingredient.Protein / 100, 0).toFixed(2)
-    },
-    getFat() {
-        return this.ingredients.reduce((fatAll, item) => fatAll + item.weight * item.ingredient.Fat / 100, 0).toFixed(2)
-    },
-    getCarbohydrates() {
-        return this.ingredients.reduce((carbohydratesAll, item) => carbohydratesAll + item.weight * item.ingredient.Carbohydrates / 100, 0).toFixed(2)
-    },
-    getEnergy() {
-        return this.ingredients.reduce((energyAll, item) => energyAll + (((item.ingredient.Protein + item.ingredient.Carbohydrates) * 4 + item.ingredient.Fat * 9) * item.weight / 100), 0).toFixed(2)
-    },
-    getRatio() {
-        const p = +this.getProtein();
-        const c = +this.getCarbohydrates();
-        const f = +this.getFat();
-
-        return f === 0 ? '0.00' : (p + c) === 0 ? 'sam tłuszcz' : (f / (p + c)).toFixed(2)
-    }
-};
+let allRecipes = [];
+let recipeContent;
+let currentRecipe;
 
 
 const main = () => {
     prepareDOMElements();
     addEventListeners();
+    newRecipe();
+    loadRecipes();
 }
 
 const prepareDOMElements = () => {
@@ -52,11 +34,46 @@ const prepareDOMElements = () => {
     ingredientsList = document.querySelector('.js--ingredients-list');
     btnAddIngredient = document.querySelector('.js--btn-add-ingredient');
     btnSaveRecipe = document.querySelector('.js--btn-save-recipe');
+    recipeContent = document.querySelector('.js--recipe-list-content');
 }
 
 const addEventListeners = () => {
     btnSaveRecipe.addEventListener('click', addRecipe);
     btnAddIngredient.addEventListener('click', addIngredient);
+    recipeName.addEventListener('input', changeRecipeName);
+}
+
+const newRecipe = () => {
+    currentRecipe = {
+        name: "",
+        ingredients: [],
+        getProtein() {
+            return this.ingredients.reduce((proteinAll, item) => proteinAll + item.weight * item.ingredient.Protein / 100, 0).toFixed(2)
+        },
+        getFat() {
+            return this.ingredients.reduce((fatAll, item) => fatAll + item.weight * item.ingredient.Fat / 100, 0).toFixed(2)
+        },
+        getCarbohydrates() {
+            return this.ingredients.reduce((carbohydratesAll, item) => carbohydratesAll + item.weight * item.ingredient.Carbohydrates / 100, 0).toFixed(2)
+        },
+        getEnergy() {
+            return this.ingredients.reduce((energyAll, item) => energyAll + (((item.ingredient.Protein + item.ingredient.Carbohydrates) * 4 + item.ingredient.Fat * 9) * item.weight / 100), 0).toFixed(2)
+        },
+        getRatio() {
+            const p = +this.getProtein();
+            const c = +this.getCarbohydrates();
+            const f = +this.getFat();
+
+            return f === 0 ? '-- : 1' : (p + c) === 0 ? 'sam tłuszcz' : `${(f / (p + c)).toFixed(2)} : 1`
+        }
+    };
+}
+
+const loadRecipes = () => {
+    allRecipes = JSON.parse(localStorage.getItem('allRecipes'), reviver) || [];
+    allRecipes.forEach(recipe => {
+        renderRecipe(recipe);
+    });
 }
 
 const fillIngredientsSelect = select => {
@@ -70,10 +87,61 @@ const fillIngredientsSelect = select => {
 }
 
 const addRecipe = () => {
+    allRecipes.push(currentRecipe);
+    localStorage.setItem('allRecipes', JSON.stringify(allRecipes, replacer, 2));
+    renderRecipe(currentRecipe);
+    newRecipe();
+}
 
+const renderRecipe = (recipe) => {
+    const recipeItem = document.createElement('div');
+    recipeItem.classList.add('recipe-list-item');
+
+    const recipeHeader = document.createElement('h2');
+    recipeHeader.classList.add('recipe-list-item__header');
+    recipeHeader.textContent = recipe.name;
+    recipeItem.appendChild(recipeHeader);
+
+    const macroContent = document.createElement('div');
+    macroContent.classList.add('recipe-list-item__macro');
+    recipeItem.appendChild(macroContent);
+
+    const protein = document.createElement('span');
+    protein.textContent = recipe.getProtein();
+    macroContent.appendChild(protein);
+
+    const fat = document.createElement('span');
+    fat.textContent = recipe.getFat();
+    macroContent.appendChild(fat);
+
+    const carbohydrates = document.createElement('span');
+    carbohydrates.textContent = recipe.getCarbohydrates();
+    macroContent.appendChild(carbohydrates);
+
+    const recipeSummary = document.createElement('div');
+    recipeSummary.classList.add('recipe-list-item__summary');
+    recipeItem.appendChild(recipeSummary);
+
+    const kcal = document.createElement('span');
+    kcal.textContent = `kcal: ${recipe.getEnergy()}`;
+    recipeSummary.appendChild(kcal);
+
+    const ratio = document.createElement('span');
+    ratio.textContent = `Stosunek ketogenny ${recipe.getRatio()}`;
+    recipeSummary.appendChild(ratio);
+
+    recipeContent.appendChild(recipeItem);
 }
 
 const addIngredient = () => {
+    currentRecipe.ingredients.push({
+        weight: 0,
+        ingredient: getIngredients()[0]
+    })
+    renderIngredients();
+}
+
+const renderIngredients = () => {
     const li = document.createElement('li');
     li.classList.add('ingredients-list__item');
 
@@ -128,12 +196,7 @@ const addIngredient = () => {
     spanCarbohydrates.textContent = 'W: 0g';
     ingredientSummary.appendChild(spanCarbohydrates);
 
-
     ingredientsList.appendChild(li);
-    currentRecipe.ingredients.push({
-        weight: 0,
-        ingredient: getIngredients()[0]
-    })
 }
 
 const applySelectFilter = select => {
@@ -193,6 +256,10 @@ const updateRecipeMacro = () => {
     recipeCarbohydrates.textContent = currentRecipe.getCarbohydrates();
 }
 
+const changeRecipeName = event => {
+    currentRecipe.name = event.target.value;
+}
+
 const incrementWeight = event => {
     const button = event.target;
     const weightInput = button.closest('li').querySelector('.ingredients-list__ingredient-weight');
@@ -207,6 +274,22 @@ const decrementWeight = event => {
         weightInput.value--;
         weightInput.dispatchEvent(new Event('input'));
     }
+}
+
+let replacer = (key, value) => {
+    if (typeof value === 'function') {
+        return value.toString();
+    }
+    return value;
+}
+
+let reviver = (key, value) => {
+    if (typeof value === 'string' &&
+        value.indexOf('function ') === 0) {
+        let functionTemplate = `(${value})`;
+        return eval(functionTemplate);
+    }
+    return value;
 }
 
 document.addEventListener('DOMContentLoaded', main);

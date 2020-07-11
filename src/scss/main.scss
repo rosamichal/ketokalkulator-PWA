@@ -170,9 +170,12 @@ input[type=number] {
   &__content {
     display: grid;
     grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin-bottom: 30px;;
 
     @media (min-width: $brakepointMedium) {
       grid-template-columns: 1fr 1fr;
+      
     }
   }
 }
@@ -185,14 +188,14 @@ input[type=number] {
 
   &__header{
     margin: 0;
-    padding: 8px;
+    padding: 8px 0;
     color: $light-green;
     font-size: 16px;
+    text-align: center;
   }
   &__macro {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 8px;
   }
 
