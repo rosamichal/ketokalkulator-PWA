@@ -44,6 +44,8 @@ const addEventListeners = () => {
 }
 
 const newRecipe = () => {
+    recipeName.value = '';
+    ingredientsList.innerHTML = '';
     currentRecipe = {
         name: "",
         ingredients: [],
