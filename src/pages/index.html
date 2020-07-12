@@ -95,13 +95,14 @@
               Kcal: <span class="js--summary__macro--energy">0</span>
             </div>
             <div class="summary__ratio-wrapper">
-              Stosunek ketogenny <span class="js--summary__macro--ratio">--</span> : 1
+              Stosunek ketogenny <span class="js--summary__macro--ratio"></span>
             </div>
           </div>
         </div>
         <h2 class="recipe__label">Nazwa dania</h2>
         <input class="input input--recipe-name js--recipe-name" type="text" placeholder="Wpisz nazwę dania"
           aria-label="Nazwa dania">
+        <p class="recipe__name-error js--name-error"></p>
         <ul class="ingredients-list js--ingredients-list">
           <!-- <li class="ingredients-list__item">
           <button>-</button>
@@ -121,9 +122,11 @@
         </li> -->
         </ul>
         <button class="js--btn-add-ingredient">Dodaj składnik</button>
+        <span class="recipe__ingredients-error js--ingredients-error"></span>
       </div>
 
       <button class="btn-save js--btn-save-recipe">Zapisz</button>
+      
     </div>
 
     <div class="recipe-list">

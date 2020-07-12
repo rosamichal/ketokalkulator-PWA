@@ -20,7 +20,8 @@ let btnSaveRecipe;
 let allRecipes = [];
 let recipeContent;
 let currentRecipe;
-
+let recipeNameError;
+let recipeIngredientsError;
 
 const main = () => {
     prepareDOMElements();
@@ -35,6 +36,8 @@ const prepareDOMElements = () => {
     btnAddIngredient = document.querySelector('.js--btn-add-ingredient');
     btnSaveRecipe = document.querySelector('.js--btn-save-recipe');
     recipeContent = document.querySelector('.js--recipe-list-content');
+    recipeNameError = document.querySelector('.js--name-error');
+    recipeIngredientsError = document.querySelector('.js--ingredients-error');
 }
 
 const addEventListeners = () => {
@@ -89,6 +92,14 @@ const fillIngredientsSelect = select => {
 }
 
 const addRecipe = () => {
+    if (!currentRecipe.name) {
+        recipeNameError.textContent = 'Nazwa dania jest wymagana';
+        return;
+    }
+    if (!+currentRecipe.getEnergy()) {
+        recipeIngredientsError.textContent = 'Dodaj przynajmniej 1 składnik';
+        return;
+    }
     allRecipes.push(currentRecipe);
     localStorage.setItem('allRecipes', JSON.stringify(allRecipes, replacer, 2));
     renderRecipe(currentRecipe);
@@ -199,6 +210,8 @@ const renderIngredients = () => {
     ingredientSummary.appendChild(spanCarbohydrates);
 
     ingredientsList.appendChild(li);
+
+    recipeIngredientsError.textContent = '';
 }
 
 const applySelectFilter = select => {
@@ -218,6 +231,9 @@ const deleteIngredient = event => {
     ingredientsList.removeChild(li);
 
     updateRecipeMacro();
+    if (!+currentRecipe.getEnergy()) {
+        recipeIngredientsError.textContent = 'Dodaj przynajmniej 1 składnik';
+    }
 }
 
 const updateIngredientMacro = event => {
@@ -260,6 +276,7 @@ const updateRecipeMacro = () => {
 
 const changeRecipeName = event => {
     currentRecipe.name = event.target.value;
+    recipeNameError.textContent = !currentRecipe.name ? 'Nazwa dania jest wymagana.' : '';
 }
 
 const incrementWeight = event => {
@@ -267,6 +284,7 @@ const incrementWeight = event => {
     const weightInput = button.closest('li').querySelector('.ingredients-list__ingredient-weight');
     weightInput.value++;
     weightInput.dispatchEvent(new Event('input'));
+    recipeIngredientsError.textContent = '';
 }
 
 const decrementWeight = event => {
@@ -275,6 +293,10 @@ const decrementWeight = event => {
     if (weightInput.value > 0) {
         weightInput.value--;
         weightInput.dispatchEvent(new Event('input'));
+    }
+
+    if (!+currentRecipe.getEnergy()){
+        recipeIngredientsError.textContent = 'Dodaj przynajmniej 1 składnik';
     }
 }
 
