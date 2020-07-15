@@ -6,6 +6,9 @@ import {
 import {
     Select
 } from './select'
+import {
+    Ingredient
+} from './models/ingredient';
 
 // uncomment the lines below to enable PWA
 // import {registerSW} from './pwa.js';
@@ -75,6 +78,7 @@ const newRecipe = () => {
 }
 
 const loadRecipes = () => {
+    recipeContent.innerHTML = '';
     allRecipes = JSON.parse(localStorage.getItem('allRecipes'), reviver) || [];
     allRecipes.forEach(recipe => {
         renderRecipe(recipe);
@@ -136,14 +140,54 @@ const renderRecipe = (recipe) => {
     recipeItem.appendChild(recipeSummary);
 
     const kcal = document.createElement('span');
-    kcal.textContent = `kcal: ${recipe.getEnergy()}`;
+    kcal.textContent = `Kcal: ${recipe.getEnergy()}`;
     recipeSummary.appendChild(kcal);
 
     const ratio = document.createElement('span');
     ratio.textContent = `Stosunek ketogenny ${recipe.getRatio()}`;
     recipeSummary.appendChild(ratio);
 
+    const buttonsWrapper = document.createElement('div');
+    buttonsWrapper.classList.add("recipe-list-item__buttons-wrapper");
+    recipeItem.appendChild(buttonsWrapper);
+
+    const editButton = document.createElement('button');
+    editButton.classList.add('recipe-list-item__button-edit', 'js--recipe-button-edit');
+    editButton.textContent = 'Edytuj';
+    editButton.addEventListener('click', editRecipe);
+    buttonsWrapper.appendChild(editButton);
+
+    const deleteButton = document.createElement('button');
+    deleteButton.classList.add('recipe-list-item__button-delete', 'js--recipe-button-delete');
+    deleteButton.textContent = 'Usuń';
+    deleteButton.addEventListener('click', deleteRecipe);
+    buttonsWrapper.appendChild(deleteButton);
+
     recipeContent.appendChild(recipeItem);
+}
+
+const editRecipe = event => {
+    const recipe = event.target.closest('.recipe-list-item');
+    const recipeIndex = Array.from(recipeContent.children).indexOf(recipe);
+    currentRecipe = allRecipes[recipeIndex];
+
+    loadCurrentRecipe();
+}
+
+const deleteRecipe = event => {
+    const recipe = event.target.closest('.recipe-list-item');
+    const recipeIndex = Array.from(recipeContent.children).indexOf(recipe);
+
+    allRecipes.splice(recipeIndex, 1);
+    localStorage.setItem('allRecipes', JSON.stringify(allRecipes, replacer, 2));
+    recipeContent.removeChild(recipe);
+}
+
+const loadCurrentRecipe = () => {
+    recipeName.value = currentRecipe.name;
+    currentRecipe.ingredients.forEach(element => {
+        renderIngredients(element);
+    })
 }
 
 const addIngredient = () => {
@@ -154,7 +198,7 @@ const addIngredient = () => {
     renderIngredients();
 }
 
-const renderIngredients = () => {
+const renderIngredients = (ingredient) => {
     const li = document.createElement('li');
     li.classList.add('ingredients-list__item');
 
@@ -209,6 +253,11 @@ const renderIngredients = () => {
     spanCarbohydrates.textContent = 'W: 0g';
     ingredientSummary.appendChild(spanCarbohydrates);
 
+    if (ingredient) {
+        inputWeight.value = ingredient.weight;
+        selectIngredients.value = ingredient.ingredient.Id;
+    }
+
     ingredientsList.appendChild(li);
 
     recipeIngredientsError.textContent = '';
@@ -226,7 +275,7 @@ const deleteIngredient = event => {
     const li = event.target.closest('li');
 
     const ingredientIndex = Array.from(ingredientsList.children).indexOf(li);
-    delete currentRecipe.ingredients[ingredientIndex];
+    currentRecipe.ingredients.splice(ingredientIndex, 1);
 
     ingredientsList.removeChild(li);
 
@@ -295,7 +344,7 @@ const decrementWeight = event => {
         weightInput.dispatchEvent(new Event('input'));
     }
 
-    if (!+currentRecipe.getEnergy()){
+    if (!+currentRecipe.getEnergy()) {
         recipeIngredientsError.textContent = 'Dodaj przynajmniej 1 składnik';
     }
 }

@@ -129,13 +129,13 @@ body {
     font-size: 18px;
   }
 
-  &__name-error{
-    margin-top:0;
+  &__name-error {
+    margin-top: 0;
     color: red;
     font-size: 13px;
   }
 
-  &__ingredients-error{
+  &__ingredients-error {
     color: red;
     font-size: 13px;
   }
@@ -182,11 +182,11 @@ input[type=number] {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 10px;
-    margin-bottom: 30px;;
+    margin-bottom: 30px;
 
     @media (min-width: $brakepointMedium) {
       grid-template-columns: 1fr 1fr;
-      
+
     }
   }
 }
@@ -197,13 +197,14 @@ input[type=number] {
   background-color: #fff;
   padding: 10px;
 
-  &__header{
+  &__header {
     margin: 0;
     padding: 8px 0;
     color: $light-green;
     font-size: 16px;
     text-align: center;
   }
+
   &__macro {
     display: flex;
     justify-content: space-between;
@@ -211,6 +212,12 @@ input[type=number] {
   }
 
   &__summary {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__buttons-wrapper {
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
   }
