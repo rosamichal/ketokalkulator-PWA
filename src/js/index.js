@@ -183,6 +183,7 @@ const deleteRecipe = event => {
 
 const loadCurrentRecipe = () => {
     recipeName.value = currentRecipe.name;
+    ingredientsList.innerHTML = '';
     currentRecipe.ingredients.forEach(element => {
         renderIngredient(element);
     })
