@@ -219,3 +219,11 @@ input[type=number] {
     justify-content: space-between;
   }
 }
+
+.ss-main .ss-single-selected {
+  height: auto;
+}
+
+.ss-main .ss-single-selected .placeholder, .ss-main .ss-single-selected .placeholder * {
+  white-space: normal;
+}
