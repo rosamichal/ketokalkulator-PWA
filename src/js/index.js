@@ -3,9 +3,7 @@ import '../scss/main.scss';
 import {
     getIngredients
 } from './ingredients'
-import {
-    Select
-} from './select'
+
 import {
     Ingredient
 } from './models/ingredient';
@@ -186,7 +184,7 @@ const deleteRecipe = event => {
 const loadCurrentRecipe = () => {
     recipeName.value = currentRecipe.name;
     currentRecipe.ingredients.forEach(element => {
-        renderIngredients(element);
+        renderIngredient(element);
     })
 }
 
@@ -195,10 +193,10 @@ const addIngredient = () => {
         weight: 0,
         ingredient: getIngredients()[0]
     })
-    renderIngredients();
+    renderIngredient();
 }
 
-const renderIngredients = (ingredient) => {
+const renderIngredient = (ingredient) => {
     const li = document.createElement('li');
     li.classList.add('ingredients-list__item');
 
@@ -211,7 +209,7 @@ const renderIngredients = (ingredient) => {
     inputWeight.type = "number";
     inputWeight.min = 0;
     inputWeight.classList.add('ingredients-list__ingredient-weight', 'input');
-    inputWeight.addEventListener('input', updateIngredientMacro);
+    inputWeight.addEventListener('input', inputWeightValueChanged);
     li.appendChild(inputWeight);
 
     const btnIncrement = document.createElement('button');
@@ -221,10 +219,9 @@ const renderIngredients = (ingredient) => {
 
     const selectIngredients = document.createElement('select');
     selectIngredients.classList.add('ingredients-list__ingredient', 'input', 'input--select');
-    selectIngredients.addEventListener('input', updateIngredientMacro);
     fillIngredientsSelect(selectIngredients);
     li.appendChild(selectIngredients);
-    applySelectFilter(selectIngredients);
+    const slimSelect = applySelectFilter(selectIngredients);
 
     const btnDelete = document.createElement('button');
     btnDelete.innerHTML = '<i class="fas fa-trash"></i>';
@@ -255,7 +252,7 @@ const renderIngredients = (ingredient) => {
 
     if (ingredient) {
         inputWeight.value = ingredient.weight;
-        selectIngredients.value = ingredient.ingredient.Id;
+        slimSelect.set(ingredient.ingredient.Id);
     }
 
     ingredientsList.appendChild(li);
@@ -263,12 +260,19 @@ const renderIngredients = (ingredient) => {
     recipeIngredientsError.textContent = '';
 }
 
+const inputWeightValueChanged = event => {
+    updateIngredientMacro(event.target.closest('.ingredients-list__item'));
+}
+
 const applySelectFilter = select => {
-    const mySelect = new Select(select, {
-        filtered: 'auto',
-        filter_threshold: 7,
-        filter_placeholder: 'Wpisz nazwę składnika...'
-    });
+    return new SlimSelect({
+        select: select,
+        onChange: (info) => {
+            console.log(info);
+            updateIngredientMacro(select.closest('.ingredients-list__item'));
+        }
+
+    })
 }
 
 const deleteIngredient = event => {
@@ -285,8 +289,7 @@ const deleteIngredient = event => {
     }
 }
 
-const updateIngredientMacro = event => {
-    const li = event.target.closest('.ingredients-list__item');
+const updateIngredientMacro = li => {
     const weightInput = li.querySelector('.ingredients-list__ingredient-weight');
     const ingredientSelect = li.querySelector('.ingredients-list__ingredient');
     const proteinInput = li.querySelector('.ingredients-list__macro--protein');

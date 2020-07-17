@@ -3,7 +3,6 @@
 @import "~normalize.css";
 
 @import "_variables";
-@import "select";
 
 html {
   box-sizing: border-box;
@@ -117,8 +116,6 @@ body {
 
   &--select {
     display: inline-block;
-    grid-column: 1 / 4;
-    width: 100%;
   }
 }
 
