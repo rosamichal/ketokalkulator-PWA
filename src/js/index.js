@@ -18,6 +18,7 @@ let recipeName;
 let ingredientsList;
 let btnAddIngredient;
 let btnSaveRecipe;
+let btnNewRecipe;
 let allRecipes = [];
 let recipeContent;
 let currentRecipe;
@@ -36,6 +37,7 @@ const prepareDOMElements = () => {
     ingredientsList = document.querySelector('.js--ingredients-list');
     btnAddIngredient = document.querySelector('.js--btn-add-ingredient');
     btnSaveRecipe = document.querySelector('.js--btn-save-recipe');
+    btnNewRecipe = document.querySelector('.js--btn-new-recipe');
     recipeContent = document.querySelector('.js--recipe-list-content');
     recipeNameError = document.querySelector('.js--name-error');
     recipeIngredientsError = document.querySelector('.js--ingredients-error');
@@ -43,6 +45,7 @@ const prepareDOMElements = () => {
 
 const addEventListeners = () => {
     btnSaveRecipe.addEventListener('click', addRecipe);
+    btnNewRecipe.addEventListener('click', newRecipe);
     btnAddIngredient.addEventListener('click', addIngredient);
     recipeName.addEventListener('input', changeRecipeName);
 }
