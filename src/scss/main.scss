@@ -28,6 +28,7 @@ body {
 
   background: #fff;
   width: 100%;
+  padding: 20px 10px;
 
   @media (min-width: $brakepointLarge) {
     width: 800px;
@@ -120,8 +121,8 @@ body {
 }
 
 .recipe {
-  padding: 20px 10px;
-
+  margin-bottom: 10px;
+  
   &__label {
     font-size: 18px;
   }
@@ -224,6 +225,7 @@ input[type=number] {
   height: auto;
 }
 
-.ss-main .ss-single-selected .placeholder, .ss-main .ss-single-selected .placeholder * {
+.ss-main .ss-single-selected .placeholder,
+.ss-main .ss-single-selected .placeholder * {
   white-space: normal;
 }
