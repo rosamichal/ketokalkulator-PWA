@@ -105,10 +105,23 @@ const addRecipe = () => {
         recipeIngredientsError.textContent = 'Dodaj przynajmniej 1 składnik';
         return;
     }
-    allRecipes.push(currentRecipe);
+
+    const recipeIndex = allRecipes.findIndex(recipe => recipe.name === currentRecipe.name);
+    if (recipeIndex === -1) {
+        allRecipes.push(currentRecipe);
+        renderRecipe(currentRecipe);
+    } else {
+        allRecipes[recipeIndex] = currentRecipe;
+        renderAllRecipes();
+    }
+
     localStorage.setItem('allRecipes', JSON.stringify(allRecipes, replacer, 2));
-    renderRecipe(currentRecipe);
     newRecipe();
+}
+
+const renderAllRecipes = () => {
+    recipeContent.innerHTML = '';
+    allRecipes.forEach(recipe => renderRecipe(recipe));
 }
 
 const renderRecipe = (recipe) => {
@@ -170,7 +183,8 @@ const renderRecipe = (recipe) => {
 const editRecipe = event => {
     const recipe = event.target.closest('.recipe-list-item');
     const recipeIndex = Array.from(recipeContent.children).indexOf(recipe);
-    currentRecipe = allRecipes[recipeIndex];
+    // Deep Clone
+    currentRecipe = JSON.parse(JSON.stringify(allRecipes[recipeIndex], replacer, 2), reviver);
 
     loadCurrentRecipe();
 }
