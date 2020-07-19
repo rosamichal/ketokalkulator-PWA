@@ -1,0 +1,24 @@
+{
+  "name": "Keto Kalkulator",
+  "short_name": "Keto Kalkulator",
+  "theme_color": "#d1ccc4",
+  "background_color": "#d1ccc4",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/ketokalkulator-PWA/",
+  "start_url": "/ketokalkulator-PWA/",
+  "icons": [
+    {
+      "src": "pwa/manifest-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "pwa/manifest-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}
