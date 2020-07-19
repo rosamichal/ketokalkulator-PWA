@@ -76,6 +76,7 @@ const newRecipe = () => {
             return f === 0 ? '-- : 1' : (p + c) === 0 ? 'sam tłuszcz' : `${(f / (p + c)).toFixed(2)} : 1`
         }
     };
+    updateRecipeMacro();
 }
 
 const loadRecipes = () => {
