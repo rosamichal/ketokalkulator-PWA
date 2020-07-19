@@ -310,8 +310,7 @@ const inputWeightValueChanged = event => {
 const applySelectFilter = select => {
     return new SlimSelect({
         select: select,
-        onChange: (info) => {
-            console.log(info);
+        onChange: () => {
             updateIngredientMacro(select.closest('.ingredients-list__item'));
         }
 
