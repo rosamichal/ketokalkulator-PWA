@@ -9,7 +9,9 @@ import {
 } from './models/ingredient';
 
 // uncomment the lines below to enable PWA
-import {registerSW} from './pwa.js';
+import {
+    registerSW
+} from './pwa.js';
 registerSW();
 
 let recipeName;
@@ -74,6 +76,7 @@ const newRecipe = () => {
             return f === 0 ? '-- : 1' : (p + c) === 0 ? 'sam tłuszcz' : `${(f / (p + c)).toFixed(2)} : 1`
         }
     };
+
     updateRecipeMacro();
 }
 
@@ -100,11 +103,12 @@ const addRecipe = () => {
         recipeNameError.textContent = 'Nazwa dania jest wymagana';
         return;
     }
-    if (!+currentRecipe.getEnergy()) {
+    if (!+currentRecipe.energy) {
         recipeIngredientsError.textContent = 'Dodaj przynajmniej 1 składnik';
         return;
     }
 
+    persistRecipeMacro(currentRecipe);
     const recipeIndex = allRecipes.findIndex(recipe => recipe.name === currentRecipe.name);
     if (recipeIndex === -1) {
         allRecipes.push(currentRecipe);
@@ -114,8 +118,30 @@ const addRecipe = () => {
         renderAllRecipes();
     }
 
-    localStorage.setItem('allRecipes', JSON.stringify(allRecipes, replacer, 2));
+    localStorage.setItem('allRecipes', JSON.stringify(allRecipes));
     newRecipe();
+}
+
+const persistRecipeMacro = recipe => {
+    let protein = 0;
+    let fat = 0;
+    let carbohydrates = 0;
+
+    recipe.ingredients.forEach(item => {
+        protein += item.weight * item.ingredient.Protein / 100;
+        fat += item.weight * item.ingredient.Fat / 100;
+        carbohydrates += item.weight * item.ingredient.Carbohydrates / 100;
+    });
+
+    recipe.protein = protein.toFixed(2);
+    recipe.fat = fat.toFixed(2);
+    recipe.carbohydrates = carbohydrates.toFixed(2);
+    recipe.energy = ((protein + carbohydrates) * 4 + fat * 9).toFixed(2);
+    recipe.ratio = fat === 0 ?
+        '-- : 1' :
+        (protein + carbohydrates) === 0 ?
+        'sam tłuszcz' :
+        `${(fat / (protein + carbohydrates)).toFixed(1)} : 1`;
 }
 
 const renderAllRecipes = () => {
@@ -137,15 +163,15 @@ const renderRecipe = (recipe) => {
     recipeItem.appendChild(macroContent);
 
     const protein = document.createElement('span');
-    protein.textContent = recipe.getProtein();
+    protein.textContent = `B: ${recipe.protein}`;
     macroContent.appendChild(protein);
 
     const fat = document.createElement('span');
-    fat.textContent = recipe.getFat();
+    fat.textContent = `T: ${recipe.fat}`;
     macroContent.appendChild(fat);
 
     const carbohydrates = document.createElement('span');
-    carbohydrates.textContent = recipe.getCarbohydrates();
+    carbohydrates.textContent = `W: ${recipe.carbohydrates}`;
     macroContent.appendChild(carbohydrates);
 
     const recipeSummary = document.createElement('div');
@@ -153,11 +179,11 @@ const renderRecipe = (recipe) => {
     recipeItem.appendChild(recipeSummary);
 
     const kcal = document.createElement('span');
-    kcal.textContent = `Kcal: ${recipe.getEnergy()}`;
+    kcal.textContent = `Kcal: ${recipe.energy}`;
     recipeSummary.appendChild(kcal);
 
     const ratio = document.createElement('span');
-    ratio.textContent = `Stosunek ketogenny ${recipe.getRatio()}`;
+    ratio.textContent = `Stosunek ketogenny ${recipe.ratio}`;
     recipeSummary.appendChild(ratio);
 
     const buttonsWrapper = document.createElement('div');
@@ -183,7 +209,7 @@ const editRecipe = event => {
     const recipe = event.target.closest('.recipe-list-item');
     const recipeIndex = Array.from(recipeContent.children).indexOf(recipe);
     // Deep Clone
-    currentRecipe = JSON.parse(JSON.stringify(allRecipes[recipeIndex], replacer, 2), reviver);
+    currentRecipe = JSON.parse(JSON.stringify(allRecipes[recipeIndex]));
 
     loadCurrentRecipe();
 }
@@ -193,7 +219,7 @@ const deleteRecipe = event => {
     const recipeIndex = Array.from(recipeContent.children).indexOf(recipe);
 
     allRecipes.splice(recipeIndex, 1);
-    localStorage.setItem('allRecipes', JSON.stringify(allRecipes, replacer, 2));
+    localStorage.setItem('allRecipes', JSON.stringify(allRecipes));
     recipeContent.removeChild(recipe);
 }
 
@@ -301,7 +327,7 @@ const deleteIngredient = event => {
     ingredientsList.removeChild(li);
 
     updateRecipeMacro();
-    if (!+currentRecipe.getEnergy()) {
+    if (!+currentRecipe.energy) {
         recipeIngredientsError.textContent = 'Dodaj przynajmniej 1 składnik';
     }
 }
@@ -330,17 +356,18 @@ const updateIngredientMacro = li => {
 }
 
 const updateRecipeMacro = () => {
+    persistRecipeMacro(currentRecipe);
     const recipeRatio = document.querySelector('.js--summary__macro--ratio');
     const recipeEnergy = document.querySelector('.js--summary__macro--energy');
     const recipeProtein = document.querySelector('.js--summary__macro--protein');
     const recipeFat = document.querySelector('.js--summary__macro--fat');
     const recipeCarbohydrates = document.querySelector('.js--summary__macro--carbohydrates');
 
-    recipeRatio.textContent = currentRecipe.getRatio();
-    recipeEnergy.textContent = currentRecipe.getEnergy();
-    recipeProtein.textContent = currentRecipe.getProtein();
-    recipeFat.textContent = currentRecipe.getFat();
-    recipeCarbohydrates.textContent = currentRecipe.getCarbohydrates();
+    recipeRatio.textContent = currentRecipe.ratio;
+    recipeEnergy.textContent = currentRecipe.energy;
+    recipeProtein.textContent = currentRecipe.protein;
+    recipeFat.textContent = currentRecipe.fat;
+    recipeCarbohydrates.textContent = currentRecipe.carbohydrates;
 }
 
 const changeRecipeName = event => {
@@ -364,7 +391,7 @@ const decrementWeight = event => {
         weightInput.dispatchEvent(new Event('input'));
     }
 
-    if (!+currentRecipe.getEnergy()) {
+    if (!+currentRecipe.energy) {
         recipeIngredientsError.textContent = 'Dodaj przynajmniej 1 składnik';
     }
 }
