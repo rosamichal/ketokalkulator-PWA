@@ -9,10 +9,8 @@ import {
 } from './models/ingredient';
 
 // uncomment the lines below to enable PWA
-// import {registerSW} from './pwa.js';
-// registerSW();
-
-/* place your code below */
+import {registerSW} from './pwa.js';
+registerSW();
 
 let recipeName;
 let ingredientsList;
