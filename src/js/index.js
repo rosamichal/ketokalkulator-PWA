@@ -152,6 +152,7 @@ const renderAllRecipes = () => {
 const renderRecipe = (recipe) => {
     const recipeItem = document.createElement('div');
     recipeItem.classList.add('recipe-list-item');
+    recipeItem.addEventListener('click', toggleIngredientsList)
 
     const recipeHeader = document.createElement('h2');
     recipeHeader.classList.add('recipe-list-item__header');
@@ -203,7 +204,7 @@ const renderRecipe = (recipe) => {
     buttonsWrapper.appendChild(deleteButton);
 
     const ingredientListWrapper = document.createElement("div");
-    ingredientListWrapper.classList.add("recipe-list-item__ingredients-list-wrapper");
+    ingredientListWrapper.classList.add("recipe-list-item__ingredients-list-wrapper", "js--ingredients-list-wrapper", "hidden");
     recipeItem.appendChild(ingredientListWrapper);
 
     const ingredientsHeader = document.createElement("h3");
@@ -248,6 +249,12 @@ const loadCurrentRecipe = () => {
     currentRecipe.ingredients.forEach(element => {
         renderIngredient(element);
     })
+}
+
+const toggleIngredientsList = event => {
+    const recipe = event.target.closest('.recipe-list-item');
+    const ingredientsList = recipe.querySelector('.js--ingredients-list-wrapper');
+    ingredientsList.classList.toggle('hidden');
 }
 
 const addIngredient = () => {
