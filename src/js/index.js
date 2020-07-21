@@ -202,6 +202,25 @@ const renderRecipe = (recipe) => {
     deleteButton.addEventListener('click', deleteRecipe);
     buttonsWrapper.appendChild(deleteButton);
 
+    const ingredientListWrapper = document.createElement("div");
+    ingredientListWrapper.classList.add("recipe-list-item__ingredients-list-wrapper");
+    recipeItem.appendChild(ingredientListWrapper);
+
+    const ingredientsHeader = document.createElement("h3");
+    ingredientsHeader.classList.add("recipe-list-item__ingredients-header");
+    ingredientsHeader.innerText = "Składniki";
+    ingredientListWrapper.appendChild(ingredientsHeader);
+
+    const ingredientsList = document.createElement("ul");
+    ingredientsList.classList.add("recipe-list-item__ingredients-list")
+    ingredientListWrapper.appendChild(ingredientsList);
+
+    recipe.ingredients.map(item => {
+        const ingredientItem = document.createElement("li");
+        ingredientItem.innerText = `${item.weight} g ${item.ingredient.Name}`;
+        ingredientsList.appendChild(ingredientItem);
+    })
+
     recipeContent.appendChild(recipeItem);
 }
 
