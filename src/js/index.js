@@ -232,6 +232,8 @@ const editRecipe = event => {
     currentRecipe = JSON.parse(JSON.stringify(allRecipes[recipeIndex]));
 
     loadCurrentRecipe();
+    event.stopPropagation();
+
 }
 
 const deleteRecipe = event => {
