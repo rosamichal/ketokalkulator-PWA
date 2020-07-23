@@ -4,9 +4,8 @@
   "theme_color": "#d1ccc4",
   "background_color": "#d1ccc4",
   "display": "standalone",
-  "orientation": "portrait",
-  "scope": "/ketokalkulator-PWA/",
-  "start_url": "/ketokalkulator-PWA/",
+  "scope": "http://corima.pl/ketokalkulator/",
+  "start_url": "http://corima.pl/ketokalkulator/",
   "icons": [
     {
       "src": "pwa/manifest-icon-192.png",
