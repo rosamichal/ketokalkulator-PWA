@@ -232,6 +232,13 @@ const editRecipe = event => {
     currentRecipe = JSON.parse(JSON.stringify(allRecipes[recipeIndex]));
 
     loadCurrentRecipe();
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+      
     event.stopPropagation();
 
 }
