@@ -1,17 +1,10 @@
 import '../scss/main.scss';
 
-import {
-    getIngredients
-} from './ingredients'
-
-import {
-    Ingredient
-} from './models/ingredient';
+import { getIngredients } from './ingredients'
 
 // uncomment the lines below to enable PWA
-import {
-    registerSW
-} from './pwa.js';
+import { registerSW } from './pwa.js';
+
 registerSW();
 
 let recipeName;
@@ -237,8 +230,8 @@ const editRecipe = event => {
         top: 0,
         left: 0,
         behavior: 'smooth'
-      });
-      
+    });
+
     event.stopPropagation();
 
 }
