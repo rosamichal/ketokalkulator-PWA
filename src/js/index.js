@@ -272,7 +272,7 @@ const renderIngredient = (ingredient) => {
     li.classList.add('ingredients-list__item');
 
     const btnDecrement = document.createElement('button');
-    btnDecrement.innerHTML = '<i class="fas fa-minus"></i>';
+    btnDecrement.innerHTML = '<img src="./images/minus.svg" alt="" />';
     btnDecrement.addEventListener('click', decrementWeight);
     li.appendChild(btnDecrement);
 
@@ -284,7 +284,7 @@ const renderIngredient = (ingredient) => {
     li.appendChild(inputWeight);
 
     const btnIncrement = document.createElement('button');
-    btnIncrement.innerHTML = '<i class="fas fa-plus"></i>';
+    btnIncrement.innerHTML = '<img src="./images/plus.svg" alt="" />';
     btnIncrement.addEventListener('click', incrementWeight);
     li.appendChild(btnIncrement);
 
@@ -295,7 +295,7 @@ const renderIngredient = (ingredient) => {
     const slimSelect = applySelectFilter(selectIngredients);
 
     const btnDelete = document.createElement('button');
-    btnDelete.innerHTML = '<i class="fas fa-trash"></i>';
+    btnDelete.innerHTML = '<img src="./images/trash.svg" alt="" />';
     btnDelete.addEventListener('click', deleteIngredient);
     li.appendChild(btnDelete);
 
