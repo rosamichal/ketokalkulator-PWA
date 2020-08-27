@@ -92,11 +92,22 @@ const newRecipe = () => {
 }
 
 const loadRecipes = () => {
-    recipeContent.innerHTML = '';
     allRecipes = JSON.parse(localStorage.getItem('allRecipes'), reviver) || [];
-    allRecipes.forEach(recipe => {
-        renderRecipe(recipe);
-    });
+    renderAllRecipes();
+}
+
+const compareRecipe = (a, b) => {
+    var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+    var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+    if (nameA < nameB) {
+        return -1;
+    }
+    if (nameA > nameB) {
+        return 1;
+    }
+
+    // names must be equal
+    return 0;
 }
 
 const fillIngredientsSelect = select => {
@@ -123,11 +134,10 @@ const addRecipe = () => {
     const recipeIndex = allRecipes.findIndex(recipe => recipe.name === currentRecipe.name);
     if (recipeIndex === -1) {
         allRecipes.push(currentRecipe);
-        renderRecipe(currentRecipe);
     } else {
         allRecipes[recipeIndex] = currentRecipe;
-        renderAllRecipes();
     }
+    renderAllRecipes();
 
     localStorage.setItem('allRecipes', JSON.stringify(allRecipes));
     newRecipe();
@@ -157,7 +167,7 @@ const persistRecipeMacro = recipe => {
 
 const renderAllRecipes = () => {
     recipeContent.innerHTML = '';
-    allRecipes.forEach(recipe => renderRecipe(recipe));
+    allRecipes.sort(compareRecipe).forEach(recipe => renderRecipe(recipe));
 }
 
 const renderRecipe = (recipe) => {
