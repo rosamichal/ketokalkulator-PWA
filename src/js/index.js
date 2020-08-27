@@ -1,17 +1,33 @@
 import '../scss/main.scss';
 
-import { getIngredients } from './ingredients'
+import {
+    getIngredients
+} from './ingredients'
 
 // uncomment the lines below to enable PWA
-import { registerSW } from './pwa.js';
+import {
+    registerSW
+} from './pwa.js';
 
 registerSW();
+
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    // Prevent the mini-infobar from appearing on mobile
+    e.preventDefault();
+    // Stash the event so it can be triggered later.
+    deferredPrompt = e;
+    // Update UI notify the user they can install the PWA
+    showInstallButton();
+});
 
 let recipeName;
 let ingredientsList;
 let btnAddIngredient;
 let btnSaveRecipe;
 let btnNewRecipe;
+let btnInstall;
 let allRecipes = [];
 let recipeContent;
 let currentRecipe;
@@ -31,6 +47,7 @@ const prepareDOMElements = () => {
     btnAddIngredient = document.querySelector('.js--btn-add-ingredient');
     btnSaveRecipe = document.querySelector('.js--btn-save-recipe');
     btnNewRecipe = document.querySelector('.js--btn-new-recipe');
+    btnInstall = document.querySelector('.js--btn-install');
     recipeContent = document.querySelector('.js--recipe-list-content');
     recipeNameError = document.querySelector('.js--name-error');
     recipeIngredientsError = document.querySelector('.js--ingredients-error');
@@ -39,6 +56,7 @@ const prepareDOMElements = () => {
 const addEventListeners = () => {
     btnSaveRecipe.addEventListener('click', addRecipe);
     btnNewRecipe.addEventListener('click', newRecipe);
+    btnInstall.addEventListener('click', installPwaApp);
     btnAddIngredient.addEventListener('click', addIngredient);
     recipeName.addEventListener('input', changeRecipeName);
 }
@@ -437,6 +455,28 @@ let reviver = (key, value) => {
         return eval(functionTemplate);
     }
     return value;
+}
+
+const showInstallButton = () => {
+    btnInstall.classList.remove('hidden');
+}
+
+const hideInstallButton = () => {
+    btnInstall.classList.add('hidden');
+}
+
+const installPwaApp = () => {
+    hideInstallButton();
+    // Show the install prompt
+    deferredPrompt.prompt();
+    // Wait for the user to respond to the prompt
+    deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+            console.log('User accepted the install prompt');
+        } else {
+            console.log('User dismissed the install prompt');
+        }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', main);
