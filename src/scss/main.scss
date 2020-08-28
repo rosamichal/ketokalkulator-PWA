@@ -115,6 +115,12 @@ body {
     width: 100%;
   }
 
+  &--recipe-note{
+    width: 100%;
+    margin-bottom: 20px;
+    border-color: $light-dark;
+  }
+
   &--select {
     display: inline-block;
   }
@@ -223,6 +229,22 @@ input[type=number] {
 
   &__ingredients-header {
     font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  &__ingredients-list {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+
+  &__note-header {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  &__note-content {
+    font-size: 14px;
+    margin-top: 5px;
   }
 }
 

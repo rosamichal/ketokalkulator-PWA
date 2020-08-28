@@ -33,6 +33,7 @@ let recipeContent;
 let currentRecipe;
 let recipeNameError;
 let recipeIngredientsError;
+let recipeNote;
 
 const main = () => {
     prepareDOMElements();
@@ -43,6 +44,7 @@ const main = () => {
 
 const prepareDOMElements = () => {
     recipeName = document.querySelector('.js--recipe-name');
+    recipeNote = document.querySelector('.js--recipe-note');
     ingredientsList = document.querySelector('.js--ingredients-list');
     btnAddIngredient = document.querySelector('.js--btn-add-ingredient');
     btnSaveRecipe = document.querySelector('.js--btn-save-recipe');
@@ -59,14 +61,17 @@ const addEventListeners = () => {
     btnInstall.addEventListener('click', installPwaApp);
     btnAddIngredient.addEventListener('click', addIngredient);
     recipeName.addEventListener('input', changeRecipeName);
+    recipeNote.addEventListener('input', changeRecipeNote);
 }
 
 const newRecipe = () => {
     recipeName.value = '';
     ingredientsList.innerHTML = '';
+
     currentRecipe = {
         name: "",
         ingredients: [],
+        note: "",
         getProtein() {
             return this.ingredients.reduce((proteinAll, item) => proteinAll + item.weight * item.ingredient.Protein / 100, 0).toFixed(2)
         },
@@ -230,6 +235,22 @@ const renderRecipe = (recipe) => {
         ingredientsList.appendChild(ingredientItem);
     })
 
+    if (recipe.note){
+        const noteWrapper = document.createElement("div");
+        noteWrapper.classList.add("js--note-wrapper", "hidden");
+        recipeItem.appendChild(noteWrapper);
+
+        const noteHeader = document.createElement("h3");
+        noteHeader.classList.add("recipe-list-item__note-header");
+        noteHeader.innerText = "Notatka";
+        noteWrapper.appendChild(noteHeader);
+
+        const noteContent = document.createElement("p");
+        noteContent.classList.add("recipe-list-item__note-content");
+        noteContent.innerText = recipe.note;
+        noteWrapper.appendChild(noteContent);
+    }
+
     const buttonsWrapper = document.createElement('div');
     buttonsWrapper.classList.add("recipe-list-item__buttons-wrapper");
     recipeItem.appendChild(buttonsWrapper);
@@ -278,6 +299,7 @@ const deleteRecipe = event => {
 
 const loadCurrentRecipe = () => {
     recipeName.value = currentRecipe.name;
+    recipeNote.value = currentRecipe.note;
     ingredientsList.innerHTML = '';
     currentRecipe.ingredients.forEach(element => {
         renderIngredient(element);
@@ -287,7 +309,9 @@ const loadCurrentRecipe = () => {
 const toggleIngredientsList = event => {
     const recipe = event.target.closest('.recipe-list-item');
     const ingredientsList = recipe.querySelector('.js--ingredients-list-wrapper');
+    const note = recipe.querySelector('.js--note-wrapper');
     ingredientsList.classList.toggle('hidden');
+    note.classList.toggle('hidden');
 }
 
 const addIngredient = () => {
@@ -431,6 +455,10 @@ const updateRecipeMacro = () => {
 const changeRecipeName = event => {
     currentRecipe.name = event.target.value;
     recipeNameError.textContent = !currentRecipe.name ? 'Nazwa dania jest wymagana.' : '';
+}
+
+const changeRecipeNote = event => {
+    currentRecipe.note = event.target.value;
 }
 
 const incrementWeight = event => {
