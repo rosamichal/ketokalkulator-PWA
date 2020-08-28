@@ -131,6 +131,8 @@ const addRecipe = () => {
         return;
     }
 
+    currentRecipe.ingredients = currentRecipe.ingredients.filter(ingredient => ingredient.weight > 0);
+
     persistRecipeMacro(currentRecipe);
     const recipeIndex = allRecipes.findIndex(recipe => recipe.name === currentRecipe.name);
     if (recipeIndex === -1) {
