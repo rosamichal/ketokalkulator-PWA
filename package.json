@@ -1,7 +1,7 @@
 {
-  "name": "wtf-webpack-starterkit",
-  "version": "1.0.1",
-  "description": "WTF Webpack starterkit",
+  "name": "keto-kalkulator",
+  "version": "1.0.2",
+  "description": "Keto Kalkulator",
   "main": "index.js",
   "private": true,
   "scripts": {
@@ -11,8 +11,8 @@
     "generate-icons": "npx pwa-asset-generator ./src/assets/img/avocado.svg public/pwa -i ./src/pages/index.html -m ./public/manifest.json  --path-override pwa --type png -b \"#d1ccc4\""
   },
   "keywords": [
-    "Webpack",
-    "boilerplate"
+    "Keto",
+    "Kalkulator"
   ],
   "author": "Michał Rosa",
   "license": "ISC",
