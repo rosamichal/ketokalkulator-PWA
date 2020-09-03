@@ -34,6 +34,8 @@ let currentRecipe;
 let recipeNameError;
 let recipeIngredientsError;
 let recipeNote;
+let summaryElement;
+let headerElement;
 
 const main = () => {
     prepareDOMElements();
@@ -53,9 +55,13 @@ const prepareDOMElements = () => {
     recipeContent = document.querySelector('.js--recipe-list-content');
     recipeNameError = document.querySelector('.js--name-error');
     recipeIngredientsError = document.querySelector('.js--ingredients-error');
+    summaryElement = document.querySelector('.js--summary');
+    headerElement = document.querySelector('.js--header');
+
 }
 
 const addEventListeners = () => {
+    window.addEventListener('scroll', setFixedToRecipeSummary)
     btnSaveRecipe.addEventListener('click', addRecipe);
     btnNewRecipe.addEventListener('click', newRecipe);
     btnInstall.addEventListener('click', installPwaApp);
@@ -236,7 +242,7 @@ const renderRecipe = (recipe) => {
         ingredientsList.appendChild(ingredientItem);
     })
 
-    if (recipe.note){
+    if (recipe.note) {
         const noteWrapper = document.createElement("div");
         noteWrapper.classList.add("js--note-wrapper", "hidden");
         recipeItem.appendChild(noteWrapper);
@@ -519,6 +525,14 @@ const installPwaApp = () => {
             console.log('User dismissed the install prompt');
         }
     });
+}
+
+const setFixedToRecipeSummary = () => {
+    if (window.pageYOffset > (headerElement.offsetHeight + headerElement.offsetTop)) {
+        summaryElement.classList.add('summary--fixed');
+    } else {
+        summaryElement.classList.remove('summary--fixed');
+    }
 }
 
 document.addEventListener('DOMContentLoaded', main);

@@ -115,7 +115,7 @@ body {
     width: 100%;
   }
 
-  &--recipe-note{
+  &--recipe-note {
     width: 100%;
     margin-bottom: 20px;
     border-color: $light-dark;
@@ -166,6 +166,14 @@ body {
 
   &__header {
     margin: 0;
+  }
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
   }
 }
 
