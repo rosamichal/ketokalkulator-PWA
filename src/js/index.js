@@ -105,7 +105,7 @@ const newRecipe = () => {
 }
 
 const loadRecipes = () => {
-    allRecipes = JSON.parse(localStorage.getItem('allRecipes'), reviver) || [];
+    allRecipes = JSON.parse(localStorage.getItem('allRecipes')) || [];
     renderAllRecipes();
 }
 
@@ -278,12 +278,6 @@ const renderRecipe = (recipe) => {
 }
 
 const editRecipe = event => {
-    const recipe = event.target.closest('.recipe-list-item');
-    const recipeIndex = Array.from(recipeContent.children).indexOf(recipe);
-    // Deep Clone
-    currentRecipe = JSON.parse(JSON.stringify(allRecipes[recipeIndex]));
-
-    loadCurrentRecipe();
 
     window.scrollTo({
         top: 0,
@@ -291,8 +285,15 @@ const editRecipe = event => {
         behavior: 'smooth'
     });
 
-    event.stopPropagation();
+    const recipe = event.target.closest('.recipe-list-item');
+    const recipeIndex = Array.from(recipeContent.children).indexOf(recipe);
+    
+    // Deep Clone
+    currentRecipe = JSON.parse(JSON.stringify(allRecipes[recipeIndex]));
 
+    loadCurrentRecipe();
+
+    event.stopPropagation();
 }
 
 const deleteRecipe = event => {
