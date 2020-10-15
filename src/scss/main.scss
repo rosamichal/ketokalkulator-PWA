@@ -261,6 +261,47 @@ input[type=number] {
   }
 }
 
+.recipe-summary {
+  z-index: 1001;
+  padding: 16px;
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: scroll;
+  bottom: 0;
+  top: 0;
+  background: white;
+  display: flex;
+  flex-direction: column;
+
+  &__buttons{
+    flex-shrink: 0;
+  }
+
+  &__content{
+    flex: 1 0 auto;
+  }
+
+  &__header h2{
+    margin: 0;
+    padding: 8px 0;
+    color: $light-green;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  &__macro {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  &__summary {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .hidden {
   display: none;
 }

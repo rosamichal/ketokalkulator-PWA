@@ -36,6 +36,19 @@ let recipeIngredientsError;
 let recipeNote;
 let summaryElement;
 let headerElement;
+let recipePopup;
+let popupEditButton;
+// let popupDeleteButton;
+let popupCloseButton;
+let popupRecipeName;
+let popupIngredientsList;
+let popupNoteWrapper;
+let popupNote;
+let popupCarbohydrates;
+let popupProtein;
+let popupFat;
+let popupEnergy;
+let popupRatio;
 
 const main = () => {
     prepareDOMElements();
@@ -57,6 +70,19 @@ const prepareDOMElements = () => {
     recipeIngredientsError = document.querySelector('.js--ingredients-error');
     summaryElement = document.querySelector('.js--summary');
     headerElement = document.querySelector('.js--header');
+    recipePopup = document.querySelector('.js--recipe-popup');
+    popupCloseButton = document.querySelector('.js--recipe-summary__close-button');
+    popupEditButton = document.querySelector('.js--recipe-summary__edit-button');
+    // popupDeleteButton = document.querySelector('.js--recipe-summary__delete-button');
+    popupRecipeName = document.querySelector('.js--recipe-summary__name');
+    popupIngredientsList = document.querySelector('.js--recipe-summary__ingredients-list');
+    popupNoteWrapper = document.querySelector('.js--recipe-summary__note-wrapper');
+    popupNote = document.querySelector('.js--recipe-summary__note');
+    popupCarbohydrates = document.querySelector('.js--recipe-summary__macro-carbohydrates');
+    popupProtein = document.querySelector('.js--recipe-summary__macro-protein');
+    popupFat = document.querySelector('.js--recipe-summary__macro-fat');
+    popupEnergy = document.querySelector('.js--recipe-summary__macro-energy');
+    popupRatio = document.querySelector('.js--recipe-summary__macro-ratio');
 
 }
 
@@ -68,6 +94,9 @@ const addEventListeners = () => {
     btnAddIngredient.addEventListener('click', addIngredient);
     recipeName.addEventListener('input', changeRecipeName);
     recipeNote.addEventListener('input', changeRecipeNote);
+    popupCloseButton.addEventListener('click', closePopup);
+    popupEditButton.addEventListener('click', popupEditRecipe);
+    // popupDeleteButton.addEventListener('click', deleteRecipe);
 }
 
 const newRecipe = () => {
@@ -188,7 +217,7 @@ const renderAllRecipes = () => {
 const renderRecipe = (recipe) => {
     const recipeItem = document.createElement('div');
     recipeItem.classList.add('recipe-list-item');
-    recipeItem.addEventListener('click', toggleIngredientsList)
+    recipeItem.addEventListener('click', showRecipePopup); //toggleIngredientsList
 
     const recipeHeader = document.createElement('h2');
     recipeHeader.classList.add('recipe-list-item__header');
@@ -278,22 +307,31 @@ const renderRecipe = (recipe) => {
 }
 
 const editRecipe = event => {
+    const recipe = event.target.closest('.recipe-list-item');
+    //const recipeIndex = Array.from(recipeContent.children).indexOf(recipe);
+    const recipeName = recipe.querySelector('.recipe-list-item__header').textContent;
+    
+    fillEditedRecipe(recipeName);
 
+    event.stopPropagation();
+}
+
+const popupEditRecipe = event => {
+    closePopup();
+    fillEditedRecipe(popupRecipeName.textContent);  
+}
+
+const fillEditedRecipe = recipeName => {
     window.scrollTo({
         top: 0,
         left: 0,
         behavior: 'smooth'
     });
-
-    const recipe = event.target.closest('.recipe-list-item');
-    const recipeIndex = Array.from(recipeContent.children).indexOf(recipe);
     
     // Deep Clone
-    currentRecipe = JSON.parse(JSON.stringify(allRecipes[recipeIndex]));
+    currentRecipe = JSON.parse(JSON.stringify(allRecipes.find(recipe => recipe.name === recipeName)));
 
     loadCurrentRecipe();
-
-    event.stopPropagation();
 }
 
 const deleteRecipe = event => {
@@ -314,12 +352,59 @@ const loadCurrentRecipe = () => {
     })
 }
 
+//to delete
 const toggleIngredientsList = event => {
     const recipe = event.target.closest('.recipe-list-item');
     const ingredientsList = recipe.querySelector('.js--ingredients-list-wrapper');
     const note = recipe.querySelector('.js--note-wrapper');
     ingredientsList.classList.toggle('hidden');
     note.classList.toggle('hidden');
+}
+const showRecipePopup = event => {
+    const recipeListItem = event.target.closest('.recipe-list-item');
+    const recipeName = recipeListItem.querySelector('.recipe-list-item__header').textContent;
+    popupRecipeName.textContent = recipeName;
+
+    const recipe = allRecipes.find(recipe => recipe.name === recipeName);
+
+    let protein = 0;
+    let fat = 0;
+    let carbohydrates = 0;
+
+    popupIngredientsList.innerHTML = '';
+    recipe.ingredients.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.weight} g ${item.ingredient.Name}`;
+        popupIngredientsList.appendChild(li);
+
+        protein += item.weight * item.ingredient.Protein / 100;
+        fat += item.weight * item.ingredient.Fat / 100;
+        carbohydrates += item.weight * item.ingredient.Carbohydrates / 100;
+    });
+
+    if (recipe.note){
+        popupNoteWrapper.classList.remove('hidden');
+        popupNote.textContent = recipe.note;
+    }
+    else {
+        popupNoteWrapper.classList.add('hidden');
+    }
+
+    popupProtein.textContent = protein.toFixed(2);
+    popupFat.textContent = fat.toFixed(2);
+    popupCarbohydrates.textContent = carbohydrates.toFixed(2);
+    popupEnergy.textContent = ((protein + carbohydrates) * 4 + fat * 9).toFixed(2);
+    popupRatio.textContent = fat === 0 ?
+        '-- : 1' :
+        (protein + carbohydrates) === 0 ?
+        'sam tłuszcz' :
+        `${(fat / (protein + carbohydrates)).toFixed(1)} : 1`;
+
+    recipePopup.classList.remove('hidden');
+}
+
+const closePopup = event => {
+    recipePopup.classList.add('hidden');
 }
 
 const addIngredient = () => {
