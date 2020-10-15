@@ -263,7 +263,7 @@ input[type=number] {
 
 .recipe-summary {
   z-index: 1001;
-  padding: 16px;
+  padding: 0;
   position: fixed;
   width: 100%;
   min-height: 100vh;
@@ -275,27 +275,34 @@ input[type=number] {
   flex-direction: column;
 
   &__buttons{
+    margin: 16px;
     flex-shrink: 0;
     display: flex;
     justify-content: space-between;
   }
 
   &__content{
+    margin: 0 16px;
     flex: 1 0 auto;
+    overflow: auto;
   }
 
-  &__header h2{
-    margin: 0;
-    padding: 8px 0;
-    color: $light-green;
-    font-size: 22px;
-    text-align: center;
+  &__header{
+    margin: 16px;
   }
 
   &__macro {
     display: flex;
     justify-content: space-between;
     margin-bottom: 8px;
+  }
+
+  &__name {
+    margin: 0;
+    padding: 16px 0;
+    color: $light-green;
+    font-size: 22px;
+    text-align: center;
   }
 
   &__summary {
