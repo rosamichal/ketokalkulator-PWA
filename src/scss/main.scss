@@ -276,6 +276,8 @@ input[type=number] {
 
   &__buttons{
     flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__content{
