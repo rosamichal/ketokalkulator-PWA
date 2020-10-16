@@ -328,8 +328,8 @@ const editRecipe = event => {
 }
 
 const popupEditRecipe = event => {
-    closePopup(event);
     fillEditedRecipe(popupRecipeName.textContent);
+    closePopup(event);
 }
 
 const fillEditedRecipe = recipeName => {
@@ -415,8 +415,13 @@ const showRecipePopup = event => {
 }
 
 const showIngredientsListPopup = event => {
+    popupIngredientsListSearch.value = '';
+    const li = event.target.closest('.ingredients-list__item');
+    const index = Array.from(ingredientsList.childNodes).indexOf(li);
     renderIngredientsList(getIngredients());
+    popupIngredientsList.dataset.currentRecipeIngredientIndex = index;
     popupIngredientsList.classList.remove('hidden');
+    popupIngredientsListSearch.focus();
 }
 
 const closePopup = event => {
@@ -457,9 +462,11 @@ const renderIngredient = (ingredient) => {
     // fillIngredientsSelect(selectIngredients);
     // li.appendChild(selectIngredients);
     // const slimSelect = applySelectFilter(selectIngredients);
+    const firstIngredient = getIngredients()[0];
     const ingredientName = document.createElement('span');
     ingredientName.classList.add('ingredients-list__ingredient');
-    ingredientName.textContent = 'Wybierz składnik...';
+    ingredientName.textContent = firstIngredient.Name;
+    ingredientName.dataset.ingredientId = firstIngredient.Id;
     ingredientName.addEventListener('click', showIngredientsListPopup);
     li.appendChild(ingredientName);
 
@@ -492,7 +499,10 @@ const renderIngredient = (ingredient) => {
 
     if (ingredient) {
         inputWeight.value = ingredient.weight;
-        slimSelect.set(ingredient.ingredient.Id);
+        //slimSelect.set(ingredient.ingredient.Id);
+        ingredientName.textContent = ingredient.ingredient.Name;
+        ingredientName.dataset.ingredientId = ingredient.ingredient.Id;
+        updateIngredientMacro(li);
     }
 
     ingredientsList.appendChild(li);
@@ -502,21 +512,36 @@ const renderIngredient = (ingredient) => {
 
 const searchIngredients = event => {
     const searchText = event.target.value;
-    const filteredIngreadients = getIngredients().filter(ingredient => ingredient.Name.includes(searchText));
+    const filteredIngreadients = getIngredients().filter(ingredient => ingredient.Name.toUpperCase().includes(searchText.toUpperCase()));
     renderIngredientsList(filteredIngreadients);
 }
 
 const renderIngredientsList = ingredients => {
     popupIngredientsListList.innerHTML = '';
-    ingredients.forEach(ingredient => renderIngredeintListItem(ingredient));
+    ingredients.forEach(ingredient => renderIngredientListItem(ingredient));
 }
 
-const renderIngredeintListItem = ingredient => {
+const renderIngredientListItem = ingredient => {
     const item = document.createElement('li');
+    item.dataset.ingredientId = ingredient.Id;
     item.classList.add('popup__list-item');
     item.textContent = ingredient.Name;
+    item.addEventListener('click', selectIngredient);
 
     popupIngredientsListList.appendChild(item);
+}
+
+const selectIngredient = event => {
+    const ingredientId = event.target.dataset.ingredientId;
+    const ingredientName = event.target.textContent;
+    const recipeIngredientIndex = popupIngredientsList.dataset.currentRecipeIngredientIndex;
+    const recipeIngredientListItem = ingredientsList.children[recipeIngredientIndex];
+    const recipeIngredientListItemName = recipeIngredientListItem.querySelector('.ingredients-list__ingredient');
+    recipeIngredientListItemName.textContent = ingredientName;
+    recipeIngredientListItemName.dataset.ingredientId = ingredientId;
+
+    updateIngredientMacro(recipeIngredientListItem);
+    closePopup(event);
 }
 
 const inputWeightValueChanged = event => {
@@ -554,7 +579,7 @@ const updateIngredientMacro = li => {
     const fatInput = li.querySelector('.ingredients-list__macro--fat');
     const carbohydratesInput = li.querySelector('.ingredients-list__macro--carbohydrates');
     //const energyInput = li.querySelector('.ingredients-list__macro--energy');
-    const ingredient = getIngredients().find(i => i.Id == ingredientSelect.value);
+    const ingredient = getIngredients().find(i => i.Id == ingredientSelect.dataset.ingredientId);
 
     const ingredientIndex = Array.from(ingredientsList.children).indexOf(li);
     currentRecipe.ingredients[ingredientIndex] = {
