@@ -103,6 +103,24 @@ body {
       column-gap: 10px;
     }
   }
+
+  &__ingredient { 
+    border: 1px solid $light-dark;
+    padding: 5px;
+  }
+}
+
+.ingredients-select-list {
+  z-index: 1001;
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: scroll;
+  bottom: 0;
+  top: 0;
+  background: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .input {
@@ -111,7 +129,7 @@ body {
   border-radius: 5px;
   margin: 0;
 
-  &--recipe-name {
+  &--wide {
     width: 100%;
   }
 
@@ -261,34 +279,49 @@ input[type=number] {
   }
 }
 
-.recipe-summary {
+.popup {
   z-index: 1001;
-  padding: 0;
   position: fixed;
   width: 100%;
   min-height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   bottom: 0;
   top: 0;
   background: white;
   display: flex;
   flex-direction: column;
 
-  &__buttons{
+  &__buttons {
     margin: 16px;
     flex-shrink: 0;
     display: flex;
     justify-content: space-between;
   }
 
-  &__content{
+  &__content {
     margin: 0 16px;
-    flex: 1 0 auto;
+    flex: 1 0;
     overflow: auto;
   }
 
-  &__header{
+  &__header {
     margin: 16px;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__list-item {
+    border-radius: 5px;
+    box-shadow: 4px 4px 3px rgba(82, 82, 82, .4);
+    background-color: white;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 12px;
+    border: 1px solid $light-dark;
   }
 
   &__macro {
