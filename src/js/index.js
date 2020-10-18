@@ -525,15 +525,35 @@ const renderIngredientListItem = ingredient => {
     const item = document.createElement('li');
     item.dataset.ingredientId = ingredient.Id;
     item.classList.add('popup__list-item');
-    item.textContent = ingredient.Name;
     item.addEventListener('click', selectIngredient);
+
+    const ingredientName = document.createElement('h3');
+    ingredientName.textContent = ingredient.Name;
+    ingredientName.classList.add('popup__list-item-header')
+    item.appendChild(ingredientName);
+
+    const macroWrapper = document.createElement('div');
+    macroWrapper.classList.add('popup__list-item-macro-wrapper');
+    item.appendChild(macroWrapper);
+
+    const protein = document.createElement('div');
+    protein.textContent = `B: ${ingredient.Protein} g`;
+    macroWrapper.appendChild(protein);
+
+    const fat = document.createElement('div');
+    fat.textContent = `T: ${ingredient.Fat} g`;
+    macroWrapper.appendChild(fat);
+
+    const carbohydrates = document.createElement('div');
+    carbohydrates.textContent = `W: ${ingredient.Carbohydrates} g`;
+    macroWrapper.appendChild(carbohydrates);
 
     popupIngredientsListList.appendChild(item);
 }
 
 const selectIngredient = event => {
-    const ingredientId = event.target.dataset.ingredientId;
-    const ingredientName = event.target.textContent;
+    const ingredientId = event.target.closest('.popup__list-item').dataset.ingredientId;
+    const ingredientName = getIngredients().find(ingredient => ingredient.Id == ingredientId).Name;
     const recipeIngredientIndex = popupIngredientsList.dataset.currentRecipeIngredientIndex;
     const recipeIngredientListItem = ingredientsList.children[recipeIngredientIndex];
     const recipeIngredientListItemName = recipeIngredientListItem.querySelector('.ingredients-list__ingredient');

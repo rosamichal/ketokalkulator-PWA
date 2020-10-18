@@ -324,6 +324,16 @@ input[type=number] {
     border: 1px solid $light-dark;
   }
 
+  &__list-item-header{
+    margin: 0 0 8px;
+  }
+
+  &__list-item-macro-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   &__macro {
     display: flex;
     justify-content: space-between;
