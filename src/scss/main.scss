@@ -211,7 +211,7 @@ input[type=number] {
 }
 
 .recipe-list {
-  margin-top: 32px;
+  margin-top: 40px;
 
   &__content {
     display: grid;
@@ -224,6 +224,10 @@ input[type=number] {
       grid-template-columns: 1fr 1fr;
 
     }
+  }
+
+  &__search{
+    margin: 0 16px 8px;
   }
 }
 

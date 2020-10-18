@@ -55,6 +55,9 @@ let popupIngredientsListCloseButton;
 let popupIngredientsListSearch;
 let popupIngredientsListList;
 
+let recipeSearch;
+let noRecipeFoundLabel;
+
 const main = () => {
     prepareDOMElements();
     addEventListeners();
@@ -92,7 +95,8 @@ const prepareDOMElements = () => {
     popupIngredientsListCloseButton = document.querySelector('.js--ingredients-list-popup__close-button');
     popupIngredientsListSearch = document.querySelector('.js--ingredients-list-popup__search');
     popupIngredientsListList = document.querySelector('.js--ingredients-list-popup__list');
-
+    recipeSearch = document.querySelector('.js--recipe-search');
+    noRecipeFoundLabel = document.querySelector('.js--no-recipe-found-label');
 }
 
 const addEventListeners = () => {
@@ -108,6 +112,7 @@ const addEventListeners = () => {
     // popupDeleteButton.addEventListener('click', deleteRecipe);
     popupIngredientsListCloseButton.addEventListener('click', closePopup);
     popupIngredientsListSearch.addEventListener('input', searchIngredients);
+    recipeSearch.addEventListener('input', searchRecipes);
 }
 
 const newRecipe = () => {
@@ -144,8 +149,11 @@ const newRecipe = () => {
     updateRecipeMacro();
 }
 
-const loadRecipes = () => {
+const loadRecipes = searchString => {
     allRecipes = JSON.parse(localStorage.getItem('allRecipes')) || [];
+    if (searchString) {
+        allRecipes = allRecipes.filter(recipe => recipe.name.includes(searchString));
+    }
     renderAllRecipes();
 }
 
@@ -222,7 +230,17 @@ const persistRecipeMacro = recipe => {
 
 const renderAllRecipes = () => {
     recipeContent.innerHTML = '';
-    allRecipes.sort(compareRecipe).forEach(recipe => renderRecipe(recipe));
+    if (allRecipes.length === 0) {
+        noRecipeFoundLabel.classList.remove('hidden');
+    } else {
+        noRecipeFoundLabel.classList.add('hidden');
+        allRecipes.sort(compareRecipe).forEach(recipe => renderRecipe(recipe));
+    }
+}
+
+const searchRecipes = event => {
+    const searchString = event.target.value;
+    loadRecipes(searchString);
 }
 
 const renderRecipe = (recipe) => {
@@ -352,6 +370,10 @@ const deleteRecipe = event => {
     allRecipes.splice(recipeIndex, 1);
     localStorage.setItem('allRecipes', JSON.stringify(allRecipes));
     recipeContent.removeChild(recipe);
+
+    if (allRecipes.length === 0){
+        noRecipeFoundLabel.classList.remove('hidden');
+    }
 }
 
 const loadCurrentRecipe = () => {
