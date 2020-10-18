@@ -152,7 +152,7 @@ const newRecipe = () => {
 const loadRecipes = searchString => {
     allRecipes = JSON.parse(localStorage.getItem('allRecipes')) || [];
     if (searchString) {
-        allRecipes = allRecipes.filter(recipe => recipe.name.includes(searchString));
+        allRecipes = allRecipes.filter(recipe => recipe.name.toUpperCase().includes(searchString.toUpperCase()));
     }
     renderAllRecipes();
 }
