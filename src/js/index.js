@@ -225,7 +225,7 @@ const persistRecipeMacro = recipe => {
         '-- : 1' :
         (protein + carbohydrates) === 0 ?
             'sam tłuszcz' :
-            `${(fat / (protein + carbohydrates)).toFixed(1)} : 1`;
+            `${(fat / (protein + carbohydrates)).toFixed(2)} : 1`;
 }
 
 const renderAllRecipes = () => {
@@ -431,7 +431,7 @@ const showRecipePopup = event => {
         '-- : 1' :
         (protein + carbohydrates) === 0 ?
             'sam tłuszcz' :
-            `${(fat / (protein + carbohydrates)).toFixed(1)} : 1`;
+            `${(fat / (protein + carbohydrates)).toFixed(2)} : 1`;
 
     recipePopup.classList.remove('hidden');
 }
