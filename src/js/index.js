@@ -141,7 +141,7 @@ const newRecipe = () => {
             const c = +this.getCarbohydrates();
             const f = +this.getFat();
 
-            return f === 0 ? '-- : 1' : (p + c) === 0 ? 'sam tłuszcz' : `${(f / (p + c)).toFixed(2)} : 1`
+            return f === 0 ? '-- : 1' : (p + c) === 0 ? 'sam tłuszcz' : `${(f / (p + c)).toFixed(1)} : 1`
         }
     };
     addIngredient();
@@ -225,7 +225,7 @@ const persistRecipeMacro = recipe => {
         '-- : 1' :
         (protein + carbohydrates) === 0 ?
             'sam tłuszcz' :
-            `${(fat / (protein + carbohydrates)).toFixed(2)} : 1`;
+            `${(fat / (protein + carbohydrates)).toFixed(1)} : 1`;
 }
 
 const renderAllRecipes = () => {
@@ -431,7 +431,7 @@ const showRecipePopup = event => {
         '-- : 1' :
         (protein + carbohydrates) === 0 ?
             'sam tłuszcz' :
-            `${(fat / (protein + carbohydrates)).toFixed(2)} : 1`;
+            `${(fat / (protein + carbohydrates)).toFixed(1)} : 1`;
 
     recipePopup.classList.remove('hidden');
 }
