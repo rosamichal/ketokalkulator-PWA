@@ -320,17 +320,17 @@ const renderRecipe = (recipe) => {
     buttonsWrapper.classList.add("recipe-list-item__buttons-wrapper");
     recipeItem.appendChild(buttonsWrapper);
 
-    const editButton = document.createElement('button');
-    editButton.classList.add('recipe-list-item__button-edit', 'js--recipe-button-edit');
-    editButton.textContent = 'Edytuj';
-    editButton.addEventListener('click', editRecipe);
-    buttonsWrapper.appendChild(editButton);
-
     const deleteButton = document.createElement('button');
     deleteButton.classList.add('recipe-list-item__button-delete', 'js--recipe-button-delete');
     deleteButton.textContent = 'Usuń';
     deleteButton.addEventListener('click', deleteRecipe);
     buttonsWrapper.appendChild(deleteButton);
+
+    const editButton = document.createElement('button');
+    editButton.classList.add('recipe-list-item__button-edit', 'js--recipe-button-edit');
+    editButton.textContent = 'Edytuj';
+    editButton.addEventListener('click', editRecipe);
+    buttonsWrapper.appendChild(editButton);
 
     recipeContent.appendChild(recipeItem);
 }
