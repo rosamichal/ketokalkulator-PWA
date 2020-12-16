@@ -76,7 +76,7 @@ const json = `[
         "Name": "MCT Oil Nutricia",
         "CategoryId": 0,
         "Protein": 0.0,
-        "Fat": 95.0,
+        "Fat": 100.0,
         "Carbohydrates": 0.0
     },
     {
@@ -97,7 +97,7 @@ const json = `[
     },
     {
         "Id": 13,
-        "Name": "MCT keto source",
+        "Name": "MCT Keto Source",
         "CategoryId": 0,
         "Protein": 0.0,
         "Fat": 100.0,
@@ -105,7 +105,7 @@ const json = `[
     },
     {
         "Id": 14,
-        "Name": "białko jaja kurzego surowe, gotowane",
+        "Name": "Białko jaja kurzego surowe, gotowane",
         "CategoryId": 0,
         "Protein": 10.9,
         "Fat": 0.2,
@@ -113,7 +113,7 @@ const json = `[
     },
     {
         "Id": 15,
-        "Name": "jaja kurze całe surowe, gotowane",
+        "Name": "Jaja kurze całe surowe, gotowane",
         "CategoryId": 0,
         "Protein": 12.5,
         "Fat": 9.7,
@@ -121,7 +121,7 @@ const json = `[
     },
     {
         "Id": 16,
-        "Name": "jajo przepiórcze",
+        "Name": "Jajo przepiórcze całe",
         "CategoryId": 0,
         "Protein": 13.0,
         "Fat": 11.0,
@@ -129,7 +129,7 @@ const json = `[
     },
     {
         "Id": 17,
-        "Name": "żółtko jaja kurzego surowe, gotowane",
+        "Name": "Żółtko jaja kurzego surowe, gotowane",
         "CategoryId": 0,
         "Protein": 15.5,
         "Fat": 28.2,
@@ -193,11 +193,11 @@ const json = `[
     },
     {
         "Id": 25,
-        "Name": "Indyk pieczony",
+        "Name": "Jagody leśne",
         "CategoryId": 0,
-        "Protein": 22.6,
-        "Fat": 10.5,
-        "Carbohydrates": 0.0
+        "Protein": 0.8,
+        "Fat": 0.6,
+        "Carbohydrates": 9.0
     },
     {
         "Id": 26,
@@ -249,7 +249,7 @@ const json = `[
     },
     {
         "Id": 32,
-        "Name": "Wątróbka kurczaka surowy",
+        "Name": "Wątróbka kurczaka surowa",
         "CategoryId": 0,
         "Protein": 19.1,
         "Fat": 6.3,
@@ -465,7 +465,7 @@ const json = `[
     },
     {
         "Id": 59,
-        "Name": "Łosoś pieczony",
+        "Name": "Łosoś pieczony bez dodatku tłuszczu",
         "CategoryId": 0,
         "Protein": 27.0,
         "Fat": 15.7,
@@ -473,7 +473,7 @@ const json = `[
     },
     {
         "Id": 60,
-        "Name": "Łosoś smażony bez tłuszczu",
+        "Name": "Łosoś smażony bez dodatku tłuszczu",
         "CategoryId": 0,
         "Protein": 23.0,
         "Fat": 13.3,
@@ -609,31 +609,31 @@ const json = `[
     },
     {
         "Id": 77,
-        "Name": "tuńczyk puszka calvo",
+        "Name": "Tuńczyk w sosie własnym puszka Calvo",
         "CategoryId": 0,
-        "Protein": 17.0,
-        "Fat": 32.0,
-        "Carbohydrates": 1.8
+        "Protein": 22.0,
+        "Fat": 0.9,
+        "Carbohydrates": 0.0
     },
     {
         "Id": 78,
-        "Name": "tuńczyk 1",
+        "Name": "Śmietanka 30% Piątnica",
         "CategoryId": 0,
-        "Protein": 29.0,
-        "Fat": 8.0,
-        "Carbohydrates": 0.0
+        "Protein": 2.2,
+        "Fat": 30.0,
+        "Carbohydrates": 3.3
     },
     {
         "Id": 79,
-        "Name": "tuńczyk 2",
+        "Name": "Serek śmietankowy naturalny Twój smak puszysty w kubeczku Piątnica",
         "CategoryId": 0,
-        "Protein": 26.0,
-        "Fat": 0.8,
-        "Carbohydrates": 0.0
+        "Protein": 6.0,
+        "Fat": 23.0,
+        "Carbohydrates": 3.0
     },
     {
         "Id": 80,
-        "Name": "100% z mięsa parówki Goodvalley",
+        "Name": "Parówki z mięsa 100% Goodvalley",
         "CategoryId": 0,
         "Protein": 14.0,
         "Fat": 24.0,
@@ -641,7 +641,7 @@ const json = `[
     },
     {
         "Id": 81,
-        "Name": "Boczek Morliny w kostce",
+        "Name": "Boczek w kostce Morliny ",
         "CategoryId": 0,
         "Protein": 13.0,
         "Fat": 28.0,
@@ -649,7 +649,7 @@ const json = `[
     },
     {
         "Id": 82,
-        "Name": "Frankfurterki wedzone Biedronka",
+        "Name": "Frankfurterki wędzone Biedronka",
         "CategoryId": 0,
         "Protein": 16.8,
         "Fat": 27.0,
@@ -729,7 +729,7 @@ const json = `[
     },
     {
         "Id": 92,
-        "Name": "Kiełbasa krucha z galaretka Madej Wróbel",
+        "Name": "Kiełbasa krucha z galaretką Madej Wróbel",
         "CategoryId": 0,
         "Protein": 19.0,
         "Fat": 27.0,
@@ -761,11 +761,11 @@ const json = `[
     },
     {
         "Id": 96,
-        "Name": "Kiełbasa wieprzowa z cielęciną",
+        "Name": "Pesto z bazylią Rana Biedronka",
         "CategoryId": 0,
-        "Protein": 21.0,
-        "Fat": 17.0,
-        "Carbohydrates": 0.4
+        "Protein": 5.0,
+        "Fat": 54.0,
+        "Carbohydrates": 12.0
     },
     {
         "Id": 97,
@@ -785,11 +785,11 @@ const json = `[
     },
     {
         "Id": 99,
-        "Name": "Parówki Sokoliki Sokołów",
+        "Name": "Pomidory pelati Cirio w puszce",
         "CategoryId": 0,
-        "Protein": 14.5,
-        "Fat": 13.0,
-        "Carbohydrates": 0.8
+        "Protein": 1.1,
+        "Fat": 0.2,
+        "Carbohydrates": 4.2
     },
     {
         "Id": 100,
@@ -825,7 +825,7 @@ const json = `[
     },
     {
         "Id": 104,
-        "Name": "Salai delikatesowe Biedronka",
+        "Name": "Salami delikatesowe Biedronka",
         "CategoryId": 0,
         "Protein": 19.0,
         "Fat": 30.0,
@@ -849,7 +849,7 @@ const json = `[
     },
     {
         "Id": 107,
-        "Name": "Stara wędzarnia parówki z cielęciną",
+        "Name": "Parówki z cielęciną Stara wędzarnia ",
         "CategoryId": 0,
         "Protein": 13.7,
         "Fat": 17.8,
@@ -881,10 +881,10 @@ const json = `[
     },
     {
         "Id": 111,
-        "Name": "Kabanosy francuskie",
+        "Name": "Kabanosy francuskie Gold Sokołów",
         "CategoryId": 0,
         "Protein": 26.0,
-        "Fat": 48.0,
+        "Fat": 50.0,
         "Carbohydrates": 1.0
     },
     {
@@ -897,7 +897,7 @@ const json = `[
     },
     {
         "Id": 113,
-        "Name": "Apetina serek kremowy",
+        "Name": "Serek kremowy Apetina ",
         "CategoryId": 0,
         "Protein": 7.8,
         "Fat": 16.0,
@@ -905,7 +905,7 @@ const json = `[
     },
     {
         "Id": 114,
-        "Name": "Feta Apetina Classic Arla",
+        "Name": "Ser Feta Apetina Classic Arla",
         "CategoryId": 0,
         "Protein": 13.0,
         "Fat": 17.0,
@@ -913,7 +913,7 @@ const json = `[
     },
     {
         "Id": 115,
-        "Name": "Feta Athos",
+        "Name": "Ser Feta Athos",
         "CategoryId": 0,
         "Protein": 16.0,
         "Fat": 24.2,
@@ -937,11 +937,11 @@ const json = `[
     },
     {
         "Id": 118,
-        "Name": "Milandia serek śmietankowy Piątnica",
+        "Name": "Serek śmietankowy w plastrach Milandia Piątnica",
         "CategoryId": 0,
-        "Protein": 6.0,
-        "Fat": 23.0,
-        "Carbohydrates": 3.0
+        "Protein": 10.0,
+        "Fat": 29.0,
+        "Carbohydrates": 5.0
     },
     {
         "Id": 119,
@@ -953,7 +953,7 @@ const json = `[
     },
     {
         "Id": 120,
-        "Name": "Mozarella Galbani w kawałku",
+        "Name": "Mozarellaw kawałku Galbani ",
         "CategoryId": 0,
         "Protein": 24.0,
         "Fat": 20.0,
@@ -969,7 +969,7 @@ const json = `[
     },
     {
         "Id": 122,
-        "Name": "Oscypek Mlekowita",
+        "Name": "Oscypek Mlekovita",
         "CategoryId": 0,
         "Protein": 25.0,
         "Fat": 18.5,
@@ -977,7 +977,7 @@ const json = `[
     },
     {
         "Id": 123,
-        "Name": "Oscypek ser Janosika milkeffekt",
+        "Name": "Oscypek ser Janosika Milkeffekt",
         "CategoryId": 0,
         "Protein": 29.0,
         "Fat": 25.0,
@@ -1017,7 +1017,7 @@ const json = `[
     },
     {
         "Id": 128,
-        "Name": "Ser gouda Mlekowita plastry",
+        "Name": "Ser Gouda plastry Mlekovita",
         "CategoryId": 0,
         "Protein": 25.0,
         "Fat": 26.0,
@@ -1073,7 +1073,7 @@ const json = `[
     },
     {
         "Id": 135,
-        "Name": "Ser, warkocze wędzone",
+        "Name": "Ser warkocze wędzone",
         "CategoryId": 0,
         "Protein": 28.0,
         "Fat": 29.0,
@@ -1105,7 +1105,7 @@ const json = `[
     },
     {
         "Id": 139,
-        "Name": "Serek śmietankowy Twój smak Piątnica",
+        "Name": "Serek śmietankowy puszysty Delikate Biedronka",
         "CategoryId": 0,
         "Protein": 6.0,
         "Fat": 23.0,
@@ -1129,15 +1129,15 @@ const json = `[
     },
     {
         "Id": 142,
-        "Name": "Twaróg sernikowy 18% 3,3w wiaderko Piątnica/Biedronka",
+        "Name": "Twaróg sernikowy 18% 3,2g W wiaderko Piątnica",
         "CategoryId": 0,
-        "Protein": 7.8,
+        "Protein": 8.0,
         "Fat": 18.0,
-        "Carbohydrates": 3.3
+        "Carbohydrates": 3.2
     },
     {
         "Id": 143,
-        "Name": "Twaróg sernikowy 18% Piątnica/Biedronka",
+        "Name": "Twaróg sernikowy 18% 2,6g W wiaderko Piątnica",
         "CategoryId": 0,
         "Protein": 8.0,
         "Fat": 18.0,
@@ -1177,7 +1177,7 @@ const json = `[
     },
     {
         "Id": 148,
-        "Name": "mleko kobiece",
+        "Name": "Mleko kobiece",
         "CategoryId": 0,
         "Protein": 1.3,
         "Fat": 4.3,
@@ -1185,7 +1185,7 @@ const json = `[
     },
     {
         "Id": 149,
-        "Name": "mleko 2%",
+        "Name": "Mleko 2%",
         "CategoryId": 0,
         "Protein": 3.3,
         "Fat": 2.0,
@@ -1193,7 +1193,7 @@ const json = `[
     },
     {
         "Id": 150,
-        "Name": "mleko owsiane Barista gluten free oats drink",
+        "Name": "Napój owsiany Barista gluten free oats drink",
         "CategoryId": 0,
         "Protein": 0.6,
         "Fat": 1.8,
@@ -1209,7 +1209,7 @@ const json = `[
     },
     {
         "Id": 152,
-        "Name": "mleko 3,2% mlekovita",
+        "Name": "Mleko 3,2% Mlekovita",
         "CategoryId": 0,
         "Protein": 3.0,
         "Fat": 3.2,
@@ -1217,7 +1217,7 @@ const json = `[
     },
     {
         "Id": 153,
-        "Name": "Mleko kokosowe Vitasia",
+        "Name": "Mleczko kokosowe Vitasia",
         "CategoryId": 0,
         "Protein": 2.2,
         "Fat": 21.0,
@@ -1225,15 +1225,15 @@ const json = `[
     },
     {
         "Id": 154,
-        "Name": "mleko jaglane",
+        "Name": "Mleko 2% bez laktozy Piątnica",
         "CategoryId": 0,
-        "Protein": 0.7,
-        "Fat": 1.1,
-        "Carbohydrates": 10.5
+        "Protein": 3.9,
+        "Fat": 2.0,
+        "Carbohydrates": 2.6
     },
     {
         "Id": 155,
-        "Name": "mleko kozie",
+        "Name": "Mleko kozie",
         "CategoryId": 0,
         "Protein": 25.0,
         "Fat": 33.0,
@@ -1241,23 +1241,23 @@ const json = `[
     },
     {
         "Id": 156,
-        "Name": "mleko owsiane",
+        "Name": "Keczup łagodny Heinz",
         "CategoryId": 0,
-        "Protein": 0.7,
-        "Fat": 0.8,
-        "Carbohydrates": 7.7
+        "Protein": 1.2,
+        "Fat": 0.1,
+        "Carbohydrates": 23.2
     },
     {
         "Id": 157,
-        "Name": "mleko sojowe Alpro",
+        "Name": "Napój sojowy oryginalny Alpro",
         "CategoryId": 0,
-        "Protein": 3.2,
+        "Protein": 3.0,
         "Fat": 1.8,
-        "Carbohydrates": 2.8
+        "Carbohydrates": 2.5
     },
     {
         "Id": 158,
-        "Name": "mleko sojowe Alpro Light  Fresh",
+        "Name": "Napój sojowy Alpro Light  Fresh",
         "CategoryId": 0,
         "Protein": 2.0,
         "Fat": 1.2,
@@ -1265,7 +1265,7 @@ const json = `[
     },
     {
         "Id": 159,
-        "Name": "mleko migdałowe Sante organic",
+        "Name": "Napój migdałowy Organic Sante",
         "CategoryId": 0,
         "Protein": 0.3,
         "Fat": 1.0,
@@ -1273,7 +1273,7 @@ const json = `[
     },
     {
         "Id": 160,
-        "Name": "bakoma jogurt bio jagoda",
+        "Name": "Jogurt bio jagoda Bakoma",
         "CategoryId": 0,
         "Protein": 3.4,
         "Fat": 2.5,
@@ -1281,7 +1281,7 @@ const json = `[
     },
     {
         "Id": 161,
-        "Name": "bakoma jogurt bio owoce lesne",
+        "Name": "Jogurt bio owoce leśne Bakoma",
         "CategoryId": 0,
         "Protein": 3.4,
         "Fat": 2.5,
@@ -1289,7 +1289,7 @@ const json = `[
     },
     {
         "Id": 162,
-        "Name": "bieluch",
+        "Name": "Serek naturalny Bieluch",
         "CategoryId": 0,
         "Protein": 8.6,
         "Fat": 8.5,
@@ -1297,23 +1297,23 @@ const json = `[
     },
     {
         "Id": 163,
-        "Name": "bio jogurt bakoma",
+        "Name": "Jogurt naturalny Bio Bakoma",
         "CategoryId": 0,
-        "Protein": 4.8,
+        "Protein": 4.5,
         "Fat": 2.0,
-        "Carbohydrates": 7.0
+        "Carbohydrates": 6.8
     },
     {
         "Id": 164,
-        "Name": "bio jogurt naturalny",
+        "Name": "Śmietana 22% Szefa Kuchni Danone",
         "CategoryId": 0,
-        "Protein": 5.0,
-        "Fat": 3.8,
-        "Carbohydrates": 4.7
+        "Protein": 2.8,
+        "Fat": 22.0,
+        "Carbohydrates": 3.2
     },
     {
         "Id": 165,
-        "Name": "danmis kozi ser",
+        "Name": "Ser kozi Danmis ",
         "CategoryId": 0,
         "Protein": 9.0,
         "Fat": 12.0,
@@ -1321,7 +1321,7 @@ const json = `[
     },
     {
         "Id": 166,
-        "Name": "danone jogurt",
+        "Name": "Jogurt naturalny łagodny Danone",
         "CategoryId": 0,
         "Protein": 4.6,
         "Fat": 3.0,
@@ -1329,15 +1329,15 @@ const json = `[
     },
     {
         "Id": 167,
-        "Name": "day up kokos",
+        "Name": "Jogurt Day up Yellow",
         "CategoryId": 0,
-        "Protein": 0.9,
-        "Fat": 4.9,
-        "Carbohydrates": 15.7
+        "Protein": 2.3,
+        "Fat": 2.8,
+        "Carbohydrates": 14.8
     },
     {
         "Id": 168,
-        "Name": "jogurt grecki pilos",
+        "Name": "Jogurt grecki Pilos Lidl",
         "CategoryId": 0,
         "Protein": 4.0,
         "Fat": 10.0,
@@ -1345,7 +1345,7 @@ const json = `[
     },
     {
         "Id": 169,
-        "Name": "jogurt kokosowy planton",
+        "Name": "Jogurt kokosowy Planton",
         "CategoryId": 0,
         "Protein": 0.9,
         "Fat": 7.1,
@@ -1353,7 +1353,7 @@ const json = `[
     },
     {
         "Id": 170,
-        "Name": "jogurt naturalny piatnica",
+        "Name": "Jogurt naturalny Piątnica",
         "CategoryId": 0,
         "Protein": 4.0,
         "Fat": 2.0,
@@ -1361,7 +1361,7 @@ const json = `[
     },
     {
         "Id": 171,
-        "Name": "jogurt naturalny zott",
+        "Name": "Jogurt naturalny Zott",
         "CategoryId": 0,
         "Protein": 4.8,
         "Fat": 3.1,
@@ -1369,7 +1369,7 @@ const json = `[
     },
     {
         "Id": 172,
-        "Name": "jogurt typu greckiego tolonnis",
+        "Name": "Jogurt naturalny typu greckiego 0% Tolonis Biedronka",
         "CategoryId": 0,
         "Protein": 10.0,
         "Fat": 0.0,
@@ -1377,7 +1377,7 @@ const json = `[
     },
     {
         "Id": 173,
-        "Name": "jogurt typu islandzkiego jagoda",
+        "Name": "Jogurt typu islandzkiego jagoda skyr FruVita Biedronka",
         "CategoryId": 0,
         "Protein": 9.6,
         "Fat": 0.0,
@@ -1385,11 +1385,11 @@ const json = `[
     },
     {
         "Id": 174,
-        "Name": "jogurt z plusem",
+        "Name": "Śliwka suszona BakaDor Biedronka",
         "CategoryId": 0,
-        "Protein": 9.0,
-        "Fat": 0.0,
-        "Carbohydrates": 5.2
+        "Protein": 3.3,
+        "Fat": 2.2,
+        "Carbohydrates": 59.0
     },
     {
         "Id": 175,
@@ -1401,7 +1401,7 @@ const json = `[
     },
     {
         "Id": 176,
-        "Name": "ser kozi pilos",
+        "Name": "ser kozi Pilos Lidl",
         "CategoryId": 0,
         "Protein": 16.0,
         "Fat": 19.0,
@@ -1409,15 +1409,15 @@ const json = `[
     },
     {
         "Id": 177,
-        "Name": "twaróg Piątnica tłusty",
+        "Name": "Rosół czysty",
         "CategoryId": 0,
-        "Protein": 15.0,
-        "Fat": 8.0,
-        "Carbohydrates": 3.7
+        "Protein": 0.5,
+        "Fat": 0.4,
+        "Carbohydrates": 0.37
     },
     {
         "Id": 178,
-        "Name": "twaróg półtlusty pilos",
+        "Name": "Twaróg półtłusty Pilos Lidl",
         "CategoryId": 0,
         "Protein": 16.0,
         "Fat": 4.0,
@@ -1425,7 +1425,7 @@ const json = `[
     },
     {
         "Id": 179,
-        "Name": "twaróg półtlusty wloszczowa",
+        "Name": "Twaróg półtłusty Włoszczowa",
         "CategoryId": 0,
         "Protein": 16.0,
         "Fat": 5.8,
@@ -1433,7 +1433,7 @@ const json = `[
     },
     {
         "Id": 180,
-        "Name": "twaróg tłusty milsani",
+        "Name": "Twaróg tłusty Milsani",
         "CategoryId": 0,
         "Protein": 17.0,
         "Fat": 8.0,
@@ -1441,15 +1441,15 @@ const json = `[
     },
     {
         "Id": 181,
-        "Name": "twaróg tłusty pilos",
+        "Name": "Guma guar Glutenex",
         "CategoryId": 0,
-        "Protein": 16.0,
-        "Fat": 8.0,
-        "Carbohydrates": 3.5
+        "Protein": 4.5,
+        "Fat": 0.6,
+        "Carbohydrates": 1.0
     },
     {
         "Id": 182,
-        "Name": "twaróg mlekpol tłusty",
+        "Name": "Twaróg  tłusty Mlekpol",
         "CategoryId": 0,
         "Protein": 16.0,
         "Fat": 8.0,
@@ -1457,15 +1457,15 @@ const json = `[
     },
     {
         "Id": 183,
-        "Name": "twaróg półtłusty ulubione",
+        "Name": "Twaróg półtłusty Ulubiony Polmlek",
         "CategoryId": 0,
-        "Protein": 19.0,
-        "Fat": 4.0,
-        "Carbohydrates": 3.7
+        "Protein": 17.0,
+        "Fat": 4.2,
+        "Carbohydrates": 3.4
     },
     {
         "Id": 184,
-        "Name": "Ulubiony twaróg tłusty",
+        "Name": "Twaróg tłusty Ulubiony",
         "CategoryId": 0,
         "Protein": 15.0,
         "Fat": 9.7,
@@ -1505,7 +1505,7 @@ const json = `[
     },
     {
         "Id": 189,
-        "Name": "Masło z migdałów prażonych Primavika",
+        "Name": "Masło migdałowe prażone Primavika",
         "CategoryId": 0,
         "Protein": 21.0,
         "Fat": 52.0,
@@ -1513,7 +1513,7 @@ const json = `[
     },
     {
         "Id": 190,
-        "Name": "Nasiona chia Melvit",
+        "Name": "Chia Melvit",
         "CategoryId": 0,
         "Protein": 21.0,
         "Fat": 31.0,
@@ -1521,7 +1521,7 @@ const json = `[
     },
     {
         "Id": 191,
-        "Name": "Nasiona chia Sante",
+        "Name": "Chia Sante",
         "CategoryId": 0,
         "Protein": 20.0,
         "Fat": 34.0,
@@ -1609,7 +1609,7 @@ const json = `[
     },
     {
         "Id": 202,
-        "Name": "chia",
+        "Name": "Chia",
         "CategoryId": 0,
         "Protein": 19.0,
         "Fat": 32.8,
@@ -1617,7 +1617,7 @@ const json = `[
     },
     {
         "Id": 203,
-        "Name": "czarnuszka",
+        "Name": "Czarnuszka",
         "CategoryId": 0,
         "Protein": 16.0,
         "Fat": 15.0,
@@ -1625,7 +1625,7 @@ const json = `[
     },
     {
         "Id": 204,
-        "Name": "masło z orzechów laskowych EkoGram the real hazelnut past",
+        "Name": "Masło z orzechów laskowych EkoGram the real hazelnut past",
         "CategoryId": 0,
         "Protein": 11.6,
         "Fat": 67.5,
@@ -1633,7 +1633,7 @@ const json = `[
     },
     {
         "Id": 205,
-        "Name": "masło z pekanów Purely Pecans",
+        "Name": "Masło z pekanów Purely Pecans",
         "CategoryId": 0,
         "Protein": 9.0,
         "Fat": 72.0,
@@ -1641,15 +1641,15 @@ const json = `[
     },
     {
         "Id": 206,
-        "Name": "Oliwki",
+        "Name": "Oliwki zielone bez pestek Eridanous Lidl",
         "CategoryId": 0,
-        "Protein": 1.5,
-        "Fat": 23.0,
+        "Protein": 1.2,
+        "Fat": 20.7,
         "Carbohydrates": 0.1
     },
     {
         "Id": 207,
-        "Name": "orzechy laskowe Sante",
+        "Name": "Orzechy laskowe Sante",
         "CategoryId": 0,
         "Protein": 14.0,
         "Fat": 61.0,
@@ -1657,7 +1657,7 @@ const json = `[
     },
     {
         "Id": 208,
-        "Name": "Orzechy Pecan Lidl",
+        "Name": "Orzechy pecan Lidl",
         "CategoryId": 0,
         "Protein": 10.1,
         "Fat": 72.1,
@@ -1665,7 +1665,7 @@ const json = `[
     },
     {
         "Id": 209,
-        "Name": "ostropest plamisty mielony",
+        "Name": "Ostropest plamisty mielony",
         "CategoryId": 0,
         "Protein": 34.0,
         "Fat": 11.0,
@@ -1725,7 +1725,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 0.74,
         "Fat": 0.33,
-        "Carbohydrates": 12.1
+        "Carbohydrates": 14.5
     },
     {
         "Id": 217,
@@ -1769,7 +1769,7 @@ const json = `[
     },
     {
         "Id": 222,
-        "Name": "Gerber Jabłko brzoskwinia",
+        "Name": "Gerber jabłko brzoskwinia",
         "CategoryId": 0,
         "Protein": 0.3,
         "Fat": 0.1,
@@ -1777,7 +1777,7 @@ const json = `[
     },
     {
         "Id": 223,
-        "Name": "Gerber Jabłko morela",
+        "Name": "Gerber jabłko morela",
         "CategoryId": 0,
         "Protein": 0.4,
         "Fat": 0.1,
@@ -2029,7 +2029,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.1,
         "Fat": 0.1,
-        "Carbohydrates": 3.80
+        "Carbohydrates": 3.8
     },
     {
         "Id": 255,
@@ -2037,7 +2037,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 2.1,
         "Fat": 0.5,
-        "Carbohydrates": 1.10
+        "Carbohydrates": 1.1
     },
     {
         "Id": 256,
@@ -2045,11 +2045,11 @@ const json = `[
         "CategoryId": 0,
         "Protein": 7.1,
         "Fat": 0.4,
-        "Carbohydrates": 8.20
+        "Carbohydrates": 8.2
     },
     {
         "Id": 257,
-        "Name": "brokuł gotowany w wodzie",
+        "Name": "Brokuły gotowane w wodzie",
         "CategoryId": 0,
         "Protein": 2.2,
         "Fat": 0.3,
@@ -2057,7 +2057,7 @@ const json = `[
     },
     {
         "Id": 258,
-        "Name": "Brokuł mrożony różyczki Chira Lidl",
+        "Name": "Brokuły mrożone różyczki Chira Lidl",
         "CategoryId": 0,
         "Protein": 2.7,
         "Fat": 0.1,
@@ -2069,7 +2069,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 3.0,
         "Fat": 0.4,
-        "Carbohydrates": 2.70
+        "Carbohydrates": 2.7
     },
     {
         "Id": 260,
@@ -2077,11 +2077,11 @@ const json = `[
         "CategoryId": 0,
         "Protein": 4.7,
         "Fat": 0.5,
-        "Carbohydrates": 3.30
+        "Carbohydrates": 3.3
     },
     {
         "Id": 261,
-        "Name": "brukselka gotowana w wodzie",
+        "Name": "Brukselka gotowana w wodzie",
         "CategoryId": 0,
         "Protein": 4.2,
         "Fat": 0.5,
@@ -2093,7 +2093,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.8,
         "Fat": 0.1,
-        "Carbohydrates": 7.30
+        "Carbohydrates": 7.3
     },
     {
         "Id": 263,
@@ -2105,7 +2105,7 @@ const json = `[
     },
     {
         "Id": 264,
-        "Name": "buraki gotowane w wodzie",
+        "Name": "Burak gotowany w wodzie",
         "CategoryId": 0,
         "Protein": 1.6,
         "Fat": 0.1,
@@ -2113,7 +2113,7 @@ const json = `[
     },
     {
         "Id": 265,
-        "Name": "Buraki Lidl gotowane ",
+        "Name": "Burak gotowany Lidl ",
         "CategoryId": 0,
         "Protein": 1.2,
         "Fat": 0.0,
@@ -2125,15 +2125,15 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.4,
         "Fat": 0.4,
-        "Carbohydrates": 5.20
+        "Carbohydrates": 5.2
     },
     {
         "Id": 267,
-        "Name": "Chrzan",
+        "Name": "Chrzan korzeń",
         "CategoryId": 0,
         "Protein": 4.5,
         "Fat": 0.6,
-        "Carbohydrates": 10.80
+        "Carbohydrates": 10.8
     },
     {
         "Id": 268,
@@ -2149,7 +2149,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.2,
         "Fat": 0.1,
-        "Carbohydrates": 2.20
+        "Carbohydrates": 2.2
     },
     {
         "Id": 270,
@@ -2157,7 +2157,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.7,
         "Fat": 0.2,
-        "Carbohydrates": 3.10
+        "Carbohydrates": 3.1
     },
     {
         "Id": 271,
@@ -2165,7 +2165,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 6.4,
         "Fat": 0.5,
-        "Carbohydrates": 28.50
+        "Carbohydrates": 28.5
     },
     {
         "Id": 272,
@@ -2173,7 +2173,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.3,
         "Fat": 0.3,
-        "Carbohydrates": 4.90
+        "Carbohydrates": 4.9
     },
     {
         "Id": 273,
@@ -2181,7 +2181,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 21.4,
         "Fat": 1.6,
-        "Carbohydrates": 45.90
+        "Carbohydrates": 45.9
     },
     {
         "Id": 274,
@@ -2189,19 +2189,19 @@ const json = `[
         "CategoryId": 0,
         "Protein": 3.0,
         "Fat": 0.4,
-        "Carbohydrates": 3.20
+        "Carbohydrates": 3.2
     },
     {
         "Id": 275,
-        "Name": "Fasola szparagowa",
+        "Name": "Fasolka szparagowa",
         "CategoryId": 0,
         "Protein": 2.4,
         "Fat": 0.2,
-        "Carbohydrates": 5.00
+        "Carbohydrates": 5.0
     },
     {
         "Id": 276,
-        "Name": "fasola szparagowa gotowana w wodzie",
+        "Name": "Fasolka szparagowa gotowana w wodzie",
         "CategoryId": 0,
         "Protein": 2.1,
         "Fat": 0.2,
@@ -2221,7 +2221,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 23.8,
         "Fat": 1.4,
-        "Carbohydrates": 45.20
+        "Carbohydrates": 45.2
     },
     {
         "Id": 279,
@@ -2229,7 +2229,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 6.7,
         "Fat": 0.4,
-        "Carbohydrates": 11.00
+        "Carbohydrates": 11.0
     },
     {
         "Id": 280,
@@ -2241,7 +2241,7 @@ const json = `[
     },
     {
         "Id": 281,
-        "Name": "groszek zielony gotowany w wodzie",
+        "Name": "Groszek zielony gotowany w wodzie",
         "CategoryId": 0,
         "Protein": 6.0,
         "Fat": 0.4,
@@ -2261,7 +2261,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 3.3,
         "Fat": 0.7,
-        "Carbohydrates": 2.30
+        "Carbohydrates": 2.3
     },
     {
         "Id": 284,
@@ -2269,11 +2269,11 @@ const json = `[
         "CategoryId": 0,
         "Protein": 2.4,
         "Fat": 0.2,
-        "Carbohydrates": 2.60
+        "Carbohydrates": 2.6
     },
     {
         "Id": 285,
-        "Name": "kalafior gotowany w wodzie",
+        "Name": "Kalafior gotowany w wodzie",
         "CategoryId": 0,
         "Protein": 1.8,
         "Fat": 0.1,
@@ -2285,7 +2285,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 2.2,
         "Fat": 0.3,
-        "Carbohydrates": 4.30
+        "Carbohydrates": 4.3
     },
     {
         "Id": 287,
@@ -2293,7 +2293,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.7,
         "Fat": 0.2,
-        "Carbohydrates": 4.90
+        "Carbohydrates": 4.9
     },
     {
         "Id": 288,
@@ -2301,7 +2301,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.9,
         "Fat": 0.2,
-        "Carbohydrates": 4.20
+        "Carbohydrates": 4.2
     },
     {
         "Id": 289,
@@ -2325,7 +2325,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.2,
         "Fat": 0.2,
-        "Carbohydrates": 1.30
+        "Carbohydrates": 1.3
     },
     {
         "Id": 292,
@@ -2333,7 +2333,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 3.3,
         "Fat": 0.4,
-        "Carbohydrates": 5.20
+        "Carbohydrates": 5.2
     },
     {
         "Id": 293,
@@ -2381,7 +2381,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 2.8,
         "Fat": 0.4,
-        "Carbohydrates": 2.80
+        "Carbohydrates": 2.8
     },
     {
         "Id": 299,
@@ -2397,7 +2397,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 3.7,
         "Fat": 1.5,
-        "Carbohydrates": 20.10
+        "Carbohydrates": 20.1
     },
     {
         "Id": 301,
@@ -2405,11 +2405,11 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.0,
         "Fat": 0.2,
-        "Carbohydrates": 5.10
+        "Carbohydrates": 5.1
     },
     {
         "Id": 302,
-        "Name": "marchew gotowana w wodzie",
+        "Name": "Marchew gotowana w wodzie",
         "CategoryId": 0,
         "Protein": 0.9,
         "Fat": 0.2,
@@ -2441,11 +2441,11 @@ const json = `[
     },
     {
         "Id": 306,
-        "Name": "Ogórek",
+        "Name": "Ogórek zielony",
         "CategoryId": 0,
         "Protein": 0.7,
         "Fat": 0.1,
-        "Carbohydrates": 2.40
+        "Carbohydrates": 2.4
     },
     {
         "Id": 307,
@@ -2477,7 +2477,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.3,
         "Fat": 0.5,
-        "Carbohydrates": 4.60
+        "Carbohydrates": 4.6
     },
     {
         "Id": 311,
@@ -2485,7 +2485,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.1,
         "Fat": 0.3,
-        "Carbohydrates": 2.60
+        "Carbohydrates": 2.6
     },
     {
         "Id": 312,
@@ -2501,7 +2501,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.6,
         "Fat": 0.6,
-        "Carbohydrates": 11.00
+        "Carbohydrates": 11.0
     },
     {
         "Id": 314,
@@ -2517,7 +2517,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 2.6,
         "Fat": 0.5,
-        "Carbohydrates": 6.30
+        "Carbohydrates": 6.3
     },
     {
         "Id": 316,
@@ -2525,7 +2525,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 4.4,
         "Fat": 0.4,
-        "Carbohydrates": 4.80
+        "Carbohydrates": 4.8
     },
     {
         "Id": 317,
@@ -2533,7 +2533,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 0.9,
         "Fat": 0.2,
-        "Carbohydrates": 2.90
+        "Carbohydrates": 2.9
     },
     {
         "Id": 318,
@@ -2557,7 +2557,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 2.2,
         "Fat": 0.3,
-        "Carbohydrates": 3.00
+        "Carbohydrates": 3.0
     },
     {
         "Id": 321,
@@ -2573,7 +2573,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 0.5,
         "Fat": 0.1,
-        "Carbohydrates": 1.40
+        "Carbohydrates": 1.4
     },
     {
         "Id": 323,
@@ -2589,7 +2589,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.1,
         "Fat": 0.3,
-        "Carbohydrates": 4.70
+        "Carbohydrates": 4.7
     },
     {
         "Id": 325,
@@ -2597,7 +2597,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.0,
         "Fat": 0.2,
-        "Carbohydrates": 1.90
+        "Carbohydrates": 1.9
     },
     {
         "Id": 326,
@@ -2605,7 +2605,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.4,
         "Fat": 0.2,
-        "Carbohydrates": 1.50
+        "Carbohydrates": 1.5
     },
     {
         "Id": 327,
@@ -2629,7 +2629,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.6,
         "Fat": 0.3,
-        "Carbohydrates": 2.80
+        "Carbohydrates": 2.8
     },
     {
         "Id": 330,
@@ -2637,7 +2637,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.0,
         "Fat": 0.2,
-        "Carbohydrates": 1.80
+        "Carbohydrates": 1.8
     },
     {
         "Id": 331,
@@ -2661,7 +2661,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 25.4,
         "Fat": 3.0,
-        "Carbohydrates": 48.60
+        "Carbohydrates": 48.6
     },
     {
         "Id": 334,
@@ -2669,7 +2669,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 9.0,
         "Fat": 0.6,
-        "Carbohydrates": 19.10
+        "Carbohydrates": 19.1
     },
     {
         "Id": 335,
@@ -2677,7 +2677,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 13.1,
         "Fat": 6.7,
-        "Carbohydrates": 7.00
+        "Carbohydrates": 7.0
     },
     {
         "Id": 336,
@@ -2685,7 +2685,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 34.3,
         "Fat": 19.6,
-        "Carbohydrates": 17.00
+        "Carbohydrates": 17.0
     },
     {
         "Id": 337,
@@ -2693,7 +2693,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.1,
         "Fat": 0.8,
-        "Carbohydrates": 2.30
+        "Carbohydrates": 2.3
     },
     {
         "Id": 338,
@@ -2701,7 +2701,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 4.1,
         "Fat": 0.8,
-        "Carbohydrates": 1.70
+        "Carbohydrates": 1.7
     },
     {
         "Id": 339,
@@ -2709,7 +2709,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.9,
         "Fat": 0.2,
-        "Carbohydrates": 2.20
+        "Carbohydrates": 2.2
     },
     {
         "Id": 340,
@@ -2717,11 +2717,11 @@ const json = `[
         "CategoryId": 0,
         "Protein": 2.6,
         "Fat": 0.4,
-        "Carbohydrates": 0.90
+        "Carbohydrates": 0.9
     },
     {
         "Id": 341,
-        "Name": "Zielony groszek, Bonduelle konserwa",
+        "Name": "Groszek zielony Bonduelle konserwa",
         "CategoryId": 0,
         "Protein": 6.0,
         "Fat": 1.0,
@@ -2729,7 +2729,7 @@ const json = `[
     },
     {
         "Id": 342,
-        "Name": "ziemniaki gotowane w wodzie",
+        "Name": "Ziemniaki gotowane w wodzie",
         "CategoryId": 0,
         "Protein": 1.8,
         "Fat": 0.1,
@@ -2741,7 +2741,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.9,
         "Fat": 0.1,
-        "Carbohydrates": 18.90
+        "Carbohydrates": 18.9
     },
     {
         "Id": 344,
@@ -2749,7 +2749,7 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.9,
         "Fat": 0.1,
-        "Carbohydrates": 16.80
+        "Carbohydrates": 16.8
     },
     {
         "Id": 345,
@@ -2757,19 +2757,19 @@ const json = `[
         "CategoryId": 0,
         "Protein": 1.8,
         "Fat": 0.1,
-        "Carbohydrates": 15.00
+        "Carbohydrates": 15.0
     },
     {
         "Id": 346,
-        "Name": "rabarbar",
+        "Name": "Oliwki zielone z migdałami Elios Biedronka",
         "CategoryId": 0,
-        "Protein": 0.9,
-        "Fat": 0.2,
-        "Carbohydrates": 4.5
+        "Protein": 3.6,
+        "Fat": 21.0,
+        "Carbohydrates": 1.0
     },
     {
         "Id": 347,
-        "Name": "przecier pomidorowy Sottile Gusto Biedronka",
+        "Name": "Przecier pomidorowy Sottile Gusto Biedronka",
         "CategoryId": 0,
         "Protein": 1.6,
         "Fat": 0.5,
@@ -2777,15 +2777,15 @@ const json = `[
     },
     {
         "Id": 348,
-        "Name": "koncentrat pomidorowy Pudliszki",
+        "Name": "Koncentrat pomidorowy Pudliszki",
         "CategoryId": 0,
-        "Protein": 5.6,
-        "Fat": 1.5,
-        "Carbohydrates": 16.7
+        "Protein": 4.7,
+        "Fat": 0.2,
+        "Carbohydrates": 19.0
     },
     {
         "Id": 349,
-        "Name": "passata pomidorowa Dawtona",
+        "Name": "Passata pomidorowa Dawtona",
         "CategoryId": 0,
         "Protein": 1.3,
         "Fat": 0.0,
@@ -2793,7 +2793,7 @@ const json = `[
     },
     {
         "Id": 350,
-        "Name": "Chleb Pro Body Putka 5,5w",
+        "Name": "Chleb Pro Body Putka 5,5g W",
         "CategoryId": 0,
         "Protein": 25.0,
         "Fat": 18.4,
@@ -2801,7 +2801,7 @@ const json = `[
     },
     {
         "Id": 351,
-        "Name": "Chleb Pro Body Putka 6,1w",
+        "Name": "Chleb Pro Body Putka 6,1g W",
         "CategoryId": 0,
         "Protein": 21.4,
         "Fat": 16.8,
@@ -2836,8 +2836,8 @@ const json = `[
         "Name": "Makaron ugotowany Pastani pełnoziarnisty fusilli Biedronka",
         "CategoryId": 0,
         "Protein": 7.1,
-        "Fat": 1.7,
-        "Carbohydrates": 25.0
+        "Fat": 1.4,
+        "Carbohydrates": 26.0
     },
     {
         "Id": 356,
@@ -2865,7 +2865,7 @@ const json = `[
     },
     {
         "Id": 359,
-        "Name": "Mąka kokosowa odtłuszczona-Efavit",
+        "Name": "Mąka kokosowa odtłuszczona Efavit",
         "CategoryId": 0,
         "Protein": 11.0,
         "Fat": 24.0,
@@ -2873,7 +2873,7 @@ const json = `[
     },
     {
         "Id": 360,
-        "Name": "Mąka kokosowa-Bio planet",
+        "Name": "Mąka kokosowa Bio Planet ",
         "CategoryId": 0,
         "Protein": 5.0,
         "Fat": 45.0,
@@ -2921,11 +2921,11 @@ const json = `[
     },
     {
         "Id": 366,
-        "Name": "Amarantus",
+        "Name": "Amarantus ugotowany",
         "CategoryId": 0,
-        "Protein": 8.8,
-        "Fat": 4.3,
-        "Carbohydrates": 70.0
+        "Protein": 6.8,
+        "Fat": 3.2,
+        "Carbohydrates": 25.5
     },
     {
         "Id": 367,
@@ -2953,7 +2953,7 @@ const json = `[
     },
     {
         "Id": 370,
-        "Name": "Masło klarowane Mlekowita",
+        "Name": "Masło klarowane Mlekovita",
         "CategoryId": 0,
         "Protein": 0.1,
         "Fat": 99.8,
@@ -2993,15 +2993,15 @@ const json = `[
     },
     {
         "Id": 375,
-        "Name": "Śmietana 36% Piątnica",
+        "Name": "Serek wiejski wysokobiałkowy Piątnica",
         "CategoryId": 0,
-        "Protein": 1.7,
-        "Fat": 36.0,
-        "Carbohydrates": 4.1
+        "Protein": 14.0,
+        "Fat": 3.0,
+        "Carbohydrates": 2.4
     },
     {
         "Id": 376,
-        "Name": "Śmietana President 30%",
+        "Name": "Śmietana 30% President ",
         "CategoryId": 0,
         "Protein": 2.2,
         "Fat": 30.0,
@@ -3017,7 +3017,7 @@ const json = `[
     },
     {
         "Id": 378,
-        "Name": "śmietana kokosowa planton",
+        "Name": "Śmietana kokosowa Planton",
         "CategoryId": 0,
         "Protein": 1.0,
         "Fat": 15.0,
@@ -3041,7 +3041,7 @@ const json = `[
     },
     {
         "Id": 381,
-        "Name": "kasza gryczana niepalona",
+        "Name": "Kasza gryczana niepalona",
         "CategoryId": 0,
         "Protein": 6.2,
         "Fat": 3.1,
@@ -3049,7 +3049,7 @@ const json = `[
     },
     {
         "Id": 382,
-        "Name": "kasza kuskus po ugotowaniu",
+        "Name": "Kasza kuskus po ugotowaniu",
         "CategoryId": 0,
         "Protein": 4.0,
         "Fat": 0.6,
@@ -3057,27 +3057,27 @@ const json = `[
     },
     {
         "Id": 383,
-        "Name": "kaszka bio jg z amarantusem",
+        "Name": "Mąka migdałowa Eureko",
         "CategoryId": 0,
-        "Protein": 13.0,
-        "Fat": 4.1,
-        "Carbohydrates": 65.0
+        "Protein": 22.0,
+        "Fat": 54.0,
+        "Carbohydrates": 5.4
     },
     {
         "Id": 384,
-        "Name": "kaszka czary mamy",
+        "Name": "Migdały w płatkach Tablier Blanc Leclerc",
         "CategoryId": 0,
-        "Protein": 12.98,
-        "Fat": 4.11,
-        "Carbohydrates": 65.11
+        "Protein": 27.0,
+        "Fat": 55.0,
+        "Carbohydrates": 3.3
     },
     {
         "Id": 385,
-        "Name": "kaszka gryczana",
+        "Name": "Mozarella mini latteo OSM Grodzisk Mazowiecki",
         "CategoryId": 0,
-        "Protein": 14.0,
-        "Fat": 2.6,
-        "Carbohydrates": 70.0
+        "Protein": 19.0,
+        "Fat": 17.0,
+        "Carbohydrates": 0.5
     },
     {
         "Id": 386,
@@ -3105,15 +3105,15 @@ const json = `[
     },
     {
         "Id": 389,
-        "Name": "Czekolada gorzka Balance Rossmann",
+        "Name": "Czekolada gorzka 95% Ekwador JD Gross",
         "CategoryId": 0,
-        "Protein": 5.7,
-        "Fat": 36.8,
-        "Carbohydrates": 14.0
+        "Protein": 12.5,
+        "Fat": 51.1,
+        "Carbohydrates": 12.7
     },
     {
         "Id": 390,
-        "Name": "Czekolada Wawel 90%",
+        "Name": "Czekolada gorzka 90%  Wawel",
         "CategoryId": 0,
         "Protein": 15.0,
         "Fat": 44.0,
@@ -3121,7 +3121,7 @@ const json = `[
     },
     {
         "Id": 391,
-        "Name": "Czkolada gorzka 95% Biedronka",
+        "Name": "Czekolada gorzka 95% Biedronka",
         "CategoryId": 0,
         "Protein": 12.0,
         "Fat": 51.0,
@@ -3129,7 +3129,7 @@ const json = `[
     },
     {
         "Id": 392,
-        "Name": "Galaretka bez cukru Celiko cytryna, sucha ",
+        "Name": "Galaretka bez cukru cytryna Celiko, sucha ",
         "CategoryId": 0,
         "Protein": 76.0,
         "Fat": 0.0,
@@ -3169,7 +3169,7 @@ const json = `[
     },
     {
         "Id": 397,
-        "Name": "Seed and berry granola",
+        "Name": "Seed and berry granola Keto",
         "CategoryId": 0,
         "Protein": 18.9,
         "Fat": 30.7,
@@ -3177,7 +3177,7 @@ const json = `[
     },
     {
         "Id": 398,
-        "Name": "Seed and nut granola",
+        "Name": "Seed and nut granola Keto",
         "CategoryId": 0,
         "Protein": 19.4,
         "Fat": 38.4,
@@ -3193,7 +3193,7 @@ const json = `[
     },
     {
         "Id": 400,
-        "Name": "Galaretka bez cukru Celiko truskawka, sucha ",
+        "Name": "Galaretka bez cukru truskawka Celiko, sucha ",
         "CategoryId": 0,
         "Protein": 76.0,
         "Fat": 0.0,
@@ -3217,7 +3217,7 @@ const json = `[
     },
     {
         "Id": 403,
-        "Name": "Bobovita bukiet jarzyn z kurczakiem",
+        "Name": "Bobovita bukiet warzyw z kurczakiem 10g W",
         "CategoryId": 0,
         "Protein": 2.5,
         "Fat": 2.0,
@@ -3265,11 +3265,11 @@ const json = `[
     },
     {
         "Id": 409,
-        "Name": "Bobovita Porcja zbóż delikatna owsianka",
+        "Name": "Bobovita porcja zbóż bezmleczna owsianka z ryżem",
         "CategoryId": 0,
-        "Protein": 15.0,
-        "Fat": 6.9,
-        "Carbohydrates": 66.0
+        "Protein": 12.1,
+        "Fat": 4.3,
+        "Carbohydrates": 76.8
     },
     {
         "Id": 410,
@@ -3289,11 +3289,11 @@ const json = `[
     },
     {
         "Id": 412,
-        "Name": "Gerber delikatny kurczak",
+        "Name": "Migdały łuskane BakaDor Biedronka",
         "CategoryId": 0,
-        "Protein": 9.3,
-        "Fat": 2.5,
-        "Carbohydrates": 3.8
+        "Protein": 20.0,
+        "Fat": 52.0,
+        "Carbohydrates": 7.6
     },
     {
         "Id": 413,
@@ -3361,7 +3361,7 @@ const json = `[
     },
     {
         "Id": 421,
-        "Name": "Bobovita jablkko z awokado i zielonymi warzywami",
+        "Name": "Bobovita jabłko z awokado i zielonymi warzywami",
         "CategoryId": 0,
         "Protein": 1.2,
         "Fat": 2.0,
@@ -3377,7 +3377,7 @@ const json = `[
     },
     {
         "Id": 423,
-        "Name": "Bobovita Bio bezmleczna kaszka wielozboózwa pełnoziarnista ",
+        "Name": "Bobovita Bio bezmleczna kaszka wielozbożowa pełnoziarnista ",
         "CategoryId": 0,
         "Protein": 12.3,
         "Fat": 2.5,
@@ -3409,7 +3409,7 @@ const json = `[
     },
     {
         "Id": 427,
-        "Name": "Babydream danie miesne z wolowina",
+        "Name": "Babydream danie mięsne z wołowiną",
         "CategoryId": 0,
         "Protein": 7.3,
         "Fat": 5.3,
@@ -3449,7 +3449,7 @@ const json = `[
     },
     {
         "Id": 432,
-        "Name": "Przecier Pudliszki",
+        "Name": "Przecier pomidorowy Pudliszki",
         "CategoryId": 0,
         "Protein": 1.5,
         "Fat": 0.0,
@@ -3465,7 +3465,7 @@ const json = `[
     },
     {
         "Id": 434,
-        "Name": "mąka keto cusine",
+        "Name": "Mąka Keto Cusine",
         "CategoryId": 0,
         "Protein": 4.4,
         "Fat": 73.0,
@@ -3473,7 +3473,7 @@ const json = `[
     },
     {
         "Id": 435,
-        "Name": "Gamberi makaron",
+        "Name": "Makaron Le Gamberi ",
         "CategoryId": 0,
         "Protein": 34.8,
         "Fat": 5.0,
@@ -3481,15 +3481,15 @@ const json = `[
     },
     {
         "Id": 436,
-        "Name": "gamberi croissant",
+        "Name": "Croissant Le Gamberi ",
         "CategoryId": 0,
         "Protein": 13.0,
-        "Fat": 31.0,
+        "Fat": 31.2,
         "Carbohydrates": 2.6
     },
     {
         "Id": 437,
-        "Name": "Gamberi bułka tarta",
+        "Name": "Bułka tarta Le Gamberi ",
         "CategoryId": 0,
         "Protein": 10.0,
         "Fat": 23.0,
@@ -3497,7 +3497,7 @@ const json = `[
     },
     {
         "Id": 438,
-        "Name": "Gamberi fetta",
+        "Name": "Fetta Le Gamberi ",
         "CategoryId": 0,
         "Protein": 14.0,
         "Fat": 34.0,
@@ -3505,15 +3505,15 @@ const json = `[
     },
     {
         "Id": 439,
-        "Name": "gamberi panino",
+        "Name": "Panino Le Gamberi ",
         "CategoryId": 0,
         "Protein": 11.0,
-        "Fat": 28.0,
-        "Carbohydrates": 3.0
+        "Fat": 27.9,
+        "Carbohydrates": 2.95
     },
     {
         "Id": 440,
-        "Name": "Gamberi piadina",
+        "Name": "Piadina Le Gamberi ",
         "CategoryId": 0,
         "Protein": 10.0,
         "Fat": 26.0,
@@ -3521,15 +3521,15 @@ const json = `[
     },
     {
         "Id": 441,
-        "Name": "ser duński",
+        "Name": "Mozarella w zalewie Sottile Gusto Biedronka",
         "CategoryId": 0,
-        "Protein": 19.0,
-        "Fat": 38.0,
-        "Carbohydrates": 0.0
+        "Protein": 17.0,
+        "Fat": 18.0,
+        "Carbohydrates": 2.0
     },
     {
         "Id": 442,
-        "Name": "18%  śmietana Piątnica",
+        "Name": "Śmietana 18% Piątnica",
         "CategoryId": 0,
         "Protein": 2.7,
         "Fat": 18.0,
@@ -3537,7 +3537,7 @@ const json = `[
     },
     {
         "Id": 443,
-        "Name": "18% Jogo śmietana",
+        "Name": "Śmietana 18% Jogo ",
         "CategoryId": 0,
         "Protein": 2.6,
         "Fat": 18.0,
@@ -3545,7 +3545,7 @@ const json = `[
     },
     {
         "Id": 444,
-        "Name": "18% Śmietana mlekovita",
+        "Name": "Śmietana 18% Mlekovita",
         "CategoryId": 0,
         "Protein": 2.4,
         "Fat": 18.0,
@@ -3553,7 +3553,7 @@ const json = `[
     },
     {
         "Id": 445,
-        "Name": "finnu",
+        "Name": "Finuu klasyczne Miks tłuszczowy 75% ",
         "CategoryId": 0,
         "Protein": 0.8,
         "Fat": 75.0,
@@ -3561,7 +3561,7 @@ const json = `[
     },
     {
         "Id": 446,
-        "Name": "majonez kielecki",
+        "Name": "Majonez kielecki",
         "CategoryId": 0,
         "Protein": 1.9,
         "Fat": 68.0,
@@ -3569,7 +3569,7 @@ const json = `[
     },
     {
         "Id": 447,
-        "Name": "masło łaciate",
+        "Name": "Masło Łaciate",
         "CategoryId": 0,
         "Protein": 0.6,
         "Fat": 83.0,
@@ -3577,7 +3577,7 @@ const json = `[
     },
     {
         "Id": 448,
-        "Name": "masło mlekovita",
+        "Name": "Masło Mlekovita",
         "CategoryId": 0,
         "Protein": 1.0,
         "Fat": 82.0,
@@ -3585,7 +3585,7 @@ const json = `[
     },
     {
         "Id": 449,
-        "Name": "masło tesco bez laktozy",
+        "Name": "Masło bez laktozy Tesco ",
         "CategoryId": 0,
         "Protein": 0.7,
         "Fat": 83.0,
@@ -3593,7 +3593,7 @@ const json = `[
     },
     {
         "Id": 450,
-        "Name": "masło ulubione",
+        "Name": "Masło Ulubione",
         "CategoryId": 0,
         "Protein": 0.7,
         "Fat": 82.0,
@@ -3601,11 +3601,11 @@ const json = `[
     },
     {
         "Id": 451,
-        "Name": "Masło extra 82% ",
+        "Name": "Pesto zielone Alla Genovese GustoBello Biedornka",
         "CategoryId": 0,
-        "Protein": 1.0,
-        "Fat": 82.0,
-        "Carbohydrates": 1.0
+        "Protein": 4.7,
+        "Fat": 39.0,
+        "Carbohydrates": 7.6
     },
     {
         "Id": 452,
@@ -3625,7 +3625,7 @@ const json = `[
     },
     {
         "Id": 454,
-        "Name": "smalec gęsi",
+        "Name": "Smalec gęsi",
         "CategoryId": 0,
         "Protein": 0.0,
         "Fat": 100.0,
@@ -3633,7 +3633,7 @@ const json = `[
     },
     {
         "Id": 455,
-        "Name": "Śmietana 18 pilos",
+        "Name": "Śmietana 18% Pilos Lidl",
         "CategoryId": 0,
         "Protein": 2.4,
         "Fat": 18.0,
@@ -3641,7 +3641,7 @@ const json = `[
     },
     {
         "Id": 456,
-        "Name": "ŚMIETANA 18% MILSA",
+        "Name": "Śmietana 18% Milsa",
         "CategoryId": 0,
         "Protein": 2.6,
         "Fat": 18.0,
@@ -3649,7 +3649,7 @@ const json = `[
     },
     {
         "Id": 457,
-        "Name": "Śmietana 18% zott",
+        "Name": "Śmietana 18% Zott",
         "CategoryId": 0,
         "Protein": 2.6,
         "Fat": 18.0,
@@ -3657,7 +3657,7 @@ const json = `[
     },
     {
         "Id": 458,
-        "Name": "smalec wieprzowy",
+        "Name": "Smalec wieprzowy",
         "CategoryId": 0,
         "Protein": 0.0,
         "Fat": 99.5,
@@ -3665,7 +3665,7 @@ const json = `[
     },
     {
         "Id": 459,
-        "Name": "Śmietanka łowicka 36%",
+        "Name": "Śmietanka 36% tortowa UHT Łowicz",
         "CategoryId": 0,
         "Protein": 2.0,
         "Fat": 36.0,
@@ -3681,43 +3681,43 @@ const json = `[
     },
     {
         "Id": 461,
-        "Name": "KetoClassic 3:1 Bar",
+        "Name": "Tagliatelle Le Gamberi",
         "CategoryId": 0,
-        "Protein": 10.8,
-        "Fat": 43.6,
-        "Carbohydrates": 3.3
+        "Protein": 34.8,
+        "Fat": 5.0,
+        "Carbohydrates": 1.8
     },
     {
         "Id": 462,
-        "Name": "Proszek do pieczenia Delecta",
+        "Name": "Mleczko kokosowe Aroy-D puszka",
         "CategoryId": 0,
-        "Protein": 1.4,
-        "Fat": 0.2,
-        "Carbohydrates": 11.0
+        "Protein": 1.6,
+        "Fat": 19.0,
+        "Carbohydrates": 2.0
     },
     {
         "Id": 463,
-        "Name": "Seed and berry granola Keto",
+        "Name": "Tahini premium House of Orient",
         "CategoryId": 0,
-        "Protein": 18.9,
-        "Fat": 30.7,
-        "Carbohydrates": 8.3
+        "Protein": 20.0,
+        "Fat": 60.0,
+        "Carbohydrates": 13.0
     },
     {
         "Id": 464,
-        "Name": "Seed and nut granola Keto",
+        "Name": "Jogurt typu greckiego 2% tł. Tolonis Biedronka",
         "CategoryId": 0,
-        "Protein": 19.4,
-        "Fat": 38.4,
-        "Carbohydrates": 5.4
+        "Protein": 9.0,
+        "Fat": 2.0,
+        "Carbohydrates": 4.0
     },
     {
         "Id": 465,
-        "Name": "Żelatyna spożywcza Delecta",
+        "Name": "Twarożek domowy grani Piątnica",
         "CategoryId": 0,
-        "Protein": 87.0,
-        "Fat": 0.02,
-        "Carbohydrates": 0.0
+        "Protein": 11.0,
+        "Fat": 4.0,
+        "Carbohydrates": 2.4
     },
     {
         "Id": 466,
@@ -3737,7 +3737,7 @@ const json = `[
     },
     {
         "Id": 468,
-        "Name": "Keczup z catering IMID",
+        "Name": "Keczup z cateringu IMID",
         "CategoryId": 0,
         "Protein": 0.0,
         "Fat": 0.0,
@@ -3745,10 +3745,10 @@ const json = `[
     },
     {
         "Id": 469,
-        "Name": "Keczup Madero",
+        "Name": "Keczup Madero Biedronka",
         "CategoryId": 0,
         "Protein": 1.7,
-        "Fat": 0.3,
+        "Fat": 0.2,
         "Carbohydrates": 22.0
     },
     {
@@ -3761,7 +3761,7 @@ const json = `[
     },
     {
         "Id": 471,
-        "Name": "Mus Kubuś ban jab",
+        "Name": "Mus Kubuś banan jabłko",
         "CategoryId": 0,
         "Protein": 0.7,
         "Fat": 0.3,
@@ -3769,7 +3769,7 @@ const json = `[
     },
     {
         "Id": 472,
-        "Name": "Almette z ziołami",
+        "Name": "Serek twarogowy puszysty z ziołami Almette ",
         "CategoryId": 0,
         "Protein": 6.1,
         "Fat": 25.0,
@@ -3777,7 +3777,7 @@ const json = `[
     },
     {
         "Id": 473,
-        "Name": "Almette śmietankowy",
+        "Name": "Serek twarogowy puszysty śmietankowy Almette ",
         "CategoryId": 0,
         "Protein": 6.7,
         "Fat": 24.0,
@@ -3785,11 +3785,11 @@ const json = `[
     },
     {
         "Id": 474,
-        "Name": "Parówki Tarczyński naturalnie",
+        "Name": "Parówki 100% z szynki Tarczyński naturalnie",
         "CategoryId": 0,
-        "Protein": 17.0,
-        "Fat": 16.0,
-        "Carbohydrates": 0.2
+        "Protein": 14.0,
+        "Fat": 27.0,
+        "Carbohydrates": 0.5
     },
     {
         "Id": 475,
@@ -3801,23 +3801,2283 @@ const json = `[
     },
     {
         "Id": 476,
-        "Name": "Kleik ryżowy Bobovita ",
+        "Name": "Boczek surowy wędzony w plastrach Pikok Lidl",
         "CategoryId": 0,
-        "Protein": 7.6,
-        "Fat": 1.0,
-        "Carbohydrates": 85.0
+        "Protein": 16.0,
+        "Fat": 26.0,
+        "Carbohydrates": 0.1
     },
     {
         "Id": 477,
-        "Name": "Kaszka mleczno ryżowa wanilia Bobovita",
+        "Name": "Bobovita kaszka mleczno ryżowa wanilia ",
         "CategoryId": 0,
         "Protein": 13.0,
         "Fat": 11.0,
         "Carbohydrates": 69.0
+    },
+    {
+        "Id": 478,
+        "Name": "Babka jajowata łupina Intenson",
+        "CategoryId": 0,
+        "Protein": 1.1,
+        "Fat": 0.2,
+        "Carbohydrates": 0.9
+    },
+    {
+        "Id": 479,
+        "Name": "Focaccina Olio Le Gamberi",
+        "CategoryId": 0,
+        "Protein": 30.0,
+        "Fat": 27.9,
+        "Carbohydrates": 2.95
+    },
+    {
+        "Id": 480,
+        "Name": "Mąka kokosowa Look Food",
+        "CategoryId": 0,
+        "Protein": 19.0,
+        "Fat": 8.5,
+        "Carbohydrates": 26.0
+    },
+    {
+        "Id": 481,
+        "Name": "Mąka pszenna Basia typ 405 GoodMills",
+        "CategoryId": 0,
+        "Protein": 10.0,
+        "Fat": 1.0,
+        "Carbohydrates": 71.7
+    },
+    {
+        "Id": 482,
+        "Name": "Czekolada gorzka 70% Lindt",
+        "CategoryId": 0,
+        "Protein": 9.5,
+        "Fat": 41.0,
+        "Carbohydrates": 34.0
+    },
+    {
+        "Id": 483,
+        "Name": "Szynka z fileta indyka Piratki Pikok Lidl",
+        "CategoryId": 0,
+        "Protein": 20.7,
+        "Fat": 5.4,
+        "Carbohydrates": 1.7
+    },
+    {
+        "Id": 484,
+        "Name": "Kabanoski z kurczaka z indykiem Gryzzale Tarczyński",
+        "CategoryId": 0,
+        "Protein": 24.0,
+        "Fat": 21.0,
+        "Carbohydrates": 5.8
+    },
+    {
+        "Id": 485,
+        "Name": "Jogurt Protein 0% tł. Truskawka czerwona porzeczka Pilos Lidl",
+        "CategoryId": 0,
+        "Protein": 6.6,
+        "Fat": 0.0,
+        "Carbohydrates": 17.0
+    },
+    {
+        "Id": 486,
+        "Name": "Kostka rosołowa warzywna Enerbio Rossmann",
+        "CategoryId": 0,
+        "Protein": 5.0,
+        "Fat": 15.0,
+        "Carbohydrates": 12.5
+    },
+    {
+        "Id": 487,
+        "Name": "Truskawka liofil. łyżka smaku Czary Mamy",
+        "CategoryId": 0,
+        "Protein": 7.2,
+        "Fat": 3.1,
+        "Carbohydrates": 59.0
+    },
+    {
+        "Id": 488,
+        "Name": "Koncentrat pomidorowy 30% Łowicz",
+        "CategoryId": 0,
+        "Protein": 5.6,
+        "Fat": 1.5,
+        "Carbohydrates": 14.0
+    },
+    {
+        "Id": 489,
+        "Name": "Kakao Bio Organic Cocoa 60% Bellarom Lidl",
+        "CategoryId": 0,
+        "Protein": 13.4,
+        "Fat": 12.6,
+        "Carbohydrates": 46.9
+    },
+    {
+        "Id": 490,
+        "Name": "Kakao Bio Organic Cocoa 44% Bellarom Lidl",
+        "CategoryId": 0,
+        "Protein": 9.9,
+        "Fat": 9.3,
+        "Carbohydrates": 60.5
+    },
+    {
+        "Id": 491,
+        "Name": "Dżem truskawka 100% Łowicz",
+        "CategoryId": 0,
+        "Protein": 0.7,
+        "Fat": 0.2,
+        "Carbohydrates": 33.0
+    },
+    {
+        "Id": 492,
+        "Name": "Czekolada gorzka 90% Lindt",
+        "CategoryId": 0,
+        "Protein": 10.0,
+        "Fat": 55.0,
+        "Carbohydrates": 14.0
+    },
+    {
+        "Id": 493,
+        "Name": "Pomidory krojone bez skórki Łowicz",
+        "CategoryId": 0,
+        "Protein": 1.1,
+        "Fat": 0.0,
+        "Carbohydrates": 3.0
+    },
+    {
+        "Id": 494,
+        "Name": "Keto kajzerka Kiełtyka",
+        "CategoryId": 0,
+        "Protein": 9.0,
+        "Fat": 6.0,
+        "Carbohydrates": 5.0
+    },
+    {
+        "Id": 495,
+        "Name": "Czekolada mleczna ze stewią niebieska Pure good Mercatare",
+        "CategoryId": 0,
+        "Protein": 12.0,
+        "Fat": 41.0,
+        "Carbohydrates": 15.0
+    },
+    {
+        "Id": 496,
+        "Name": "Napój migdałowy Almond Barista Alpro",
+        "CategoryId": 0,
+        "Protein": 0.5,
+        "Fat": 1.2,
+        "Carbohydrates": 2.6
+    },
+    {
+        "Id": 497,
+        "Name": "Oliwki czarne drylowane Figaro",
+        "CategoryId": 0,
+        "Protein": 0.5,
+        "Fat": 14.6,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 498,
+        "Name": "Mąka kokosowa Bio Bio Planet 57 g W z błonnikiem",
+        "CategoryId": 0,
+        "Protein": 18.0,
+        "Fat": 12.0,
+        "Carbohydrates": 19.0
+    },
+    {
+        "Id": 499,
+        "Name": "Kakao DecoMorreno",
+        "CategoryId": 0,
+        "Protein": 24.0,
+        "Fat": 11.0,
+        "Carbohydrates": 13.0
+    },
+    {
+        "Id": 500,
+        "Name": "Mąka kokosowa bezglutenowa Eko Młyn Niedźwiady",
+        "CategoryId": 0,
+        "Protein": 20.0,
+        "Fat": 10.0,
+        "Carbohydrates": 18.0
+    },
+    {
+        "Id": 501,
+        "Name": "Babka jajowata łupina Witpak",
+        "CategoryId": 0,
+        "Protein": 6.0,
+        "Fat": 1.5,
+        "Carbohydrates": 8.0
+    },
+    {
+        "Id": 502,
+        "Name": "Śmietanka 36% tortowa Rolmecz",
+        "CategoryId": 0,
+        "Protein": 2.0,
+        "Fat": 36.0,
+        "Carbohydrates": 2.9
+    },
+    {
+        "Id": 503,
+        "Name": "Mąka migdałowa Ekologiczna Eko-Wital",
+        "CategoryId": 0,
+        "Protein": 22.0,
+        "Fat": 54.0,
+        "Carbohydrates": 5.4
+    },
+    {
+        "Id": 504,
+        "Name": "Kiełbasa wiejska z cielęciną Spiżarnia Smaków Piotr i Paweł",
+        "CategoryId": 0,
+        "Protein": 21.0,
+        "Fat": 17.0,
+        "Carbohydrates": 0.1
+    },
+    {
+        "Id": 505,
+        "Name": "Szynka Juranda Spiżarnia",
+        "CategoryId": 0,
+        "Protein": 23.0,
+        "Fat": 3.2,
+        "Carbohydrates": 0.7
+    },
+    {
+        "Id": 506,
+        "Name": "Parówki Delikatesowe Krawczyk",
+        "CategoryId": 0,
+        "Protein": 13.0,
+        "Fat": 24.0,
+        "Carbohydrates": 1.9
+    },
+    {
+        "Id": 507,
+        "Name": "Szynka z Mleczkowa Krawczyk",
+        "CategoryId": 0,
+        "Protein": 21.0,
+        "Fat": 2.1,
+        "Carbohydrates": 1.0
+    },
+    {
+        "Id": 508,
+        "Name": "Salami rogal JBB Bałdyga",
+        "CategoryId": 0,
+        "Protein": 15.0,
+        "Fat": 43.0,
+        "Carbohydrates": 3.6
+    },
+    {
+        "Id": 509,
+        "Name": "Bezy waniliowe Crunchy Melts Vanilla Jada Foods",
+        "CategoryId": 0,
+        "Protein": 7.1,
+        "Fat": 0.0,
+        "Carbohydrates": 85.7
+    },
+    {
+        "Id": 510,
+        "Name": "Nasiona konopi łuskane Bio Planet żółte op",
+        "CategoryId": 0,
+        "Protein": 25.0,
+        "Fat": 48.0,
+        "Carbohydrates": 3.3
+    },
+    {
+        "Id": 511,
+        "Name": "Krem czekoladowo-orzechowy ze stewią Cavalier",
+        "CategoryId": 0,
+        "Protein": 5.3,
+        "Fat": 38.5,
+        "Carbohydrates": 9.6
+    },
+    {
+        "Id": 512,
+        "Name": "Bisco Natura Le Gamberi",
+        "CategoryId": 0,
+        "Protein": 14.0,
+        "Fat": 34.0,
+        "Carbohydrates": 2.0
+    },
+    {
+        "Id": 513,
+        "Name": "Mąka migdałowa hiszpańska Pięć Przemian",
+        "CategoryId": 0,
+        "Protein": 20.0,
+        "Fat": 59.0,
+        "Carbohydrates": 2.5
+    },
+    {
+        "Id": 514,
+        "Name": "Granola Keto with Raspberry ",
+        "CategoryId": 0,
+        "Protein": 14.5,
+        "Fat": 44.0,
+        "Carbohydrates": 13.5
+    },
+    {
+        "Id": 515,
+        "Name": "Granola Keto Peanat Butter Crunch Keto and Co",
+        "CategoryId": 0,
+        "Protein": 14.0,
+        "Fat": 45.6,
+        "Carbohydrates": 10.5
+    },
+    {
+        "Id": 516,
+        "Name": "Kiełbasa swojska JBB Bałdyga",
+        "CategoryId": 0,
+        "Protein": 13.0,
+        "Fat": 19.0,
+        "Carbohydrates": 0.9
+    },
+    {
+        "Id": 517,
+        "Name": "Krem orzechowy Keto Cream with MCT Oil Hazelnut Be Keto",
+        "CategoryId": 0,
+        "Protein": 6.0,
+        "Fat": 48.0,
+        "Carbohydrates": 2.0
+    },
+    {
+        "Id": 518,
+        "Name": "Soda oczyszczona spożywcza",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 0.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 519,
+        "Name": "Owocowe puree tubka jabłko gruszka truskawka Genuss Plus",
+        "CategoryId": 0,
+        "Protein": 0.4,
+        "Fat": 0.5,
+        "Carbohydrates": 11.1
+    },
+    {
+        "Id": 520,
+        "Name": "Mus tubka jabłko banan szpinak ogórek Erbar Freche Freunde",
+        "CategoryId": 0,
+        "Protein": 0.8,
+        "Fat": 0.4,
+        "Carbohydrates": 11.0
+    },
+    {
+        "Id": 521,
+        "Name": "Stewia w kropelkach",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 0.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 522,
+        "Name": "Erytrytol 100%",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 0.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 523,
+        "Name": "Woda",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 0.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 524,
+        "Name": "Erytrytol ze stewią bez innych dodatków",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 0.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 525,
+        "Name": "Erytrytol z inuliną Zielony Listek",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 0.0,
+        "Carbohydrates": 6.8
+    },
+    {
+        "Id": 526,
+        "Name": "Parówki z szynki Tarczyński",
+        "CategoryId": 0,
+        "Protein": 13.0,
+        "Fat": 27.0,
+        "Carbohydrates": 3.4
+    },
+    {
+        "Id": 527,
+        "Name": "Kasza gryczana biała Lidl",
+        "CategoryId": 0,
+        "Protein": 13.9,
+        "Fat": 3.0,
+        "Carbohydrates": 60.0
+    },
+    {
+        "Id": 528,
+        "Name": "Kasza jaglana Lidl",
+        "CategoryId": 0,
+        "Protein": 11.8,
+        "Fat": 1.8,
+        "Carbohydrates": 68.8
+    },
+    {
+        "Id": 529,
+        "Name": "Kleik kukurydziany Nestle",
+        "CategoryId": 0,
+        "Protein": 7.5,
+        "Fat": 2.0,
+        "Carbohydrates": 83.5
+    },
+    {
+        "Id": 530,
+        "Name": "Pasta z nasion Pestko Mleczni Bracia",
+        "CategoryId": 0,
+        "Protein": 4.7,
+        "Fat": 62.7,
+        "Carbohydrates": 5.2
+    },
+    {
+        "Id": 531,
+        "Name": "Pieczywo Vega Lekkie buraczek Sonko",
+        "CategoryId": 0,
+        "Protein": 7.8,
+        "Fat": 1.5,
+        "Carbohydrates": 76.9
+    },
+    {
+        "Id": 532,
+        "Name": "Śmietana 22% Łaciata",
+        "CategoryId": 0,
+        "Protein": 2.4,
+        "Fat": 22.0,
+        "Carbohydrates": 3.5
+    },
+    {
+        "Id": 533,
+        "Name": "Śmietanka 36% Łaciata różowa UHT",
+        "CategoryId": 0,
+        "Protein": 2.0,
+        "Fat": 36.0,
+        "Carbohydrates": 2.9
+    },
+    {
+        "Id": 534,
+        "Name": "Kabanoski z szynki Gryzzale Tarczyński",
+        "CategoryId": 0,
+        "Protein": 28.0,
+        "Fat": 30.0,
+        "Carbohydrates": 1.9
+    },
+    {
+        "Id": 535,
+        "Name": "Ser sałatkowo-kanapkowy Tłusty Tolonis Biedronka",
+        "CategoryId": 0,
+        "Protein": 10.0,
+        "Fat": 18.0,
+        "Carbohydrates": 6.0
+    },
+    {
+        "Id": 536,
+        "Name": "Mascarpone Galbani",
+        "CategoryId": 0,
+        "Protein": 3.4,
+        "Fat": 40.0,
+        "Carbohydrates": 4.9
+    },
+    {
+        "Id": 537,
+        "Name": "Mascarpone Sottile Gusto",
+        "CategoryId": 0,
+        "Protein": 3.4,
+        "Fat": 40.0,
+        "Carbohydrates": 4.9
+    },
+    {
+        "Id": 538,
+        "Name": "Mozarella mini Sottile Gusto Biedronka",
+        "CategoryId": 0,
+        "Protein": 18.0,
+        "Fat": 19.0,
+        "Carbohydrates": 1.5
+    },
+    {
+        "Id": 539,
+        "Name": "Burrata GustoBello Biedronka",
+        "CategoryId": 0,
+        "Protein": 10.0,
+        "Fat": 23.0,
+        "Carbohydrates": 2.0
+    },
+    {
+        "Id": 540,
+        "Name": "Masło orzechowe peanut crunchy Vitanella Biedronka",
+        "CategoryId": 0,
+        "Protein": 22.0,
+        "Fat": 49.0,
+        "Carbohydrates": 17.0
+    },
+    {
+        "Id": 541,
+        "Name": "Krem z orzeszków ziemnych Go Vege Biedronka",
+        "CategoryId": 0,
+        "Protein": 26.2,
+        "Fat": 51.9,
+        "Carbohydrates": 9.6
+    },
+    {
+        "Id": 542,
+        "Name": "Dżem wiśniowy Rapsodia Biedronka",
+        "CategoryId": 0,
+        "Protein": 0.1,
+        "Fat": 0.1,
+        "Carbohydrates": 34.0
+    },
+    {
+        "Id": 543,
+        "Name": "Napój sojowy naturalny klasyczny Vitanella Biedronka",
+        "CategoryId": 0,
+        "Protein": 3.2,
+        "Fat": 1.8,
+        "Carbohydrates": 3.9
+    },
+    {
+        "Id": 544,
+        "Name": "Napój migdałowy naturalny Vitanella Biedronka",
+        "CategoryId": 0,
+        "Protein": 0.3,
+        "Fat": 1.1,
+        "Carbohydrates": 3.0
+    },
+    {
+        "Id": 545,
+        "Name": "Śmietanka 30% UHT Mleczna Dolina Biedronka",
+        "CategoryId": 0,
+        "Protein": 2.2,
+        "Fat": 30.0,
+        "Carbohydrates": 3.1
+    },
+    {
+        "Id": 546,
+        "Name": "Śmietanka 30% Łaciata czerwona UHT",
+        "CategoryId": 0,
+        "Protein": 2.2,
+        "Fat": 30.0,
+        "Carbohydrates": 3.3
+    },
+    {
+        "Id": 547,
+        "Name": "Płatki orkiszowe Plony Natury Biedronka",
+        "CategoryId": 0,
+        "Protein": 13.0,
+        "Fat": 3.3,
+        "Carbohydrates": 64.0
+    },
+    {
+        "Id": 548,
+        "Name": "Płatki owsiane górskie Plony Natury Biedronka",
+        "CategoryId": 0,
+        "Protein": 13.0,
+        "Fat": 5.7,
+        "Carbohydrates": 60.0
+    },
+    {
+        "Id": 549,
+        "Name": "Ciecierzyca w słoiku Gourmes Biedronka",
+        "CategoryId": 0,
+        "Protein": 6.2,
+        "Fat": 2.2,
+        "Carbohydrates": 14.0
+    },
+    {
+        "Id": 550,
+        "Name": "Fasola czerwona konserwowa Nasza Spiżarnia Biedronka",
+        "CategoryId": 0,
+        "Protein": 6.4,
+        "Fat": 0.2,
+        "Carbohydrates": 14.0
+    },
+    {
+        "Id": 551,
+        "Name": "Czerwona fasola kidney Bonduelle",
+        "CategoryId": 0,
+        "Protein": 7.2,
+        "Fat": 1.1,
+        "Carbohydrates": 15.8
+    },
+    {
+        "Id": 552,
+        "Name": "Fasola biała konserwowa Nasza Spiżarnia Biedronka",
+        "CategoryId": 0,
+        "Protein": 8.2,
+        "Fat": 0.6,
+        "Carbohydrates": 12.0
+    },
+    {
+        "Id": 553,
+        "Name": "Ser Halloumi Eridanous Lidl",
+        "CategoryId": 0,
+        "Protein": 22.0,
+        "Fat": 25.0,
+        "Carbohydrates": 1.5
+    },
+    {
+        "Id": 554,
+        "Name": "Orzechy laskowe Bakallino Biedronka  ",
+        "CategoryId": 0,
+        "Protein": 15.0,
+        "Fat": 61.0,
+        "Carbohydrates": 6.7
+    },
+    {
+        "Id": 555,
+        "Name": "Migdały blanszowane w płatkach Bakallino Biedronka",
+        "CategoryId": 0,
+        "Protein": 22.0,
+        "Fat": 51.0,
+        "Carbohydrates": 9.5
+    },
+    {
+        "Id": 556,
+        "Name": "Mak niebieski mielony Bakallino Biedronka",
+        "CategoryId": 0,
+        "Protein": 21.0,
+        "Fat": 43.0,
+        "Carbohydrates": 3.3
+    },
+    {
+        "Id": 557,
+        "Name": "Migdały łuskane Bakallino Biedronka",
+        "CategoryId": 0,
+        "Protein": 20.0,
+        "Fat": 52.0,
+        "Carbohydrates": 7.6
+    },
+    {
+        "Id": 558,
+        "Name": "Ser Grana Padano DOP Deluxe Lidl",
+        "CategoryId": 0,
+        "Protein": 33.0,
+        "Fat": 29.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 559,
+        "Name": "Proszek do pieczenia Winiary",
+        "CategoryId": 0,
+        "Protein": 0.1,
+        "Fat": 0.1,
+        "Carbohydrates": 21.5
+    },
+    {
+        "Id": 560,
+        "Name": "Bobovita morele banany jabłka",
+        "CategoryId": 0,
+        "Protein": 0.7,
+        "Fat": 0.1,
+        "Carbohydrates": 13.8
+    },
+    {
+        "Id": 561,
+        "Name": "Aromat Pomarańcza z Brazylii Dr Oetker",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 100.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 562,
+        "Name": "Bobovita kaszka mleczno-ryżowa malina",
+        "CategoryId": 0,
+        "Protein": 12.0,
+        "Fat": 9.2,
+        "Carbohydrates": 71.0
+    },
+    {
+        "Id": 563,
+        "Name": "Serek śmietankowy Delikate w plastrach klasyczny Biedronka",
+        "CategoryId": 0,
+        "Protein": 10.0,
+        "Fat": 24.0,
+        "Carbohydrates": 5.0
+    },
+    {
+        "Id": 564,
+        "Name": "Orzechy brazylijskie BakaDor Biedronka",
+        "CategoryId": 0,
+        "Protein": 14.0,
+        "Fat": 67.0,
+        "Carbohydrates": 4.2
+    },
+    {
+        "Id": 565,
+        "Name": "Jogurt grecki bardzo gęsty Bakoma",
+        "CategoryId": 0,
+        "Protein": 3.5,
+        "Fat": 7.5,
+        "Carbohydrates": 4.7
+    },
+    {
+        "Id": 566,
+        "Name": "Bobovita jarzynowa z cielęciną",
+        "CategoryId": 0,
+        "Protein": 2.1,
+        "Fat": 1.3,
+        "Carbohydrates": 7.5
+    },
+    {
+        "Id": 567,
+        "Name": "Aromat Migdał z Maroka Dr Oetker",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 100.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 568,
+        "Name": "Bobovita zupka warzywna z cielęciną",
+        "CategoryId": 0,
+        "Protein": 2.7,
+        "Fat": 1.6,
+        "Carbohydrates": 7.8
+    },
+    {
+        "Id": 569,
+        "Name": "Gerber schabik ze śliwką w warzywach",
+        "CategoryId": 0,
+        "Protein": 2.6,
+        "Fat": 1.5,
+        "Carbohydrates": 5.5
+    },
+    {
+        "Id": 570,
+        "Name": "Bobovita suszona śliwka z gruszką i buraczkiem",
+        "CategoryId": 0,
+        "Protein": 0.4,
+        "Fat": 0.1,
+        "Carbohydrates": 12.0
+    },
+    {
+        "Id": 571,
+        "Name": "Orzechy makadamia prażone solone Alesto Lidl",
+        "CategoryId": 0,
+        "Protein": 7.1,
+        "Fat": 77.8,
+        "Carbohydrates": 4.2
+    },
+    {
+        "Id": 572,
+        "Name": "Olej z awokado Vita Dor",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 100.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 573,
+        "Name": "Szynka Nature Kraina Wędlin Biedronka",
+        "CategoryId": 0,
+        "Protein": 20.0,
+        "Fat": 3.0,
+        "Carbohydrates": 1.1
+    },
+    {
+        "Id": 574,
+        "Name": "Mozarella kuleczki Bakoma",
+        "CategoryId": 0,
+        "Protein": 18.0,
+        "Fat": 18.5,
+        "Carbohydrates": 1.5
+    },
+    {
+        "Id": 575,
+        "Name": "Jogurt Protein 0% tł. naturalny Pilos Lidl",
+        "CategoryId": 0,
+        "Protein": 8.8,
+        "Fat": 0.0,
+        "Carbohydrates": 3.3
+    },
+    {
+        "Id": 576,
+        "Name": "Parówki bez laktozy Głodniaki Kraina Wędlin Biedronka",
+        "CategoryId": 0,
+        "Protein": 14.0,
+        "Fat": 20.0,
+        "Carbohydrates": 1.4
+    },
+    {
+        "Id": 577,
+        "Name": "Gerber risotto z indykiem i warzywami",
+        "CategoryId": 0,
+        "Protein": 2.2,
+        "Fat": 2.0,
+        "Carbohydrates": 7.2
+    },
+    {
+        "Id": 578,
+        "Name": "Bobovita krupniczek z cielęciną",
+        "CategoryId": 0,
+        "Protein": 2.5,
+        "Fat": 1.9,
+        "Carbohydrates": 6.4
+    },
+    {
+        "Id": 579,
+        "Name": "Bobovita bukiet warzyw z kurczakiem 8g W",
+        "CategoryId": 0,
+        "Protein": 2.3,
+        "Fat": 1.9,
+        "Carbohydrates": 8.0
+    },
+    {
+        "Id": 580,
+        "Name": "Tagliatelle Le Gamberi",
+        "CategoryId": 0,
+        "Protein": 34.8,
+        "Fat": 5.0,
+        "Carbohydrates": 1.8
+    },
+    {
+        "Id": 581,
+        "Name": "Bobovita porcja zbóż bezmleczna 7 zbóż zbożowa-jaglana",
+        "CategoryId": 0,
+        "Protein": 12.0,
+        "Fat": 2.1,
+        "Carbohydrates": 73.0
+    },
+    {
+        "Id": 582,
+        "Name": "Śmietana 30% President",
+        "CategoryId": 0,
+        "Protein": 2.2,
+        "Fat": 30.0,
+        "Carbohydrates": 3.1
+    },
+    {
+        "Id": 583,
+        "Name": "Stewia w kropelkach Vanilla Sweet Leaf",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 0.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 584,
+        "Name": "Chleb proteinowy Grzybki",
+        "CategoryId": 0,
+        "Protein": 26.5,
+        "Fat": 13.4,
+        "Carbohydrates": 5.9
+    },
+    {
+        "Id": 585,
+        "Name": "Żurek koncentrat Krakus",
+        "CategoryId": 0,
+        "Protein": 1.7,
+        "Fat": 3.5,
+        "Carbohydrates": 5.4
+    },
+    {
+        "Id": 586,
+        "Name": "Łosoś wędzony na zimno plastry Marinero Biedronka",
+        "CategoryId": 0,
+        "Protein": 21.0,
+        "Fat": 10.0,
+        "Carbohydrates": 0.2
+    },
+    {
+        "Id": 587,
+        "Name": "Bataty surowe",
+        "CategoryId": 0,
+        "Protein": 1.6,
+        "Fat": 0.5,
+        "Carbohydrates": 17.1
+    },
+    {
+        "Id": 588,
+        "Name": "Bataty ugotowane",
+        "CategoryId": 0,
+        "Protein": 1.4,
+        "Fat": 0.2,
+        "Carbohydrates": 15.2
+    },
+    {
+        "Id": 589,
+        "Name": "Bataty upieczone bez tłuszczu",
+        "CategoryId": 0,
+        "Protein": 2.01,
+        "Fat": 0.2,
+        "Carbohydrates": 17.4
+    },
+    {
+        "Id": 590,
+        "Name": "Aromat Cytryna z Sycylii Dr Oetker",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 100.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 591,
+        "Name": "Ser Favita tłusty Mlekowita",
+        "CategoryId": 0,
+        "Protein": 10.0,
+        "Fat": 18.0,
+        "Carbohydrates": 7.0
+    },
+    {
+        "Id": 592,
+        "Name": "Masło extra Osełka górska Sobik",
+        "CategoryId": 0,
+        "Protein": 0.7,
+        "Fat": 83.0,
+        "Carbohydrates": 0.4
+    },
+    {
+        "Id": 593,
+        "Name": "Wiórki kokosowe Bakallino Biedronka",
+        "CategoryId": 0,
+        "Protein": 5.6,
+        "Fat": 63.0,
+        "Carbohydrates": 5.9
+    },
+    {
+        "Id": 594,
+        "Name": "Kiełbasa aleksandryjska Aleksandria",
+        "CategoryId": 0,
+        "Protein": 13.0,
+        "Fat": 20.0,
+        "Carbohydrates": 1.8
+    },
+    {
+        "Id": 595,
+        "Name": "Parówki Berlinki classic",
+        "CategoryId": 0,
+        "Protein": 13.0,
+        "Fat": 21.0,
+        "Carbohydrates": 2.7
+    },
+    {
+        "Id": 596,
+        "Name": "Parówki z serem z indyka Indykpol",
+        "CategoryId": 0,
+        "Protein": 14.0,
+        "Fat": 18.0,
+        "Carbohydrates": 2.0
+    },
+    {
+        "Id": 597,
+        "Name": "Czekolada gorzka 85% Lindt",
+        "CategoryId": 0,
+        "Protein": 12.5,
+        "Fat": 46.0,
+        "Carbohydrates": 19.0
+    },
+    {
+        "Id": 598,
+        "Name": "Keczup łagodny 60% mniej kcal Kotlin",
+        "CategoryId": 0,
+        "Protein": 1.4,
+        "Fat": 0.2,
+        "Carbohydrates": 8.2
+    },
+    {
+        "Id": 599,
+        "Name": "Keczup łagodny Kotlin",
+        "CategoryId": 0,
+        "Protein": 1.4,
+        "Fat": 0.2,
+        "Carbohydrates": 23.0
+    },
+    {
+        "Id": 600,
+        "Name": "Ser Złoty Mazur Mlekpol",
+        "CategoryId": 0,
+        "Protein": 26.0,
+        "Fat": 27.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 601,
+        "Name": "Serek Kiri z twarożku śmietankowego",
+        "CategoryId": 0,
+        "Protein": 8.5,
+        "Fat": 29.0,
+        "Carbohydrates": 2.5
+    },
+    {
+        "Id": 602,
+        "Name": "Kiełbasa morlińska z piersi kurczaka Morliny",
+        "CategoryId": 0,
+        "Protein": 17.0,
+        "Fat": 13.0,
+        "Carbohydrates": 0.6
+    },
+    {
+        "Id": 603,
+        "Name": "Mąka kokosowa Targoch",
+        "CategoryId": 0,
+        "Protein": 19.1,
+        "Fat": 12.0,
+        "Carbohydrates": 15.0
+    },
+    {
+        "Id": 604,
+        "Name": "Jogurt natutralny Augustowski Mlekpol",
+        "CategoryId": 0,
+        "Protein": 4.3,
+        "Fat": 2.5,
+        "Carbohydrates": 5.8
+    },
+    {
+        "Id": 605,
+        "Name": "Serek puszysty naturalny łaciaty",
+        "CategoryId": 0,
+        "Protein": 5.8,
+        "Fat": 23.0,
+        "Carbohydrates": 4.8
+    },
+    {
+        "Id": 606,
+        "Name": "Filet wędzony z piersi indyka Pikok Lidl",
+        "CategoryId": 0,
+        "Protein": 20.7,
+        "Fat": 5.4,
+        "Carbohydrates": 1.7
+    },
+    {
+        "Id": 607,
+        "Name": "Filet z kurczaka 98% Piratki Pikok Lidl",
+        "CategoryId": 0,
+        "Protein": 22.0,
+        "Fat": 1.0,
+        "Carbohydrates": 1.7
+    },
+    {
+        "Id": 608,
+        "Name": "Mozarella w plastrach Livilio Lidl",
+        "CategoryId": 0,
+        "Protein": 24.3,
+        "Fat": 19.0,
+        "Carbohydrates": 0.9
+    },
+    {
+        "Id": 609,
+        "Name": "Serowe paluszki Piratki Lidl",
+        "CategoryId": 0,
+        "Protein": 24.0,
+        "Fat": 21.0,
+        "Carbohydrates": 2.0
+    },
+    {
+        "Id": 610,
+        "Name": "Szynka z fileta drobiowa Pikok Lidl",
+        "CategoryId": 0,
+        "Protein": 19.0,
+        "Fat": 2.5,
+        "Carbohydrates": 2.2
+    },
+    {
+        "Id": 611,
+        "Name": "Serek śmietankowy Mleczwart Wartkowice",
+        "CategoryId": 0,
+        "Protein": 9.0,
+        "Fat": 14.2,
+        "Carbohydrates": 1.8
+    },
+    {
+        "Id": 612,
+        "Name": "Krem z orzeszków ziemnych z kawałkami Go Vege Biedronka",
+        "CategoryId": 0,
+        "Protein": 26.4,
+        "Fat": 51.6,
+        "Carbohydrates": 8.9
+    },
+    {
+        "Id": 613,
+        "Name": "Len złoty Bio Planet",
+        "CategoryId": 0,
+        "Protein": 24.0,
+        "Fat": 31.0,
+        "Carbohydrates": 2.0
+    },
+    {
+        "Id": 614,
+        "Name": "Mascarpone kuchmistrza Mlekovita",
+        "CategoryId": 0,
+        "Protein": 3.4,
+        "Fat": 40.0,
+        "Carbohydrates": 2.6
+    },
+    {
+        "Id": 615,
+        "Name": "Śmietana 18% gęsta Bakoma",
+        "CategoryId": 0,
+        "Protein": 2.5,
+        "Fat": 18.0,
+        "Carbohydrates": 3.0
+    },
+    {
+        "Id": 616,
+        "Name": "Mąka migdałowa Agnex",
+        "CategoryId": 0,
+        "Protein": 20.0,
+        "Fat": 52.0,
+        "Carbohydrates": 7.6
+    },
+    {
+        "Id": 617,
+        "Name": "Kakao o obniżonej zawartości tłuszczu Carrefour",
+        "CategoryId": 0,
+        "Protein": 21.0,
+        "Fat": 11.0,
+        "Carbohydrates": 10.0
+    },
+    {
+        "Id": 618,
+        "Name": "Majonez kielecki omega-3",
+        "CategoryId": 0,
+        "Protein": 1.6,
+        "Fat": 78.0,
+        "Carbohydrates": 2.8
+    },
+    {
+        "Id": 619,
+        "Name": "Orzechy laskowe prażone Alesto Lidl",
+        "CategoryId": 0,
+        "Protein": 14.3,
+        "Fat": 70.5,
+        "Carbohydrates": 3.5
+    },
+    {
+        "Id": 620,
+        "Name": "Śmietanka 36% Piątnica",
+        "CategoryId": 0,
+        "Protein": 2.2,
+        "Fat": 36.0,
+        "Carbohydrates": 3.3
+    },
+    {
+        "Id": 621,
+        "Name": "Parówki Sokoliki Sokołów",
+        "CategoryId": 0,
+        "Protein": 15.5,
+        "Fat": 13.0,
+        "Carbohydrates": 1.7
+    },
+    {
+        "Id": 622,
+        "Name": "Topinambur w proszku Go Bio Biedronka",
+        "CategoryId": 0,
+        "Protein": 12.0,
+        "Fat": 1.0,
+        "Carbohydrates": 9.0
+    },
+    {
+        "Id": 623,
+        "Name": "Mięso mielone z kurczaka Kraina Mięs Biedronka",
+        "CategoryId": 0,
+        "Protein": 18.0,
+        "Fat": 7.7,
+        "Carbohydrates": 1.2
+    },
+    {
+        "Id": 624,
+        "Name": "Stewia w pudrze",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 0.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 625,
+        "Name": "Pieczarki Portobello",
+        "CategoryId": 0,
+        "Protein": 2.1,
+        "Fat": 0.4,
+        "Carbohydrates": 2.6
+    },
+    {
+        "Id": 626,
+        "Name": "Musztarda Sarepska ostra Kamis",
+        "CategoryId": 0,
+        "Protein": 4.4,
+        "Fat": 4.0,
+        "Carbohydrates": 7.9
+    },
+    {
+        "Id": 627,
+        "Name": "Quinoa ugotowana",
+        "CategoryId": 0,
+        "Protein": 4.4,
+        "Fat": 1.92,
+        "Carbohydrates": 18.5
+    },
+    {
+        "Id": 628,
+        "Name": "Syrop Davinci wartości uśrednione",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 0.0,
+        "Carbohydrates": 1.0
+    },
+    {
+        "Id": 629,
+        "Name": "Pomidorki koktajlowe",
+        "CategoryId": 0,
+        "Protein": 0.9,
+        "Fat": 0.3,
+        "Carbohydrates": 3.6
+    },
+    {
+        "Id": 630,
+        "Name": "Pomidory śliwkowe",
+        "CategoryId": 0,
+        "Protein": 0.8,
+        "Fat": 0.3,
+        "Carbohydrates": 3.5
+    },
+    {
+        "Id": 631,
+        "Name": "Ocet jabłkowy",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 0.0,
+        "Carbohydrates": 0.9
+    },
+    {
+        "Id": 632,
+        "Name": "Guma ksantanowa Bobs Red Mill",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 0.0,
+        "Carbohydrates": 1.2
+    },
+    {
+        "Id": 633,
+        "Name": "Majonez catering IMiD",
+        "CategoryId": 0,
+        "Protein": 1.0,
+        "Fat": 50.0,
+        "Carbohydrates": 6.0
+    },
+    {
+        "Id": 634,
+        "Name": "Kurczak gotowany Cedrob catering IMiD",
+        "CategoryId": 0,
+        "Protein": 19.0,
+        "Fat": 1.2,
+        "Carbohydrates": 0.2
+    },
+    {
+        "Id": 635,
+        "Name": "Pieprzowa z indyka Indykpol catering IMiD",
+        "CategoryId": 0,
+        "Protein": 18.0,
+        "Fat": 4.6,
+        "Carbohydrates": 0.3
+    },
+    {
+        "Id": 636,
+        "Name": "Ser żółty plasterkowany Włoszczowa catering IMiD",
+        "CategoryId": 0,
+        "Protein": 25.0,
+        "Fat": 26.0,
+        "Carbohydrates": 1.1
+    },
+    {
+        "Id": 637,
+        "Name": "Szynka od szwagra Krakus catering IMiD",
+        "CategoryId": 0,
+        "Protein": 19.0,
+        "Fat": 13.0,
+        "Carbohydrates": 0.3
+    },
+    {
+        "Id": 638,
+        "Name": "Szynka pieczona Pekpol catering IMiD",
+        "CategoryId": 0,
+        "Protein": 20.0,
+        "Fat": 13.0,
+        "Carbohydrates": 0.5
+    },
+    {
+        "Id": 639,
+        "Name": "Szynka z indyka Lukullus catering IMiD",
+        "CategoryId": 0,
+        "Protein": 18.0,
+        "Fat": 1.6,
+        "Carbohydrates": 0.5
+    },
+    {
+        "Id": 640,
+        "Name": "Musztarda francuska lekko ostra Kamis",
+        "CategoryId": 0,
+        "Protein": 6.6,
+        "Fat": 9.9,
+        "Carbohydrates": 9.5
+    },
+    {
+        "Id": 641,
+        "Name": "Chrzan tarty Rolnik",
+        "CategoryId": 0,
+        "Protein": 2.5,
+        "Fat": 3.0,
+        "Carbohydrates": 12.0
+    },
+    {
+        "Id": 642,
+        "Name": "Chrzan Krakus",
+        "CategoryId": 0,
+        "Protein": 2.7,
+        "Fat": 9.8,
+        "Carbohydrates": 12.0
+    },
+    {
+        "Id": 643,
+        "Name": "Chrzan tarty Motyl",
+        "CategoryId": 0,
+        "Protein": 2.5,
+        "Fat": 10.0,
+        "Carbohydrates": 15.0
+    },
+    {
+        "Id": 644,
+        "Name": "Sos tatarski Winiary",
+        "CategoryId": 0,
+        "Protein": 1.0,
+        "Fat": 63.7,
+        "Carbohydrates": 7.9
+    },
+    {
+        "Id": 645,
+        "Name": "Kefir Robico 1,5% tł.",
+        "CategoryId": 0,
+        "Protein": 3.1,
+        "Fat": 1.5,
+        "Carbohydrates": 4.2
+    },
+    {
+        "Id": 646,
+        "Name": "Pstrąg tęczowy filet wędzony Nautica Lidl",
+        "CategoryId": 0,
+        "Protein": 20.6,
+        "Fat": 4.7,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 647,
+        "Name": "Śledź filety ala matijas w oleju Nautica Lidl",
+        "CategoryId": 0,
+        "Protein": 12.1,
+        "Fat": 13.7,
+        "Carbohydrates": 0.6
+    },
+    {
+        "Id": 648,
+        "Name": "Makrela filety wędzone Nautica Lidl",
+        "CategoryId": 0,
+        "Protein": 21.0,
+        "Fat": 21.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 649,
+        "Name": "Łosoś atlantycki wędzony na goraco OceanSea Lidl",
+        "CategoryId": 0,
+        "Protein": 26.6,
+        "Fat": 12.4,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 650,
+        "Name": "Halibut niebieski wędzony Nautica Lidl",
+        "CategoryId": 0,
+        "Protein": 17.0,
+        "Fat": 6.9,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 651,
+        "Name": "Łosoś atlantycki wędzony dzwonko Atlantic Lidl",
+        "CategoryId": 0,
+        "Protein": 24.0,
+        "Fat": 13.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 652,
+        "Name": "Pstrąg tęczowy łososiowy Nautica Lidl",
+        "CategoryId": 0,
+        "Protein": 22.0,
+        "Fat": 7.5,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 653,
+        "Name": "Tuńczyk jednolity w sosie własnym Nixe Lidl",
+        "CategoryId": 0,
+        "Protein": 25.4,
+        "Fat": 0.8,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 654,
+        "Name": "Serek wiejski naturalny Łaciaty",
+        "CategoryId": 0,
+        "Protein": 11.0,
+        "Fat": 5.0,
+        "Carbohydrates": 2.5
+    },
+    {
+        "Id": 655,
+        "Name": "Mintaj filet zamrożony Ocean Sea Lidl",
+        "CategoryId": 0,
+        "Protein": 16.0,
+        "Fat": 0.5,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 656,
+        "Name": "Krewetki czerwone argentyńskie surowe mrożone",
+        "CategoryId": 0,
+        "Protein": 22.0,
+        "Fat": 2.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 657,
+        "Name": "Jeżyny",
+        "CategoryId": 0,
+        "Protein": 1.2,
+        "Fat": 1.0,
+        "Carbohydrates": 6.2
+    },
+    {
+        "Id": 658,
+        "Name": "Krewetki białe całe gotowane mrożone Deluxe Lidl",
+        "CategoryId": 0,
+        "Protein": 17.0,
+        "Fat": 1.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 659,
+        "Name": "Tavoletta al cacao Le Gamberi",
+        "CategoryId": 0,
+        "Protein": 12.0,
+        "Fat": 39.0,
+        "Carbohydrates": 1.0
+    },
+    {
+        "Id": 660,
+        "Name": "Maka pszenna pełnoziarnista Lidl",
+        "CategoryId": 0,
+        "Protein": 12.0,
+        "Fat": 2.2,
+        "Carbohydrates": 64.0
+    },
+    {
+        "Id": 661,
+        "Name": "Adams Bread Dark",
+        "CategoryId": 0,
+        "Protein": 32.0,
+        "Fat": 10.3,
+        "Carbohydrates": 0.64
+    },
+    {
+        "Id": 662,
+        "Name": "Makaron niskowęglowodanowy Skinny makaron ActivePol",
+        "CategoryId": 0,
+        "Protein": 70.7,
+        "Fat": 7.9,
+        "Carbohydrates": 4.3
+    },
+    {
+        "Id": 663,
+        "Name": "Otręby gryczane Melvit",
+        "CategoryId": 0,
+        "Protein": 36.0,
+        "Fat": 9.9,
+        "Carbohydrates": 20.0
+    },
+    {
+        "Id": 664,
+        "Name": "Konopie z otrębami lnianymi Melvit",
+        "CategoryId": 0,
+        "Protein": 26.0,
+        "Fat": 47.0,
+        "Carbohydrates": 2.2
+    },
+    {
+        "Id": 665,
+        "Name": "Mleczko kokosowe Thai coco",
+        "CategoryId": 0,
+        "Protein": 0.9,
+        "Fat": 18.2,
+        "Carbohydrates": 2.5
+    },
+    {
+        "Id": 666,
+        "Name": "Mleczko kokosowe Blue Dragon",
+        "CategoryId": 0,
+        "Protein": 1.4,
+        "Fat": 15.0,
+        "Carbohydrates": 3.4
+    },
+    {
+        "Id": 667,
+        "Name": "Serek wiejski Mlekovita",
+        "CategoryId": 0,
+        "Protein": 11.0,
+        "Fat": 5.0,
+        "Carbohydrates": 2.0
+    },
+    {
+        "Id": 668,
+        "Name": "Makrela filet wędzony Biedronka",
+        "CategoryId": 0,
+        "Protein": 19.9,
+        "Fat": 23.0,
+        "Carbohydrates": 0.1
+    },
+    {
+        "Id": 669,
+        "Name": "Len mielony złoty odtłuszczony Plony Natury Biedronka",
+        "CategoryId": 0,
+        "Protein": 32.0,
+        "Fat": 18.0,
+        "Carbohydrates": 4.0
+    },
+    {
+        "Id": 670,
+        "Name": "Chia Intenson",
+        "CategoryId": 0,
+        "Protein": 23.0,
+        "Fat": 33.0,
+        "Carbohydrates": 0.5
+    },
+    {
+        "Id": 671,
+        "Name": "Napój migdałowy niesłodzony Alpro",
+        "CategoryId": 0,
+        "Protein": 0.4,
+        "Fat": 1.1,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 672,
+        "Name": "Pistacje kalifornijskie niesolone Alesto Lidl",
+        "CategoryId": 0,
+        "Protein": 25.4,
+        "Fat": 51.7,
+        "Carbohydrates": 10.3
+    },
+    {
+        "Id": 673,
+        "Name": "Pstrąg tęczowy patroszony Marinero Biedronka",
+        "CategoryId": 0,
+        "Protein": 18.0,
+        "Fat": 5.2,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 674,
+        "Name": "Musztarda Dijon Kamis",
+        "CategoryId": 0,
+        "Protein": 7.4,
+        "Fat": 11.0,
+        "Carbohydrates": 2.8
+    },
+    {
+        "Id": 675,
+        "Name": "Olej rzepakowy o smaku masła tłocozny na zimno Olandia",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 100.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 676,
+        "Name": "Bisco Cocco Le Gamberi",
+        "CategoryId": 0,
+        "Protein": 14.0,
+        "Fat": 34.0,
+        "Carbohydrates": 2.0
+    },
+    {
+        "Id": 677,
+        "Name": "Schab wędzony Nature Kraina Wędlin Biedronka",
+        "CategoryId": 0,
+        "Protein": 21.0,
+        "Fat": 4.5,
+        "Carbohydrates": 1.2
+    },
+    {
+        "Id": 678,
+        "Name": "Ryż Basmati Biedronka",
+        "CategoryId": 0,
+        "Protein": 8.5,
+        "Fat": 1.0,
+        "Carbohydrates": 77.0
+    },
+    {
+        "Id": 679,
+        "Name": "Kasza jęczmienna perłowa Biedronka",
+        "CategoryId": 0,
+        "Protein": 11.0,
+        "Fat": 0.6,
+        "Carbohydrates": 65.0
+    },
+    {
+        "Id": 680,
+        "Name": "Kabanosy Nature kraina Wędlin Biedronka",
+        "CategoryId": 0,
+        "Protein": 24.0,
+        "Fat": 40.0,
+        "Carbohydrates": 0.5
+    },
+    {
+        "Id": 681,
+        "Name": "Parówki z szynki Nature Kraina Wędlin Biedronka",
+        "CategoryId": 0,
+        "Protein": 14.0,
+        "Fat": 24.0,
+        "Carbohydrates": 1.0
+    },
+    {
+        "Id": 682,
+        "Name": "Mozarella tarta wiórki Sottile Gusto Biedronka",
+        "CategoryId": 0,
+        "Protein": 24.0,
+        "Fat": 20.0,
+        "Carbohydrates": 0.5
+    },
+    {
+        "Id": 683,
+        "Name": "Twaróg garwoliński tłusty OSM Garwolin",
+        "CategoryId": 0,
+        "Protein": 17.0,
+        "Fat": 8.0,
+        "Carbohydrates": 2.7
+    },
+    {
+        "Id": 684,
+        "Name": "Frankfurterki wieprzowe Pikok Pure Lidl",
+        "CategoryId": 0,
+        "Protein": 17.0,
+        "Fat": 19.0,
+        "Carbohydrates": 1.5
+    },
+    {
+        "Id": 685,
+        "Name": "Kiełbasa śląska Pikok Pure Lidl",
+        "CategoryId": 0,
+        "Protein": 16.0,
+        "Fat": 21.0,
+        "Carbohydrates": 1.4
+    },
+    {
+        "Id": 686,
+        "Name": "Kabanosy wieprzowe Pikok Pure Lidl",
+        "CategoryId": 0,
+        "Protein": 28.0,
+        "Fat": 37.0,
+        "Carbohydrates": 0.7
+    },
+    {
+        "Id": 687,
+        "Name": "Kiełbasa szynkowa Pikok Pure Lidl",
+        "CategoryId": 0,
+        "Protein": 19.0,
+        "Fat": 3.9,
+        "Carbohydrates": 1.0
+    },
+    {
+        "Id": 688,
+        "Name": "Śmietanka 30% Mleczna Dolina Biedronka",
+        "CategoryId": 0,
+        "Protein": 2.2,
+        "Fat": 30.0,
+        "Carbohydrates": 3.3
+    },
+    {
+        "Id": 689,
+        "Name": "Masło Ekstra bez laktozy Mleczna Dolina Biedronka",
+        "CategoryId": 0,
+        "Protein": 0.7,
+        "Fat": 82.0,
+        "Carbohydrates": 0.7
+    },
+    {
+        "Id": 690,
+        "Name": "Masło Ekstra Mleczna Dolina Biedronka",
+        "CategoryId": 0,
+        "Protein": 0.6,
+        "Fat": 83.0,
+        "Carbohydrates": 0.8
+    },
+    {
+        "Id": 691,
+        "Name": "Chipsy z topinambura z sola morską Crispy natural",
+        "CategoryId": 0,
+        "Protein": 8.9,
+        "Fat": 0.4,
+        "Carbohydrates": 2.6
+    },
+    {
+        "Id": 692,
+        "Name": "Mleczko kokosowe Smaki Świata Biedronka",
+        "CategoryId": 0,
+        "Protein": 1.2,
+        "Fat": 18.0,
+        "Carbohydrates": 1.5
+    },
+    {
+        "Id": 693,
+        "Name": "Chipsy kokosowe bio Diet Food",
+        "CategoryId": 0,
+        "Protein": 6.9,
+        "Fat": 64.0,
+        "Carbohydrates": 8.4
+    },
+    {
+        "Id": 694,
+        "Name": "Krem czekoladowy Le Gamberi",
+        "CategoryId": 0,
+        "Protein": 12.0,
+        "Fat": 48.0,
+        "Carbohydrates": 1.8
+    },
+    {
+        "Id": 695,
+        "Name": "Miąższ kokosowy Bio Coco Farm",
+        "CategoryId": 0,
+        "Protein": 6.1,
+        "Fat": 67.0,
+        "Carbohydrates": 9.1
+    },
+    {
+        "Id": 696,
+        "Name": "Napój sojowy Adez",
+        "CategoryId": 0,
+        "Protein": 2.9,
+        "Fat": 2.0,
+        "Carbohydrates": 1.0
+    },
+    {
+        "Id": 697,
+        "Name": "Tahini jasne Primavika",
+        "CategoryId": 0,
+        "Protein": 33.0,
+        "Fat": 45.0,
+        "Carbohydrates": 4.4
+    },
+    {
+        "Id": 698,
+        "Name": "Mozarella BardzoBuona",
+        "CategoryId": 0,
+        "Protein": 22.0,
+        "Fat": 23.0,
+        "Carbohydrates": 0.1
+    },
+    {
+        "Id": 699,
+        "Name": "Samsok z malin Viands",
+        "CategoryId": 0,
+        "Protein": 0.7,
+        "Fat": 0.2,
+        "Carbohydrates": 4.8
+    },
+    {
+        "Id": 700,
+        "Name": "Napoj migdałowy Vitanella Biedronka",
+        "CategoryId": 0,
+        "Protein": 0.3,
+        "Fat": 1.1,
+        "Carbohydrates": 3.0
+    },
+    {
+        "Id": 701,
+        "Name": "Salami wieprzowo-wołowe Nature Kraina Wędlin Biedronka",
+        "CategoryId": 0,
+        "Protein": 21.0,
+        "Fat": 31.0,
+        "Carbohydrates": 0.2
+    },
+    {
+        "Id": 702,
+        "Name": "Kiełki słonecznika Vital fresh Biedronka",
+        "CategoryId": 0,
+        "Protein": 9.5,
+        "Fat": 24.5,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 703,
+        "Name": "Kiełki pora",
+        "CategoryId": 0,
+        "Protein": 6.0,
+        "Fat": 1.4,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 704,
+        "Name": "Chrupki pałeczki kukurydziane Miami Biedornka",
+        "CategoryId": 0,
+        "Protein": 8.1,
+        "Fat": 2.8,
+        "Carbohydrates": 80.0
+    },
+    {
+        "Id": 705,
+        "Name": "Pistacje prażone solone Top Biedronka",
+        "CategoryId": 0,
+        "Protein": 20.0,
+        "Fat": 53.0,
+        "Carbohydrates": 16.0
+    },
+    {
+        "Id": 706,
+        "Name": "Napój kokosowy Adez",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 0.9,
+        "Carbohydrates": 3.2
+    },
+    {
+        "Id": 707,
+        "Name": "Napój migdałowy Adez",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 1.1,
+        "Carbohydrates": 0.5
+    },
+    {
+        "Id": 708,
+        "Name": "Parówki z szynki i cielęciny Głodniaki Karina Wędlin Biedronka",
+        "CategoryId": 0,
+        "Protein": 14.0,
+        "Fat": 20.0,
+        "Carbohydrates": 1.4
+    },
+    {
+        "Id": 709,
+        "Name": "Czekolada gorzka 85% Cavalier",
+        "CategoryId": 0,
+        "Protein": 5.3,
+        "Fat": 34.8,
+        "Carbohydrates": 10.0
+    },
+    {
+        "Id": 710,
+        "Name": "Orzechy brazylijskie Alesto Lidl",
+        "CategoryId": 0,
+        "Protein": 14.7,
+        "Fat": 67.4,
+        "Carbohydrates": 3.6
+    },
+    {
+        "Id": 711,
+        "Name": "Migdały Alesto Lidl",
+        "CategoryId": 0,
+        "Protein": 24.2,
+        "Fat": 56.0,
+        "Carbohydrates": 5.4
+    },
+    {
+        "Id": 712,
+        "Name": "Orzeszki ziemne Alesto Lidl",
+        "CategoryId": 0,
+        "Protein": 24.4,
+        "Fat": 51.2,
+        "Carbohydrates": 11.0
+    },
+    {
+        "Id": 713,
+        "Name": "Orzeszki ziemne smażone Alesto Lidl",
+        "CategoryId": 0,
+        "Protein": 24.4,
+        "Fat": 51.2,
+        "Carbohydrates": 11.0
+    },
+    {
+        "Id": 714,
+        "Name": "Pistacje kalifornijskie prażone i solone Alesto Lidl",
+        "CategoryId": 0,
+        "Protein": 26.5,
+        "Fat": 49.2,
+        "Carbohydrates": 10.3
+    },
+    {
+        "Id": 715,
+        "Name": "Orzeszki pinii Alesto Lidl",
+        "CategoryId": 0,
+        "Protein": 14.0,
+        "Fat": 55.0,
+        "Carbohydrates": 21.7
+    },
+    {
+        "Id": 716,
+        "Name": "Migdały całe Belbake Lidl",
+        "CategoryId": 0,
+        "Protein": 24.2,
+        "Fat": 56.0,
+        "Carbohydrates": 5.4
+    },
+    {
+        "Id": 717,
+        "Name": "Słonecznik prażony i solony Alesto Lidl",
+        "CategoryId": 0,
+        "Protein": 24.0,
+        "Fat": 56.0,
+        "Carbohydrates": 7.5
+    },
+    {
+        "Id": 718,
+        "Name": "Kapary Freshona Lidl",
+        "CategoryId": 0,
+        "Protein": 2.2,
+        "Fat": 0.6,
+        "Carbohydrates": 2.6
+    },
+    {
+        "Id": 719,
+        "Name": "Wiórki kokosowe Belbake Lidl",
+        "CategoryId": 0,
+        "Protein": 7.0,
+        "Fat": 61.0,
+        "Carbohydrates": 7.3
+    },
+    {
+        "Id": 720,
+        "Name": "Masło orzechowe smooth Mcennedy Lidl",
+        "CategoryId": 0,
+        "Protein": 25.2,
+        "Fat": 52.4,
+        "Carbohydrates": 10.9
+    },
+    {
+        "Id": 721,
+        "Name": "Masło orzechowe crunchy Mcennedy Lidl",
+        "CategoryId": 0,
+        "Protein": 25.3,
+        "Fat": 50.4,
+        "Carbohydrates": 12.3
+    },
+    {
+        "Id": 722,
+        "Name": "Parówki z indyka Pikok Pure Lidl",
+        "CategoryId": 0,
+        "Protein": 15.0,
+        "Fat": 14.0,
+        "Carbohydrates": 0.9
+    },
+    {
+        "Id": 723,
+        "Name": "Czekolada gorzka 80% Wedel",
+        "CategoryId": 0,
+        "Protein": 10.0,
+        "Fat": 42.0,
+        "Carbohydrates": 20.0
+    },
+    {
+        "Id": 724,
+        "Name": "Twaróg śmietankowy ze Strzałkowa",
+        "CategoryId": 0,
+        "Protein": 14.0,
+        "Fat": 16.0,
+        "Carbohydrates": 4.2
+    },
+    {
+        "Id": 725,
+        "Name": "Mascarpone Mlekpol",
+        "CategoryId": 0,
+        "Protein": 4.5,
+        "Fat": 40.0,
+        "Carbohydrates": 2.5
+    },
+    {
+        "Id": 726,
+        "Name": "Mąka migdałowa Helcom",
+        "CategoryId": 0,
+        "Protein": 24.0,
+        "Fat": 54.0,
+        "Carbohydrates": 10.0
+    },
+    {
+        "Id": 727,
+        "Name": "Herbata owocowa, napar bez cukru",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 0.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 728,
+        "Name": "Serek o smaku naturalnym Krasnystaw",
+        "CategoryId": 0,
+        "Protein": 6.5,
+        "Fat": 9.0,
+        "Carbohydrates": 3.9
+    },
+    {
+        "Id": 729,
+        "Name": "Mąka z lnu eko Bio Planet",
+        "CategoryId": 0,
+        "Protein": 40.0,
+        "Fat": 8.8,
+        "Carbohydrates": 3.9
+    },
+    {
+        "Id": 730,
+        "Name": "Sos sojowy bezglutenowy Kikkoman",
+        "CategoryId": 0,
+        "Protein": 10.0,
+        "Fat": 0.0,
+        "Carbohydrates": 2.0
+    },
+    {
+        "Id": 731,
+        "Name": "Nori wodorosty sushi Asia Flavours",
+        "CategoryId": 0,
+        "Protein": 54.0,
+        "Fat": 3.5,
+        "Carbohydrates": 40.0
+    },
+    {
+        "Id": 732,
+        "Name": "Ser Halloumi Elios Biedronka",
+        "CategoryId": 0,
+        "Protein": 22.0,
+        "Fat": 25.0,
+        "Carbohydrates": 1.9
+    },
+    {
+        "Id": 733,
+        "Name": "Barszcz czerwony Krakus w kartonie",
+        "CategoryId": 0,
+        "Protein": 1.0,
+        "Fat": 0.0,
+        "Carbohydrates": 7.1
+    },
+    {
+        "Id": 734,
+        "Name": "Szparagi ugotowane",
+        "CategoryId": 0,
+        "Protein": 2.4,
+        "Fat": 0.2,
+        "Carbohydrates": 2.1
+    },
+    {
+        "Id": 735,
+        "Name": "Karczoch ugotowany z solą",
+        "CategoryId": 0,
+        "Protein": 2.9,
+        "Fat": 2.8,
+        "Carbohydrates": 8.6
+    },
+    {
+        "Id": 736,
+        "Name": "Banan zielony",
+        "CategoryId": 0,
+        "Protein": 1.0,
+        "Fat": 0.3,
+        "Carbohydrates": 14.2
+    },
+    {
+        "Id": 737,
+        "Name": "Pumpernikiel Schulstad",
+        "CategoryId": 0,
+        "Protein": 5.4,
+        "Fat": 2.2,
+        "Carbohydrates": 43.0
+    },
+    {
+        "Id": 738,
+        "Name": "Ogórki konserwowe Krakus",
+        "CategoryId": 0,
+        "Protein": 0.4,
+        "Fat": 0.4,
+        "Carbohydrates": 6.6
+    },
+    {
+        "Id": 739,
+        "Name": "Mięso z uda kurczaka ze skórą",
+        "CategoryId": 0,
+        "Protein": 16.8,
+        "Fat": 10.2,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 740,
+        "Name": "Mięso z królika",
+        "CategoryId": 0,
+        "Protein": 21.0,
+        "Fat": 8.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 741,
+        "Name": "Kasza gryczana ugotowana",
+        "CategoryId": 0,
+        "Protein": 4.7,
+        "Fat": 1.1,
+        "Carbohydrates": 22.2
+    },
+    {
+        "Id": 742,
+        "Name": "Kasza jaglana ugotowana",
+        "CategoryId": 0,
+        "Protein": 3.6,
+        "Fat": 0.9,
+        "Carbohydrates": 21.9
+    },
+    {
+        "Id": 743,
+        "Name": "Chleb żytni jasny",
+        "CategoryId": 0,
+        "Protein": 4.1,
+        "Fat": 1.3,
+        "Carbohydrates": 53.3
+    },
+    {
+        "Id": 744,
+        "Name": "Chleb baltonowski",
+        "CategoryId": 0,
+        "Protein": 7.7,
+        "Fat": 1.5,
+        "Carbohydrates": 51.5
+    },
+    {
+        "Id": 745,
+        "Name": "Chleb mazowiecki",
+        "CategoryId": 0,
+        "Protein": 8.3,
+        "Fat": 1.4,
+        "Carbohydrates": 51.8
+    },
+    {
+        "Id": 746,
+        "Name": "Bułki grahamki",
+        "CategoryId": 0,
+        "Protein": 9.6,
+        "Fat": 1.7,
+        "Carbohydrates": 49.4
+    },
+    {
+        "Id": 747,
+        "Name": "Bułki wrocławskie",
+        "CategoryId": 0,
+        "Protein": 8.8,
+        "Fat": 4.4,
+        "Carbohydrates": 54.8
+    },
+    {
+        "Id": 748,
+        "Name": "Kajzerki",
+        "CategoryId": 0,
+        "Protein": 9.2,
+        "Fat": 3.6,
+        "Carbohydrates": 56.7
+    },
+    {
+        "Id": 749,
+        "Name": "Chrupki kukurydziane zwykłe",
+        "CategoryId": 0,
+        "Protein": 8.9,
+        "Fat": 3.0,
+        "Carbohydrates": 71.3
+    },
+    {
+        "Id": 750,
+        "Name": "Herbata, napar bez cukru",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 0.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 751,
+        "Name": "Kawa, napar bez cukru",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 0.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 752,
+        "Name": "Drożdże piekarskie świeże",
+        "CategoryId": 0,
+        "Protein": 11.3,
+        "Fat": 2.0,
+        "Carbohydrates": 7.1
+    },
+    {
+        "Id": 753,
+        "Name": "Sól",
+        "CategoryId": 0,
+        "Protein": 0.0,
+        "Fat": 0.0,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 754,
+        "Name": "Żelatyna",
+        "CategoryId": 0,
+        "Protein": 84.2,
+        "Fat": 0.1,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 755,
+        "Name": "Gęś pieczona",
+        "CategoryId": 0,
+        "Protein": 19.9,
+        "Fat": 19.7,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 756,
+        "Name": "Kaczka pierś ze skórą pieczona",
+        "CategoryId": 0,
+        "Protein": 24.5,
+        "Fat": 10.85,
+        "Carbohydrates": 0.0
+    },
+    {
+        "Id": 757,
+        "Name": "Watróbka wieprzowa saute, smażona",
+        "CategoryId": 0,
+        "Protein": 21.8,
+        "Fat": 18.0,
+        "Carbohydrates": 5.3
+    },
+    {
+        "Id": 758,
+        "Name": "Polędwica wołowa w sosie własnym pieczona",
+        "CategoryId": 0,
+        "Protein": 21.5,
+        "Fat": 12.6,
+        "Carbohydrates": 0.0
     }
 ]`;
 
 export const getIngredients = () => {
     const ingredients = JSON.parse(json);
-    return ingredients;
+    return ingredients.sort(function(a, b) {
+        var nameA = a.Name.toUpperCase(); // ignore upper and lowercase
+        var nameB = b.Name.toUpperCase(); // ignore upper and lowercase
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+      
+        // names must be equal
+        return 0;
+      });
 }
