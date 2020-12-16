@@ -29,6 +29,13 @@ body {
   justify-content: space-between;
 }
 
+.footer{
+  background-color: $light-green;
+  color: #fff;
+  font-size: 13px;
+  padding: 1px 10px;
+}
+
 .main {
   width: 100%;
 
@@ -174,6 +181,12 @@ body {
   &__ingredients-error {
     color: red;
     font-size: 13px;
+  }
+
+  &__ingredients-list-empty-label{
+    padding: 30px 10px;
+    font-size: 15px;
+    text-align: center;
   }
 }
 

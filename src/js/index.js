@@ -33,6 +33,7 @@ let recipeContent;
 let currentRecipe;
 let recipeNameError;
 let recipeIngredientsError;
+let ingredientsListEmptyLabel;
 let recipeNote;
 let summaryElement;
 let headerElement;
@@ -76,6 +77,7 @@ const prepareDOMElements = () => {
     recipeContent = document.querySelector('.js--recipe-list-content');
     recipeNameError = document.querySelector('.js--name-error');
     recipeIngredientsError = document.querySelector('.js--ingredients-error');
+    ingredientsListEmptyLabel = document.querySelector(".js--ingredients-list-empty-label");
     summaryElement = document.querySelector('.js--summary');
     headerElement = document.querySelector('.js--header');
     recipePopup = document.querySelector('.js--recipe-popup');
@@ -144,7 +146,7 @@ const newRecipe = () => {
             return f === 0 ? '-- : 1' : (p + c) === 0 ? 'sam tłuszcz' : `${(f / (p + c)).toFixed(1)} : 1`
         }
     };
-    addIngredient();
+    //addIngredient();
 
     updateRecipeMacro();
 }
@@ -451,11 +453,14 @@ const closePopup = event => {
 }
 
 const addIngredient = () => {
+    ingredientsListEmptyLabel.classList.add('hidden');
     currentRecipe.ingredients.push({
         weight: 0,
         ingredient: getIngredients()[0]
     })
     renderIngredient();
+    const newIngredient = ingredientsList.lastChild;
+    newIngredient.querySelector('.ingredients-list__ingredient').click();
 }
 
 const renderIngredient = (ingredient) => {
