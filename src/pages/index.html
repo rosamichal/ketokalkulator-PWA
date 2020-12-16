@@ -127,16 +127,18 @@
       </div>
       <textarea class="input input--recipe-note js--recipe-note" rows="5"
         placeholder="Miejsce na notatki (opcjonalne)"></textarea>
-      <button class="btn-save js--btn-save-recipe">Zapisz</button>
-      <button class="btn-new-recipe js--btn-new-recipe">Wyczyść</button>
-      <button class="btn-install hidden js--btn-install">Zainstaluj aplikację</button>
-
+      <div class="buttons">
+        <button class="btn-new-recipe js--btn-new-recipe">Wyczyść</button>
+        <button class="btn-install hidden js--btn-install">Zainstaluj aplikację</button>
+        <button class="btn-save js--btn-save-recipe">Zapisz</button>
+      </div>
     </div>
 
     <div class="recipe-list">
       <div class="recipe-list__search">
         <input type="text" class="input input--wide js--recipe-search" placeholder="Szukaj przepisu...">
-        <p class="js--no-recipe-found-label hidden">Brak przepisów do wyświetlenia. Dodaj nowy przepis lub zmień kryteria wyszukiwania.</p>
+        <p class="js--no-recipe-found-label hidden">Brak przepisów do wyświetlenia. Dodaj nowy przepis lub zmień
+          kryteria wyszukiwania.</p>
       </div>
       <div class="recipe-list__content js--recipe-list-content">
         <!-- <div class="recipe-list-item">

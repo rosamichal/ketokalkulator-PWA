@@ -24,14 +24,25 @@ body {
   min-height: 100vh;
 }
 
-.recipe-form {
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
 
+.main {
+  width: 100%;
+
+  @media (min-width: $brakepointLarge) {
+    width: 800px;
+  }
+}
+
+.recipe-form {
   background: #fff;
   width: 100%;
   padding: 20px 10px;
 
   @media (min-width: $brakepointLarge) {
-    width: 800px;
     border-radius: 5px;
     box-shadow: 4px 4px 5px rgba(82, 82, 82, .4);
     align-self: start;
@@ -104,7 +115,7 @@ body {
     }
   }
 
-  &__ingredient { 
+  &__ingredient {
     border: 1px solid $light-dark;
     padding: 5px;
   }
@@ -226,7 +237,7 @@ input[type=number] {
     }
   }
 
-  &__search{
+  &__search {
     margin: 0 16px 8px;
   }
 }
@@ -328,11 +339,11 @@ input[type=number] {
     border: 1px solid $light-dark;
   }
 
-  &__list-item-header{
+  &__list-item-header {
     margin: 0 0 8px;
   }
 
-  &__list-item-macro-wrapper{
+  &__list-item-macro-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
